@@ -3,9 +3,9 @@ import csv
 import pandas as pd
 import nltk
 nltk.download('punkt')
-path_dialog_acts = 'res/dialog_acts.dat'
 
-def get_data():
+
+def get_data(path_dialog_acts = 'res/dialog_acts.dat' ):
   
   dialogue_df = pd.DataFrame(columns = ['class', 'line'])#, dtype = {'class': str, 'line' : str})
   descriptions = ['ack','affirm','bye','confirm','deny','hello',
