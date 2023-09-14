@@ -1,7 +1,15 @@
 # By MatthijsvL
-import csv
 import pandas as pd
 import nltk
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
 nltk.download('punkt')
 
 descriptions = ['ack','affirm','bye','confirm','deny','hello',
@@ -27,10 +35,7 @@ def get_data(path_dialog_acts = 'res/dialog_acts.dat' ):
   dialogue_df['lines'] = dialogue_df.apply(dialog_clean, axis = 1)
 
 
-  dialogue_df['tokenized'] = dialogue_df.apply(lambda row: nltk.word_tokenize(row['lines'
-  ]), axis = 1)
+  dialogue_df['tokenized'] = dialogue_df.apply(lambda row: nltk.word_tokenize(row['lines']), axis = 1)
   return dialogue_df
 
-if __name__ == "__main__":
-  print(get_data())
 
