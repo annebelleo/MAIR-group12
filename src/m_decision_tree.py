@@ -8,16 +8,23 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import tree
 
-def get_trained_decision_tree(x, y):
-    # categories y:
-    y = y.to_numpy().reshape(y.shape[0])
-    # create the tokenizer for x:
-    t = Tokenizer()
-    # fit the tokenizer on the documents
-    t.fit_on_texts(x)
-    # integer encode documents
-    x = t.texts_to_matrix(x, mode='count')
-    
-    clf = tree.DecisionTreeClassifier(max_depth = 5)
-    clf = clf.fit(x, y)
-    return clf
+
+class DecisionTree():
+
+    def __init__(self, x, y):
+        # categories y:
+        y = y.to_numpy().reshape(y.shape[0])
+        # create the tokenizer for x:
+        self.tokenizer = Tokenizer()
+        # fit the tokenizer on the documents
+        self.tokenizer.fit_on_texts(x)
+        # integer encode documents
+        x = self.tokenizer.texts_to_matrix(x, mode='count')
+        
+        self.model = tree.DecisionTreeClassifier(max_depth = 5)
+        self.model.fit(x, y)
+        
+    def predict(self, x):
+        x = self.tokenizer.texts_to_matrix(x , mode='count')
+        result = self.model.apply(x) 
+        return result

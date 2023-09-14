@@ -18,7 +18,7 @@ descriptions = ['ack','affirm','bye','confirm','deny','hello',
 descript2class = {k: v for v, k in enumerate(descriptions)}
 class2descript = {v: k for k, v in descript2class.items()}
 
-def get_data(path_dialog_acts = 'res/dialog_acts.dat', drop_duplicates = True): 
+def get_data(path_dialog_acts = 'res/dialog_acts.dat', drop_duplicates = False): 
   
   dialogue_df = pd.DataFrame(columns = ['class', 'line'])#, dtype = {'class': str, 'line' : str})
   
