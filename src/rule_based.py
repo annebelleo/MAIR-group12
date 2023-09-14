@@ -4,41 +4,25 @@ from data_preparation import get_data
 import matplotlib.pyplot as plt
 import numpy as np
 def rule_baseline(data_df):
-    token_df = data_df["tokenized"]
+    token_df = data_df["lines"]
+    # token_df = ["okay please do"]
     output = []
-    for value in token_df:
-        if "okay" in value:
-            output.append(0)
-        elif "yes" in value:
-            output.append(1)
-        elif "bye" in value:
-            output.append(2)
-        elif "is" in value:
-            output.append(3)
-        elif "dont"in value or "not" in value:
-            output.append(4)
-        elif "hi" in value or "hello" in value:
-            output.append(5)
-        elif "need" in value or "want" in value:
+    dict = {0:["okay","ok","kay","k"],1:["yes"],2:["bye"],3:["is","does"],
+            4:["don't","not","wrong"],5:["hi","hello"],6:["want","look for","looking"],
+            7:["no"],8:["uh","cough","noise","unintelligible"],9:["repeat","again"],
+            10:["how","about"],11:["more"],12:["what"],13:["restart","start over"],14:["thank"]}
+    for token in token_df:
+        flag= False
+        for cat in dict.values():
+            for options in cat:
+                if options in token:
+                    output.append(list(dict.keys())[list(dict.values()).index(cat)])
+                    flag = True
+                    break
+            if flag==True:
+                    break
+        if flag == False:
             output.append(6)
-        elif "no" in value:
-            output.append(7)
-        elif "uhhh" in value or "noise" in value or "cough" in value:
-            output.append(8)
-        elif "repeat" in value or "again" in value:
-            output.append(9)
-        elif "how" and "about" in value:
-            output.append(10)
-        elif "more" in value:
-            output.append(11)
-        elif "what" in value:
-            output.append(12)
-        elif "restart" in value or ("start" and "over") in value :
-            output.append(13)
-        elif "thank" in value or "thanks" in value:
-            output.append(14)
-        else:
-            output.append(-1)
     return output
 train, test = sklearn.model_selection.train_test_split(get_data(),test_size=0.15)
 predicted = rule_baseline(test)

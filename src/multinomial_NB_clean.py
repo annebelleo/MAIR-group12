@@ -8,21 +8,24 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 
 # Split into train and test data
-df = dp.get_data()
-simple_df = (df[["class","lines"]])
-train, test = train_test_split(simple_df,test_size=0.15)
+# df = dp.get_data()
+# simple_df = (df[["class","lines"]])
+# train, test = train_test_split(simple_df,test_size=0.15)
 
-# Actuall ML part
-pipeline_clf = Pipeline([('vect', CountVectorizer()),('tfidf', TfidfTransformer()),('clf', MultinomialNB())])
-pipeline_clf.fit(train["lines"],train["class"])
-pipeline_predicted = pipeline_clf.predict(test["lines"])
+def multinomial_nb(train,test):
+    # Actuall ML part
+    pipeline_clf = Pipeline([('vect', CountVectorizer()),('tfidf', TfidfTransformer()),('clf', MultinomialNB())])
+    pipeline_clf.fit(train["lines"],train["class"])
+    pipeline_predicted = pipeline_clf.predict(test["lines"])
+
+    return pipeline_predicted
 
 # Plot of predicted class to actual class histograms 
-fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
-axs[0].hist(test["class"])
-axs[1].hist(pipeline_predicted)
-plt.show()
+# fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
+# axs[0].hist(test["class"])
+# axs[1].hist(pipeline_predicted)
+# plt.show()
 
-# Evaluation
-from sklearn.metrics import accuracy_score
-print("Accuracy: " + str(accuracy_score(test["class"], pipeline_predicted)))
+# # Evaluation
+# from sklearn.metrics import accuracy_score
+# print("Accuracy: " + str(accuracy_score(test["class"], pipeline_predicted)))
