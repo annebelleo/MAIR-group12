@@ -4,15 +4,16 @@ import pandas as pd
 import nltk
 nltk.download('punkt')
 
+descriptions = ['ack','affirm','bye','confirm','deny','hello',
+                  'inform','negate','null', 'repeat', 'reqalts',
+                    'reqmore', 'request', 'restart','thankyou']
+descript2class = {k: v for v, k in enumerate(descriptions)}
+class2descript = {v: k for k, v in descript2class.items()}
 
 def get_data(path_dialog_acts = 'res/dialog_acts.dat' ):
   
   dialogue_df = pd.DataFrame(columns = ['class', 'line'])#, dtype = {'class': str, 'line' : str})
-  descriptions = ['ack','affirm','bye','confirm','deny','hello',
-                  'inform','negate','null', 'repeat', 'reqalts',
-                    'reqmore', 'request', 'restart','thankyou']
-  descript2class = {k: v for v, k in enumerate(descriptions)}
-  class2descript = {v: k for k, v in descript2class.items()}
+  
  # print(descript2class)
  # print(class2descript)
 
@@ -30,4 +31,6 @@ def get_data(path_dialog_acts = 'res/dialog_acts.dat' ):
   ]), axis = 1)
   return dialogue_df
 
+if __name__ == "__main__":
+  print(get_data())
 
