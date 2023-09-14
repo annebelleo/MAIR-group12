@@ -1,11 +1,9 @@
 # By MatthijsvL
 import csv
 import pandas as pd
-import nltk
-nltk.download('punkt')
 
 
-def get_data(path_dialog_acts = 'res/dialog_acts.dat' ):
+def get_data(path_dialog_acts = 'res/dialog_acts.dat', drop_duplicates = True): 
   
   dialogue_df = pd.DataFrame(columns = ['class', 'line'])#, dtype = {'class': str, 'line' : str})
   descriptions = ['ack','affirm','bye','confirm','deny','hello',
@@ -24,10 +22,9 @@ def get_data(path_dialog_acts = 'res/dialog_acts.dat' ):
 
   dialogue_df['class'] = dialogue_df.apply(dialog_class, axis = 1)
   dialogue_df['lines'] = dialogue_df.apply(dialog_clean, axis = 1)
+  if drop_duplicates:
+    dialogue_df.drop_duplicates(inplace=True)
 
-
-  dialogue_df['tokenized'] = dialogue_df.apply(lambda row: nltk.word_tokenize(row['lines'
-  ]), axis = 1)
   return dialogue_df
 
 
