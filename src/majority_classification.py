@@ -10,9 +10,6 @@ class baseline_majority:
         '''
         train_labels = np.asarray(train_labels)[:]
         classif_unique, classif_occurence = np.unique(train_labels, return_counts=True)
-        print(classif_unique)
-        print(classif_occurence)
-        print(classif_unique[np.argmax(classif_occurence)])
         self.majority_class = classif_unique[np.argmax(classif_occurence)]
         self.trained = True
     
@@ -22,12 +19,9 @@ class baseline_majority:
             
         else:
             test_set = np.asarray(test_set)[:]
-            print(test_set)
             predictions = np.full_like(test_set, self.majority_class)
             return predictions
-
-        
-        
+       
     
     def __init__(self):
         self.majority_class = -1

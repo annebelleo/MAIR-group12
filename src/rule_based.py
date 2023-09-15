@@ -24,10 +24,12 @@ def rule_baseline(data_df):
         if flag == False:
             output.append(6)
     return output
-train, test = sklearn.model_selection.train_test_split(get_data(),test_size=0.15)
-predicted = rule_baseline(test)
-fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
-axs[0].hist(predicted)
-axs[1].hist(test["class"])
-plt.show()
-print("Accuracy: " + str(np.mean(predicted==test["class"])))
+
+if __name__ == '__main__':
+    train, test = sklearn.model_selection.train_test_split(get_data(),test_size=0.15)
+    predicted = rule_baseline(test)
+    fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
+    axs[0].hist(predicted)
+    axs[1].hist(test["class"])
+    plt.show()
+    print("Accuracy: " + str(np.mean(predicted==test["class"])))

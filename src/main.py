@@ -11,7 +11,13 @@ import majority_classification
 #import m_decision_tree # fix deprecated error
 #import m_feed_forward # fix deprecated error
 
+import visualization
 
+descriptions = ['ack','affirm','bye','confirm','deny','hello',
+                  'inform','negate','null', 'repeat', 'reqalts',
+                    'reqmore', 'request', 'restart','thankyou']
+descript2class = {k: v for v, k in enumerate(descriptions)}
+class2descript = {v: k for k, v in descript2class.items()}
 
 def get_data(path_dialog_acts = 'res/dialog_acts.dat', drop_duplicates = False): 
   
@@ -23,9 +29,11 @@ def get_data(path_dialog_acts = 'res/dialog_acts.dat', drop_duplicates = False):
   # apply functions
   dialog_class = lambda frame : descript2class[frame['sentence'].split(' ', maxsplit = 1)[0]]
   dialog_clean = lambda frame: frame['sentence'].split(' ',maxsplit = 1)[1].strip()
+  #dialog_tokenize = lambda frame: frame['sentence'].strip().split(' ')
 
   dialogue_df['label'] = dialogue_df.apply(dialog_class, axis = 1)
   dialogue_df['sentence'] = dialogue_df.apply(dialog_clean, axis = 1)
+  #dialogue_df['tokens'] = dialogue_df.apply(dialog_tokenize, axis = 1)
   if drop_duplicates:
     dialogue_df.drop_duplicates(subset='sentence', keep = 'first', inplace=True)
 
@@ -60,11 +68,6 @@ if __name__ == "__main__":
 
     
     ### Prepare datasets
-    descriptions = ['ack','affirm','bye','confirm','deny','hello',
-                  'inform','negate','null', 'repeat', 'reqalts',
-                    'reqmore', 'request', 'restart','thankyou']
-    descript2class = {k: v for v, k in enumerate(descriptions)}
-    class2descript = {v: k for k, v in descript2class.items()}
 
     dialogDF = get_data(drop_duplicates=False)
     dialogTrain, dialogTest = train_test_split(dialogDF, test_size=0.15, random_state=42)
@@ -83,6 +86,7 @@ if __name__ == "__main__":
     predsMajorityClassif = modelMajorityClassif.model_predict(dialogTest['label'])
     resultsMajorityClassif = model_evaluate(predicted_labels = predsMajorityClassif, 
                                             test_labels = dialogTest['label'])
+    
     model_results['majority_classif'] = resultsMajorityClassif
     
     # Baseline: majority classification no duplicates
@@ -112,9 +116,14 @@ if __name__ == "__main__":
     # ml2 nodup
     num_models = 1
     print(resultsMajorityClassif.keys())
+    print(model_results.keys())
     measures = ['accuracy', 'precision', 'recall', 'f1']
-
+    print(list(model_results.keys()))
     
+    # Makes barplot for accuracy of all models
+    visualization.plotModelMetric(model_results, measure = measures[0], title = 'model_accuracy')
+
+
 
 
 
