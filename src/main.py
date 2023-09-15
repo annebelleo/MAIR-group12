@@ -34,9 +34,9 @@ if __name__ == "__main__":
                                             test_labels = dialogTest['label'])
     print("Rule Based results:")
     #print(f"{resultRuleBase}")
-    print(f"{resultRuleBase['accuracy']}")
-    print(f"{resultRuleBase['macro avg']}")
-    print(f"{resultRuleBase['weighted avg']}")
+    print(f"accuracy {resultRuleBase['accuracy']}")
+    print(f"macro avg {resultRuleBase['macro avg']}")
+    print(f"weighted avg {resultRuleBase['weighted avg']}")
     
     ### Perform Classification
 
@@ -51,9 +51,9 @@ if __name__ == "__main__":
                                             test_labels = dialogTest['label'])
     print(f"Majority classif results:")
     #print(f"{resultsMajorityClassif}")
-    print(f"{resultsMajorityClassif['accuracy']}")
-    print(f"{resultsMajorityClassif['macro avg']}")
-    print(f"{resultsMajorityClassif['weighted avg']}")
+    print(f"accuracy {resultsMajorityClassif['accuracy']}")
+    print(f"macro avg {resultsMajorityClassif['macro avg']}")
+    print(f"weighted avg {resultsMajorityClassif['weighted avg']}")
     model_results['majority_classif'] = resultsMajorityClassif
     
     # Baseline: majority classification no duplicates
@@ -64,9 +64,9 @@ if __name__ == "__main__":
                                                   test_labels = dialogTest_nodup['label'])
     model_results_nodup['majority_classif'] = resultsMajorityClassif_nodup
     print(f"Majority Unique classif results:")
-    print(f"{resultsMajorityClassif_nodup['accuracy']}")
-    print(f"{resultsMajorityClassif_nodup['macro avg']}")
-    print(f"{resultsMajorityClassif_nodup['weighted avg']}")
+    print(f"accuracy {resultsMajorityClassif_nodup['accuracy']}")
+    print(f" macro avg {resultsMajorityClassif_nodup['macro avg']}")
+    print(f"weighted avg {resultsMajorityClassif_nodup['weighted avg']}")
     
     # baseline 2
 
@@ -80,9 +80,9 @@ if __name__ == "__main__":
                                                   test_labels = dialogTest["label"])
     model_results['decision_tree'] = resultDecisionTree
     print(f"Desition Tree Unique classif results:")
-    print(f"{resultDecisionTree['accuracy']}")
-    print(f"{resultDecisionTree['macro avg']}")
-    print(f"{resultDecisionTree['weighted avg']}")
+    print(f"accuracy {resultDecisionTree['accuracy']}")
+    print(f"macro avg {resultDecisionTree['macro avg']}")
+    print(f"weighted avg {resultDecisionTree['weighted avg']}")
     
     # ML 1 nodup
     dt_nodup = decision_tree.DecisionTree(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
@@ -91,9 +91,9 @@ if __name__ == "__main__":
                                                                      test_labels= dialogTest_nodup['label'])
     model_results_nodup['decision_tree_nodup'] = resultDecisionTreeUnique
     print(f"Desition Tree Unique classif results:")
-    print(f"{resultDecisionTreeUnique['accuracy']}")
-    print(f"{resultDecisionTreeUnique['macro avg']}")
-    print(f"{resultDecisionTreeUnique['weighted avg']}")
+    print(f"accuracy {resultDecisionTreeUnique['accuracy']}")
+    print(f"macro avg {resultDecisionTreeUnique['macro avg']}")
+    print(f"weighted avg {resultDecisionTreeUnique['weighted avg']}")
     
     # ml2 
     # use Feed Forward Network
@@ -105,9 +105,9 @@ if __name__ == "__main__":
     
     model_results_nodup['ffn'] = resultFFN
     print(f"FeedForward Network:")
-    print(f"{resultFFN['accuracy']}")
-    print(f"{resultFFN['macro avg']}")
-    print(f"{resultFFN['weighted avg']}")
+    print(f"accuracy {resultFFN['accuracy']}")
+    print(f"macro avg {resultFFN['macro avg']}")
+    print(f"weighted avg{resultFFN['weighted avg']}")
     
     #print(f'ffn result labels: {ffn_result}')
     # ml2 nodup
@@ -115,9 +115,9 @@ if __name__ == "__main__":
     ffn_nodup_results = ffn_nodup.predict(dialogTest_nodup['sentence'])
     resultFFNUnique = model_eval.model_evaluate(predicted_labels = ffn_nodup_results, test_labels=dialogTest_nodup['label'])
     print(f"FeedForward Unique Network:")
-    print(f"{resultFFNUnique['accuracy']}")
-    print(f"{resultFFNUnique['macro avg']}")
-    print(f"{resultFFNUnique['weighted avg']}")
+    print(f"accuracy {resultFFNUnique['accuracy']}")
+    print(f"macro avg {resultFFNUnique['macro avg']}")
+    print(f"weighted avg {resultFFNUnique['weighted avg']}")
     
    # num_models = 1
    # print(resultsMajorityClassif.keys())

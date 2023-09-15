@@ -1,0 +1,74 @@
+(uu_mair_chat) robin@Ideapad:~/uu/mair_chat/MAIR-group12$ /home/robin/anaconda3/envs/uu_mair_chat/bin/python /home/robin/uu/mair_chat/MAIR-group12/src/main.py
+2023-09-15 23:41:59.367303: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Rule Based results:
+0.5648196549921589
+{'precision': 0.5326735853821668, 'recall': 0.5911665431352211, 'f1-score': 0.4804078681899257, 'support': 3826.0}
+{'precision': 0.7924445610949042, 'recall': 0.5648196549921589, 'f1-score': 0.6499986278361524, 'support': 3826.0}
+Majority classif results:
+0.40041819132253004
+{'precision': 0.02669454608816867, 'recall': 0.06666666666666667, 'f1-score': 0.03812367798929949, 'support': 3826.0}
+{'precision': 0.1603347279420063, 'recall': 0.40041819132253004, 'f1-score': 0.2289812128055678, 'support': 3826.0}
+Majority Unique classif results:
+0.5559701492537313
+{'precision': 0.03971215351812367, 'recall': 0.07142857142857142, 'f1-score': 0.05104487838300788, 'support': 804.0}
+{'precision': 0.30910280686121633, 'recall': 0.5559701492537313, 'f1-score': 0.3973120011453524, 'support': 804.0}
+Desition Tree Unique classif results:
+0.98170412963931
+{'precision': 0.9334050598128149, 'recall': 0.8876777502624137, 'f1-score': 0.9019556365352107, 'support': 3826.0}
+{'precision': 0.9818742598665359, 'recall': 0.98170412963931, 'f1-score': 0.9816621733907411, 'support': 3826.0}
+Desition Tree Unique classif results:
+0.8669154228855721
+{'precision': 0.8319398279999237, 'recall': 0.8519152760752894, 'f1-score': 0.8322199616348953, 'support': 804.0}
+{'precision': 0.876939788001072, 'recall': 0.8669154228855721, 'f1-score': 0.8700026487483604, 'support': 804.0}
+2023-09-15 23:42:12.030350: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Epoch 1/10
+170/170 [==============================] - 3s 10ms/step - loss: 0.6215 - accuracy: 0.8721
+Epoch 2/10
+170/170 [==============================] - 2s 10ms/step - loss: 0.0869 - accuracy: 0.9776
+Epoch 3/10
+170/170 [==============================] - 3s 15ms/step - loss: 0.0487 - accuracy: 0.9873
+Epoch 4/10
+170/170 [==============================] - 2s 12ms/step - loss: 0.0316 - accuracy: 0.9919
+Epoch 5/10
+170/170 [==============================] - 2s 12ms/step - loss: 0.0227 - accuracy: 0.9934
+Epoch 6/10
+170/170 [==============================] - 3s 17ms/step - loss: 0.0178 - accuracy: 0.9947
+Epoch 7/10
+170/170 [==============================] - 3s 15ms/step - loss: 0.0131 - accuracy: 0.9964
+Epoch 8/10
+170/170 [==============================] - 2s 13ms/step - loss: 0.0111 - accuracy: 0.9973
+Epoch 9/10
+170/170 [==============================] - 1s 9ms/step - loss: 0.0091 - accuracy: 0.9974
+Epoch 10/10
+170/170 [==============================] - 2s 9ms/step - loss: 0.0066 - accuracy: 0.9987
+120/120 [==============================] - 1s 7ms/step
+FeedForward Network:
+0.9869315211709357
+{'precision': 0.9740661509743439, 'recall': 0.9179980287838878, 'f1-score': 0.9349715270596292, 'support': 3826.0}
+{'precision': 0.987245852474497, 'recall': 0.9869315211709357, 'f1-score': 0.9868122924405216, 'support': 3826.0}
+Epoch 1/10
+36/36 [==============================] - 2s 22ms/step - loss: 1.6220 - accuracy: 0.6454
+Epoch 2/10
+36/36 [==============================] - 0s 7ms/step - loss: 0.7967 - accuracy: 0.7851
+Epoch 3/10
+36/36 [==============================] - 0s 8ms/step - loss: 0.4980 - accuracy: 0.8527
+Epoch 4/10
+36/36 [==============================] - 0s 7ms/step - loss: 0.3221 - accuracy: 0.8933
+Epoch 5/10
+36/36 [==============================] - 0s 8ms/step - loss: 0.2288 - accuracy: 0.9355
+Epoch 6/10
+36/36 [==============================] - 0s 9ms/step - loss: 0.1701 - accuracy: 0.9502
+Epoch 7/10
+36/36 [==============================] - 0s 7ms/step - loss: 0.1353 - accuracy: 0.9592
+Epoch 8/10
+36/36 [==============================] - 0s 7ms/step - loss: 0.1123 - accuracy: 0.9647
+Epoch 9/10
+36/36 [==============================] - 0s 9ms/step - loss: 0.0923 - accuracy: 0.9728
+Epoch 10/10
+36/36 [==============================] - 0s 8ms/step - loss: 0.0763 - accuracy: 0.9772
+26/26 [==============================] - 0s 2ms/step
+FeedForward Unique Network:
+0.9154228855721394
+{'precision': 0.7235132705649205, 'recall': 0.6935673315059334, 'f1-score': 0.7036819495838349, 'support': 804.0}
+{'precision': 0.9127093571099332, 'recall': 0.9154228855721394, 'f1-score': 0.9130898283936342, 'support': 804.0}
