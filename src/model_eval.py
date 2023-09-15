@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 import sklearn
-import m_feed_forward
-import m_decision_tree
+import models.feed_forward as feed_forward
+import models.decision_tree as decision_tree
 import data_preparation
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
@@ -59,12 +59,12 @@ if __name__ == "__main__":
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=42)
 
     # use Decision Tree
-    dt = m_decision_tree.DecisionTree(x_train, y_train)
+    dt = decision_tree.DecisionTree(x_train, y_train)
     dt_result = dt.predict(x_test)
     print(f'descision tree result labels: {dt_result}')
 
     # use Feed Forward Network
-    ffn = m_feed_forward.FeedForwardNetwork(x_train, y_train, epochs=10)
+    ffn = feed_forward.FeedForwardNetwork(x_train, y_train, epochs=10)
     ffn_result = ffn.predict(x_test)
     print(f'ffn result labels: {ffn_result}')
 

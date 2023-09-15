@@ -6,15 +6,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from random import seed
 # Import Packages
-import majority_classification
+import models.majority_classification as majority_classification
 #import rule_based
-#import m_decision_tree # fix deprecated error
-#import m_feed_forward # fix deprecated error
+#import decision_tree # fix deprecated error
+#import feed_forward # fix deprecated error
 import data_preparation
 import visualization
 import model_eval
-import m_decision_tree
-import m_feed_forward
+import models.decision_tree as decision_tree
+import models.feed_forward as feed_forward
 
 if __name__ == "__main__":
 
@@ -57,26 +57,26 @@ if __name__ == "__main__":
 
     # ML 1
     # use Decision Tree
-    dt = m_decision_tree.DecisionTree(dialogTrain['sentence'], dialogTrain['label'])
+    dt = decision_tree.DecisionTree(dialogTrain['sentence'], dialogTrain['label'])
     dt_result = dt.predict(dialogTest['sentence'])
     model_results['decision_tree'] = model_eval.model_evaluate(predicted_labels = dt_result, 
                                                   test_labels = dialogTest["label"])
     # ML 1 nodup
-    dt_nodup = m_decision_tree.DecisionTree(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
+    dt_nodup = decision_tree.DecisionTree(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
     dt_result_nodup = dt_nodup.predict(dialogTest_nodup['sentence'])
     model_results_nodup['decision_tree_nodup'] = model_eval.model_evaluate(predicted_labels = dt_result_nodup,
                                                                      test_labels= dialogTest_nodup['label'])
 
     # ml2 
     # use Feed Forward Network
-    ffn = m_feed_forward.FeedForwardNetwork(dialogTrain['sentence'], dialogTrain['label'], epochs=10)
+    ffn = feed_forward.FeedForwardNetwork(dialogTrain['sentence'], dialogTrain['label'], epochs=10)
     ffn_result = ffn.predict(dialogTest['sentence'])
     model_results['ffn'] = model_eval.model_evaluate(predicted_labels = ffn_result, 
                                                   test_labels = dialogTest["label"])
     
     #print(f'ffn result labels: {ffn_result}')
     # ml2 nodup
-    ffn_nodup = m_feed_forward.FeedForwardNetwork(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 10)
+    ffn_nodup = feed_forward.FeedForwardNetwork(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 10)
     ffn_nodup_results = ffn_nodup.predict(dialogTest_nodup['sentence'])
     model_results_nodup['ffn_nodup'] = model_eval.model_evaluate(predicted_labels = ffn_nodup_results, test_labels=dialogTest_nodup['label'])
 
