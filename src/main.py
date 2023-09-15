@@ -35,7 +35,7 @@ if __name__ == "__main__":
     model_results_nodup = {}
 
     # Baseline: majority classification
-    modelMajorityClassif = majority_classification.baseline_majority()
+    modelMajorityClassif = majority_classification.Baseline_majority()
     modelMajorityClassif.model_train(dialogTrain['label'])
     predsMajorityClassif = modelMajorityClassif.model_predict(dialogTest['label'])
     resultsMajorityClassif = model_eval.model_evaluate(predicted_labels = predsMajorityClassif, 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     model_results['majority_classif'] = resultsMajorityClassif
     
     # Baseline: majority classification no duplicates
-    modelMajorityClassif_nodup = majority_classification.baseline_majority()
+    modelMajorityClassif_nodup = majority_classification.Baseline_majority()
     modelMajorityClassif_nodup.model_train(dialogTrain_nodup['label'])
     predsMajorityClassif_nodup = modelMajorityClassif.model_predict(dialogTest_nodup['label'])
     resultsMajorityClassif_nodup =  model_eval.model_evaluate(predicted_labels = predsMajorityClassif_nodup, 
@@ -59,17 +59,28 @@ if __name__ == "__main__":
     # use Decision Tree
     dt = m_decision_tree.DecisionTree(dialogTrain['sentence'], dialogTrain['label'])
     dt_result = dt.predict(dialogTest['sentence'])
-    print(f'descision tree result labels: {dt_result}')
+    model_results['decision_tree'] = model_eval.model_evaluate(predicted_labels = dt_result, 
+                                                  test_labels = dialogTest["label"])
     # ML 1 nodup
+    dt_nodup = m_decision_tree.DecisionTree(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
+    dt_result_nodup = dt_nodup.predict(dialogTest_nodup['sentence'])
+    model_results_nodup['decision_tree_nodup'] = model_eval.model_evaluate(predicted_labels = dt_result_nodup,
+                                                                     test_labels= dialogTest_nodup['label'])
 
     # ml2 
     # use Feed Forward Network
-   # ffn = m_feed_forward.FeedForwardNetwork(dialogTrain['sentence'], dialogTrain['label'], epochs=10)
-    #ffn_result = ffn.predict(dialogTest['sentence'])
+    ffn = m_feed_forward.FeedForwardNetwork(dialogTrain['sentence'], dialogTrain['label'], epochs=10)
+    ffn_result = ffn.predict(dialogTest['sentence'])
+    model_results['ffn'] = model_eval.model_evaluate(predicted_labels = ffn_result, 
+                                                  test_labels = dialogTest["label"])
+    
     #print(f'ffn result labels: {ffn_result}')
     # ml2 nodup
-   
-   
+    ffn_nodup = m_feed_forward.FeedForwardNetwork(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 10)
+    ffn_nodup_results = ffn_nodup.predict(dialogTest_nodup['sentence'])
+    model_results_nodup['ffn_nodup'] = model_eval.model_evaluate(predicted_labels = ffn_nodup_results, test_labels=dialogTest_nodup['label'])
+
+  
    # num_models = 1
    # print(resultsMajorityClassif.keys())
    # print(model_results.keys())
@@ -78,6 +89,7 @@ if __name__ == "__main__":
     
     # Makes barplot for accuracy of all models
     visualization.plotModelMetric(model_results, measure = measures[0], title = 'model_accuracy')
+    visualization.plotModelMetric(model_results_nodup, measure = measures[0], title = 'model_accuracy_nodup')
 
 
 

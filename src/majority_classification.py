@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-class baseline_majority:
+class Baseline_majority:
     def model_train(self, train_labels):
         '''
         train_set: array_like structure like numpy array or pandas dataframe
