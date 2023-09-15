@@ -7,10 +7,10 @@ def rule_baseline(data_df):
     token_df = data_df["lines"]
     # token_df = ["okay please do"]
     output = []
-    dict = {0:["okay","ok","kay","k"],1:["yes"],2:["bye"],3:["is","does"],
-            4:["don't","not","wrong"],5:["hi","hello"],6:["want","look for","looking"],
-            7:["no"],8:["uh","cough","noise","unintelligible"],9:["repeat","again"],
-            10:["how","about"],11:["more"],12:["what"],13:["restart","start over"],14:["thank"]}
+    dict = {0:["okay","ok","kay","k", "right"],1:["yes"],2:["bye"],3:["is","does"],
+            4:["don't","not","wrong"],5:["hi","hello"],6:["cheap", "care", "want","look for","looking"],
+            7:["no"],8:["sil","uh","cough","noise","unintelligible"],9:["repeat","again"],
+            10:["how","about", "else"],11:["more"],12:["type", "number", "what", "address", "code", "phone", "post"],13:["restart","start over"],14:["good", "thank", "bye", "you"]}
     for token in token_df:
         flag= False
         for cat in dict.values():
