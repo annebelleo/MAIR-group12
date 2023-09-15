@@ -27,7 +27,7 @@ if __name__ == "__main__":
     dialogTrain, dialogTest = train_test_split(dialogDF, test_size=0.15, random_state=42)
 
     dialogDF_nodup = data_preparation.get_data(drop_duplicates=True)
-    dialogTrain_nodup, dialogTest_nodup = train_test_split(dialogDF, test_size=0.15, random_state=42)
+    dialogTrain_nodup, dialogTest_nodup = train_test_split(dialogDF_nodup, test_size=0.15, random_state=42)
 
     ### Perform Classification
 
