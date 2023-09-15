@@ -4,7 +4,7 @@ from data_preparation import get_data
 import matplotlib.pyplot as plt
 import numpy as np
 def rule_baseline(data_df):
-    token_df = data_df["lines"]
+    token_df = data_df
     # token_df = ["okay please do"]
     output = []
     dict = {0:["okay","ok","kay","k", "right"],1:["yes"],2:["bye"],3:["is","does"],
