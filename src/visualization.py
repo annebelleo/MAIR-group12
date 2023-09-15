@@ -1,10 +1,9 @@
 
 
-from main import get_data, descriptions, descript2class, class2descript
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+import data_preparation
 # lets do some EDA
 #bag_o_words = dialogue_df['tokenized'].explode('tokenized')
 #bag_value_counts = bag_o_words.value_counts()
@@ -93,7 +92,7 @@ def plotModelMetric(modelresultscollection, measure = 'accuracy', title = 'title
 if __name__ == '__main__':
     from sklearn.model_selection import train_test_split
     
-    dialogDF = get_data(drop_duplicates=False)
+    dialogDF = data_preparation.get_data(drop_duplicates=False)
     dialogTrain, dialogTest = train_test_split(dialogDF, test_size=0.15, random_state=42)
     #print(dialogDF)
     

@@ -13,7 +13,8 @@ import majority_classification
 import data_preparation
 import visualization
 import model_eval
-
+import m_decision_tree
+import m_feed_forward
 
 if __name__ == "__main__":
 
@@ -56,14 +57,14 @@ if __name__ == "__main__":
 
     # ML 1
     # use Decision Tree
-    #dt = m_decision_tree.DecisionTree(dialogTrain['sentence'], dialogTrain['label'])
-    #dt_result = dt.predict(dialogTest['sentence'])
-    #print(f'descision tree result labels: {dt_result}')
+    dt = m_decision_tree.DecisionTree(dialogTrain['sentence'], dialogTrain['label'])
+    dt_result = dt.predict(dialogTest['sentence'])
+    print(f'descision tree result labels: {dt_result}')
     # ML 1 nodup
 
     # ml2 
     # use Feed Forward Network
-    #ffn = m_feed_forward.FeedForwardNetwork(dialogTrain['sentence'], dialogTrain['label'], epochs=10)
+   # ffn = m_feed_forward.FeedForwardNetwork(dialogTrain['sentence'], dialogTrain['label'], epochs=10)
     #ffn_result = ffn.predict(dialogTest['sentence'])
     #print(f'ffn result labels: {ffn_result}')
     # ml2 nodup
