@@ -1,0 +1,3995 @@
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+any part of town {}
+any {}
+any {}
+any {}
+any type {}
+asian oriental {'food': ['asian oriental']}
+scottish {}
+scottish {}
+uh it doesnt matter {}
+hindi food is okay {}
+doesnt matter {}
+it doesnt matter {}
+any {}
+food {}
+asian oriental {'food': ['asian oriental']}
+im looking for a restaurant in the center serving greek food {}
+i dont care {}
+english food center part of town {}
+dont care {}
+any {}
+i dont care {}
+dont care {}
+im looking for corsica food {}
+dont care {}
+dont care {}
+any part {}
+any {}
+christmas food {}
+any {}
+dont care {}
+any {}
+mexican food {}
+im looking for venison food cross talk {}
+how about gastro pub type of food {'food': ['gastropub']}
+i dont care {}
+iam looking for a restaurant in the center {}
+serve kosher food {}
+im looking for a restaurant serving {}
+any price range {}
+venetian food {}
+asian oriental food {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+any area {}
+food {}
+i want to find moderately priced restaurant it should be {'pricerange': ['moderate']}
+i dont care {}
+any kind of food {}
+tv_noise any {}
+tv_noise any {}
+i dont care {}
+i dont care tv_noise {}
+i dont care {}
+dont care {}
+that food tv_noise {}
+i want a restaurant in the unintelligible that serves belgium food {}
+doesnt matter {}
+restaurant {}
+center {}
+any {}
+it doesnt matter {}
+any kind of food {}
+i dont care {}
+i dont care {}
+any {}
+i dont care {}
+i dont care {}
+um want to find a moderately priced restaurant in the {'pricerange': ['moderate']}
+any type is fine {}
+im looking for a restaurant that serves world food {}
+i dont care {}
+i dont care {}
+it doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+doesnt matter {}
+im looking for a restaurant in the center {}
+creative food {}
+restaurant serving english food {}
+christmas food {}
+im looking for a restaurant {}
+asian oriental {'food': ['asian oriental']}
+any part of town {}
+any kind {}
+it doesnt matter {}
+i dont care {}
+cantonese food {}
+mexican food {}
+i dont care {}
+and asian {}
+pan asian {}
+food {}
+any type {}
+any part {}
+so i dont care whats the address {}
+i dont care {}
+basque food {}
+dont care {}
+dont care {}
+dont care {}
+im looking for a moderately priced rest {'pricerange': ['moderate']}
+any part of town {}
+brazilian {}
+it doesnt matter {}
+i dont care about the price range {}
+any {}
+i dont care {}
+i dont care {}
+greek food {}
+is doesnt matter {}
+any kind of food {}
+yea im looking for a restaurant that serves basque food {}
+moderately priced {'pricerange': ['moderate']}
+any type of food {}
+i dont care {}
+hungarian {}
+im looking for {}
+im looking for {}
+im looking for a restaurant in the center {}
+any {}
+i need a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+vegetarian {}
+i dont care {}
+anywhere {}
+corsica {}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+i want to find a moderately priced restaurant and it should serve {'pricerange': ['moderate']}
+any {}
+moderately priced {'pricerange': ['moderate']}
+any kind {}
+any food {}
+american {}
+indonesian food {}
+itailian {'food': ['italian']}
+i dont care {}
+dont care {}
+dont care {}
+i dont care {}
+i do not care {}
+dont care {}
+moderately priced restaurant halal food {'pricerange': ['moderate']}
+doesnt matter {}
+halal {}
+greek {}
+i dont care {}
+any {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+um im trying to find a restaurant in the unintelligible of town {}
+greek food {}
+doesnt matter {}
+any area {}
+im looking for a moderately priced restaurant in the {'pricerange': ['moderate']}
+i dont care {}
+im looking for a restaurant that serves corsica food {}
+i dont care {}
+i dont care {}
+austrian {}
+austrian {}
+id like a restaurant in {}
+in the center {}
+cross over food {}
+im looking for unintelligible food {}
+it doesnt matter {}
+australian food {'food': ['australasian']}
+moderately priced restaurants {'pricerange': ['moderate']}
+dont care {}
+any {}
+breath i dont care {}
+moderately {'pricerange': ['moderate']}
+doesnt matter {}
+i dont care {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+doesnt matter {}
+it doesnt matter {}
+german food {}
+it doesnt matter {}
+i want to find a moderately {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+any area {}
+any {}
+i dont care {}
+i dont care {}
+it doesnt matter {}
+dont care {}
+any {}
+i dont care {}
+im looking for scandinavian food {}
+any part of town {}
+scandanavian {}
+can i have the venusian food {}
+dont care {}
+any {}
+any type of food {}
+i would like to find a restaurant {}
+any {}
+doesnt matter {}
+does not matter {}
+i dont care {}
+brazilian {}
+gastro pub {'food': ['gastropub']}
+looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+what about other areas {}
+german food {}
+any {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any type {}
+a restaurant in {}
+any area {}
+i dont care {}
+i dont care {}
+i want to find a moderately priced restaurant and it should be in the {'pricerange': ['moderate']}
+any {}
+any {}
+i dont care {}
+food {}
+any area {}
+im looking for world food {}
+im looking for a restaurant in any area that serves austrian food {}
+austrian food {}
+ah can i find a unintelligible restaurant serving scotch food {}
+ah scottish food {}
+i need a moderately priced restaurant in the part of town {'pricerange': ['moderate']}
+i dont care {}
+mexican food {}
+any type of food {}
+it doesnt matter {}
+any food {}
+restaurant {}
+dont care {}
+any where {}
+cantonese food {}
+moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+i dont care {}
+i dont care {}
+russian {}
+dont care {}
+doesnt matter {}
+it doesnt matter {}
+signaporian {}
+i want a basque food restaurant {}
+i dont care {}
+basque food {}
+i dont care {}
+hi im looking for moderately priced {'pricerange': ['moderate']}
+dont care {}
+i would like asian oriental {'food': ['asian oriental']}
+it doesnt matter {}
+uh it doesnt matter {}
+any kind {}
+i dont care noise {}
+venetian {}
+i dont care {}
+it doesnt matter {}
+doesnt matter {}
+any price range {}
+find restaurant serving asian {}
+find restaurant serving asian oriental {'food': ['asian oriental']}
+restaurant {}
+find restaurant {}
+serving asian oriental {'food': ['asian oriental']}
+doesnt matter {}
+danish {}
+danish {}
+do you have any asian oriental food {'food': ['asian oriental']}
+christmas {}
+im looking for a restaurant {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+ah i dont care {}
+restaurant {}
+corsica food {}
+doesnt matter {}
+dont care {}
+any {}
+asian oriental food {'food': ['asian oriental']}
+need a restaurant serving brazilian food {}
+doesnt matter {}
+brazilian {}
+any price range {}
+doesnt matter {}
+dont care {}
+any {}
+im looking for a restaurant that serves {}
+i dont care {}
+um i dont care about the price {}
+i would like malaysian food in the center part of {}
+i dont care {}
+i want a restaurant serving {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+halo food {}
+i dont care {}
+i dont care about the price range {}
+im looking for a moderately priced restaurant that serves canapes {'pricerange': ['moderate']}
+dont care {}
+belgium {}
+belgium {}
+belgium {}
+dont care {}
+dont care {}
+belgium food {}
+find a restaurant serving cannabis food {}
+dont care {}
+canopy {}
+is there on serving chineese {'food': ['chinese']}
+it doesnt matter {}
+any kind {}
+mexican {}
+ah it doesnt matter {}
+dont care {}
+i dont care {}
+any area {}
+i need a restaurant in the {}
+i need a restaurant that {}
+i dont care {}
+any price range {}
+it doesnt matter {}
+doesnt matter {}
+it doesnt matter {}
+greek {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+im looking for a restaurant in the center that serves corsica {}
+dont care {}
+dont care {}
+corsica food {}
+corsica {}
+i dont care {}
+dont care {}
+i dont care {}
+i dont care {}
+any {}
+i dont care {}
+unintelligible restaurant {}
+i dont care {}
+what does rice house {}
+i need a moderately priced restaurant serving world food {'pricerange': ['moderate']}
+asian oriental food {'food': ['asian oriental']}
+i dont care {}
+um it doesnt matter {}
+any food {}
+dont care {}
+barbecue {}
+i dont care {}
+doesnt matter {}
+im looking for a moderately {'pricerange': ['moderate']}
+i dont care {}
+id like a restaurant in any area {}
+belgium food {}
+center {}
+dont care {}
+im looking for a restaurant in the center {}
+any {}
+dont care {}
+malaysian {}
+moderately {'pricerange': ['moderate']}
+any {}
+any time {}
+venetian food {}
+venetian food {}
+i dont care {}
+scottish {}
+anything {}
+i dont care {}
+dont care {}
+any kind {}
+i dont care {}
+dont care {}
+basque {}
+basque {}
+basque {}
+i dont care {}
+any {}
+i dont care {}
+looking for a moderately priced restaurant that serves cancun {'pricerange': ['moderate']}
+test food {}
+canapes food {}
+canapes {}
+it doesnt matter {}
+dont care {}
+dont care {}
+any {}
+dont care {}
+i dont care {}
+i dont care {}
+im looking for a restaurant in any area that {}
+any {}
+it doesnt matter to me {}
+any {}
+unintelligible restaurant {}
+dont matter {}
+doesnt matter {}
+dont matter {}
+i want a restaurant that serves basque food {}
+creative food {}
+prezzo {}
+creative food {}
+do you have prezzo {}
+i dont care {}
+food {}
+i dont care {}
+i want to find a restaurant in any area {}
+any area {}
+i dont care {}
+i dont care {}
+center {}
+moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+vegetarian {}
+i dont care {}
+dont care {}
+im looking for a moderately priced restaurant that serves uh {'pricerange': ['moderate']}
+i dont care {}
+german food {}
+doesnt matter {}
+dont care {}
+it doesnt matter {}
+looking for a singaporean restaurant in the center {}
+im looking for singaporean food {}
+singaporean food {}
+mexican {}
+it doesnt matter {}
+restaurant the serves english food {}
+doesnt matter {}
+can i have the corsica {}
+asian {}
+asian {}
+can i have asian food {}
+asian oriental food {'food': ['asian oriental']}
+dont care {}
+i dont care {}
+center {}
+i need a restaurant in the center of town {}
+kosher food {}
+kosher food {}
+doesnt matter {}
+afghan {}
+afghan {}
+afghan food {}
+any of town {}
+moderately priced {'pricerange': ['moderate']}
+doesnt matter {}
+signapore {}
+i would like a moderately priced restaurant {'pricerange': ['moderate']}
+doesnt matter {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any part {}
+corsica food {}
+it doesnt matter {}
+i dont care {}
+i want indonesian food {}
+i dont care {}
+i dont care {}
+anything {}
+creative food {}
+any {}
+i dont care {}
+any kind {}
+i would like to find a moderately priced {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+it doesnt matter {}
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+any part {}
+i dont care about the price range {}
+asian oriental {'food': ['asian oriental']}
+um anything {}
+i dont care {}
+im looking for {}
+id like a moderately priced restaurant that serves halal food {'pricerange': ['moderate']}
+i dont care {}
+cantonese food {}
+cantonese food {}
+any area {}
+singaporean food {}
+im looking for singaporean food {}
+food {}
+im looking for a restaurant that has unintelligible {}
+doesnt matter {}
+it doesnt matter {}
+i dont care {}
+i dont care {}
+doesnt matter {}
+i dont care {}
+any {}
+kosher {}
+it doesnt matter {}
+any {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+american {}
+australian {'food': ['australasian']}
+any type of food {}
+i dont care {}
+any {}
+food {}
+food {}
+any type {}
+it doesnt matter {}
+i dont care {}
+id like a barbecue restaurant {}
+im looking for meditteranian {'food': ['mediterranean']}
+dont care {}
+it doesnt matter {}
+dont care {}
+im looking for a restaurant that serves {}
+i dont care {}
+i dont care {}
+danish food {}
+i am looking fora restaurant that should serve {}
+world food {}
+dont care {}
+in the center that serves unintelligible asian {}
+i dont care {}
+i dont care {}
+mexican food {}
+any kind {}
+it doesnt matter {}
+looking for a restaurant in the center part of town {}
+i need to find a moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+mexican food {}
+uh i dont care {}
+type food {}
+i want a russian restaurant {}
+any type {}
+dont care {}
+i dont care {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+im looking for something serving vegetarian food {}
+doesnt matter {}
+something moderately priced {'pricerange': ['moderate']}
+find moderately priced brazilian restaurant {'pricerange': ['moderate']}
+find asian oriental {'food': ['asian oriental']}
+i do not care {}
+the center of town {}
+it doesnt matter {}
+doesnt matter {}
+american {}
+i dont care {}
+i dont care {}
+i do not care {}
+i dont care {}
+any area {}
+any {}
+any kind of food {}
+i dont care {}
+what about in the center of town {}
+it doesnt matter {}
+world food {}
+any {}
+im looking for a restaurant that serves german food {}
+any part {}
+i dont care {}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+restaurant {}
+any {}
+any kind of food {}
+im looking for a greek restaurant {}
+anything {}
+i dont care {}
+im looking for a restaurant in the center serving {}
+air tran {}
+i dont care {}
+noise i want to find a restaurant that ser {}
+umh i dont care noise {}
+eritrean food noise {}
+eritrean food {}
+noise i dont care about the price range {}
+dont care {}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+any area {}
+caribbean food {}
+i dont care {}
+i am looking for a moderately priced restaurant and it should {'pricerange': ['moderate']}
+im looking for a restaurant in any area that serves {}
+unusual food {}
+uh i dont mind {}
+canope food {}
+any {}
+any {}
+dont care {}
+i dont care {}
+any {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+any {}
+looking for a basque restaurant {}
+dont care {}
+im looking for a restaurant in the center of town that serves {}
+i dont care {}
+hungarian food {}
+scandinavian food {}
+any {}
+scandinavian food {}
+it doesnt matter {}
+center area {}
+i dont care {}
+i dont care {}
+dont care {}
+barbecue {}
+english please {}
+any area {}
+i dont care {}
+i dont care {}
+any {}
+i dont know {}
+noise im looking for a restaurant that serves scottish food {}
+any area {}
+dont care {}
+dont care {}
+for a restaurant {}
+part of town that serves asian food {}
+and asian food {}
+uh doesnt matter {}
+uh im looking for a moderately priced restaurant serving {'pricerange': ['moderate']}
+it doesnt matter {}
+it doesnt matter {}
+i dont care {}
+any food {}
+i dont care {}
+australian {'food': ['australasian']}
+i dont care {}
+belgium {}
+i dont care {}
+i dont care {}
+it doesnt matter {}
+i want to find a moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+cantonese {}
+cantonese {}
+cantonese {}
+im looking for a restaurant in any area that serves swedish food {}
+indonesian {}
+im looking for a restaurant in any area {}
+any area {}
+i would like to find a moderately priced restaurant and it should {'pricerange': ['moderate']}
+may i have a moderately priced restaurant serving english {'pricerange': ['moderate']}
+dont care {}
+scandinavian {}
+dont care {}
+a restaurant that serves scandinavian food {}
+restaurant with scandin {}
+scandinavian food {}
+dont care {}
+any {}
+moderately priced restaurant {'pricerange': ['moderate']}
+belgium {}
+it doesnt matter {}
+i dont care {}
+asian oriental {'food': ['asian oriental']}
+moderately priced vanessa restaurant {'pricerange': ['moderate']}
+it doesnt matter {}
+i dont care {}
+any part {}
+any kind of food {}
+dont care {}
+creative food {}
+i need a restaurant that serves corsica food {}
+im looking for asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+any type of food {}
+medterranean {'food': ['mediterranean']}
+any {}
+dont care {}
+dont care {}
+a restaurant {}
+mexican food {}
+noise taquita restaurant {}
+i want christmas food {}
+christmas food {}
+asian oriental food {'food': ['asian oriental']}
+any area {}
+danish food {}
+i dont care {}
+any any part of town {}
+english food {}
+center {}
+any {}
+i dont care {}
+it doesnt matter {}
+dont care {}
+malaysian {}
+i dont care {}
+it doesnt matter {}
+i dont care {}
+any {}
+im looking for a restaurant {}
+corsica food {}
+mexican {}
+im looking for a moderately priced restaurant that serves tur {'pricerange': ['moderate']}
+doesnt matter {}
+doesnt matter {}
+i dont care {}
+i dont care {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+it doesnt matter {}
+it doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+i do not care {}
+talian food {'food': ['italian']}
+ok talian food {'food': ['italian']}
+kitalian food {'food': ['italian']}
+i am looking for kitalian food {'food': ['italian']}
+katalian food {}
+catalen food {'food': ['catalan']}
+i am looking for catalin food {'food': ['catalan']}
+dont care {}
+doesnt matter {}
+i dont care {}
+asian oriental {'food': ['asian oriental']}
+center {}
+dont care {}
+basque {}
+it doesnt matter {}
+any {}
+mexican {}
+im looking for a restaurant in the {}
+swedish {}
+i dont care {}
+im looking for vegetarian food {}
+any area {}
+im looking for irish food in any price range {}
+irish food {}
+irish food {}
+i dont care {}
+i dont care {}
+any {}
+dont care {}
+it doesnt matter {}
+dont care {}
+i dont care {}
+uh dont care {}
+um anything else {}
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+change that to any price range {}
+change that to any price range {}
+uh any {}
+it does not matter {}
+i do not care {}
+it does not matter {}
+i want a restaurant in the center of town {}
+i dont care {}
+im looking for a moderately priced restaurant in the {'pricerange': ['moderate']}
+i dont care {}
+im looking for a restaurant in any area that serves malaysian food {}
+dont care {}
+i dont care {}
+im looking for corsica food noise {}
+i dont care {}
+i dont care {}
+austrian food {}
+austrian {}
+dont care {}
+i dont care {}
+i dont care {}
+swedish food {}
+food {}
+any {}
+moderately priced {'pricerange': ['moderate']}
+creative {}
+any area {}
+doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+it does not matter {}
+i dont care {}
+canapes {}
+i dont care {}
+any type {}
+a restaurant in the center that serves leban {}
+i do not care {}
+it doesnt matter {}
+i dont care {}
+it doesnt matter {}
+im looking for a restaurant in any area that servess {}
+irish food {}
+it doesnt matter {}
+doesnt matter {}
+doesnt matter {}
+i dont care {}
+american {}
+belgium food {}
+any {}
+food {}
+any price range is fine {}
+of the restaurant please {}
+dont care {}
+doesnt matter {}
+i dont care {}
+dont care {}
+the food {}
+food {}
+i dont care {}
+vegetarian food please {}
+the center of town {}
+the center of town {}
+austrian food {}
+dont care {}
+dont care {}
+i dont care about the price range i need bask food {}
+oh anything {}
+english food {}
+any area {}
+moderately priced {'pricerange': ['moderate']}
+mexican {}
+portugese {'food': ['portuguese']}
+i dont care {}
+any {}
+canapes {}
+a restaurant {}
+christmas food {}
+any {}
+im looking for a restaurant moderately pri {'pricerange': ['moderate']}
+doesnt matter {}
+any {}
+doesnt matter {}
+dont care {}
+dont care {}
+dont care {}
+i dont care {}
+the center {}
+i dont care {}
+barbecue food {}
+i do not care {}
+world food {}
+i dont care {}
+uh any part of town {}
+any kind {}
+corsica food {}
+doesnt matter {}
+anywhere {}
+corsica {}
+restaurant in the center {}
+any {}
+im looking to find a moderately priced restaurant {'pricerange': ['moderate']}
+any type of food {}
+caribbean food {}
+i dont care {}
+caribbean food {}
+i dont care {}
+restaurant {}
+im looking for a moderately priced restaurant that serves polish food {'pricerange': ['moderate']}
+im looking for a moderately priced {'pricerange': ['moderate']}
+polish food {}
+it doesnt matter {}
+malaysian food {}
+i dont care {}
+i want to find a moderately priced restaurant {'pricerange': ['moderate']}
+austrian food {}
+i dont care {}
+dont know {}
+dont care {}
+indonesian {}
+i dont care {}
+im looking for a restaurant that serves welsh food {}
+doesnt matter {}
+i dont care {}
+anything {}
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+any {}
+any {}
+i dont care {}
+it doesnt matter {}
+australian food center part of town {'food': ['australasian']}
+australian {'food': ['australasian']}
+austral asian {'food': ['australasian']}
+austral asian {'food': ['australasian']}
+any area {}
+it doesnt matter {}
+asian oriental {'food': ['asian oriental']}
+any {}
+any {}
+center {}
+any {}
+moderately {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+any food {}
+dont care {}
+im looking for a restaurant {}
+the center {}
+i dont care {}
+any area {}
+i dont know {}
+any thing {}
+austrian food {}
+doesnt matter {}
+any {}
+looking for a restaurant {}
+it doesnt matter {}
+i dont care {}
+i dont care {}
+venesian {}
+im looking for a moderately price restaurant that serves halo food {'pricerange': ['moderate']}
+find me a moderately priced restaurant in {'pricerange': ['moderate']}
+american {}
+i dont care {}
+any {}
+i dont care {}
+i dont care {}
+any {}
+any {}
+unusual food {}
+doesnt matter {}
+i dont care {}
+im looking for a restaurant in any area that {}
+i dont care {}
+i dont care {}
+im looking for an ex {}
+dont care {}
+anything {}
+any price range {}
+any type of food {}
+im looking for a moderately priced {'pricerange': ['moderate']}
+restaurant and it should be {}
+dont care {}
+unusual food {}
+dont care {}
+any part of town {}
+could i have a restaurant in the center {}
+brazillian {}
+it doesnt matter {}
+moderately {'pricerange': ['moderate']}
+brazilian {}
+i dont care {}
+im looking for a restaurant that serves unintelligible food {}
+unintelligible food {}
+im looking for a restaurant serving unintelligible {}
+im looking for {}
+im looking for a restaurant that serves unintelligible {}
+im looking for a moderately priced restaurant that serves christmas food {'pricerange': ['moderate']}
+dont care {}
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+russian food {}
+i dont care {}
+im looking for a russian food {}
+i dont care {}
+i dont care {}
+um any type of food {}
+unintelligible restaurant {}
+any {}
+any {}
+what about kosher food {}
+doesnt matter {}
+any {}
+im looking for a restaurant in any area that serves {}
+i dont care {}
+i dont care {}
+cantonese {}
+i dont care {}
+i dont care {}
+in any area {}
+scandinavian food {}
+it doesnt matter {}
+food {}
+food {}
+food {}
+center {}
+center {}
+uh doesnt matter {}
+uh it doesnt matter {}
+barbecue {}
+it doesnt matter {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+any anything else {}
+i am looking for a moderately priced restaurant that {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+any type {}
+doesnt matter {}
+any type {}
+air tran {}
+i need a restaurant in the center of town {}
+scandinavian food {}
+scandinavian {}
+any {}
+creative {}
+any {}
+noise i am looking for a moderately priced restaurant unintelligible {'pricerange': ['moderate']}
+what about a moderately priced re {'pricerange': ['moderate']}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+for a moderately priced restaurant {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+im looking for moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any area {}
+moderately priced restaurant {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+i dont care {}
+scottish food {}
+i dont care {}
+with scottish food {}
+with scottish {}
+food {}
+any {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+food {}
+food {}
+food {}
+food {}
+food {}
+food {}
+food {}
+food {}
+food {}
+im looking for a restaurant serving polish food {}
+i dont care {}
+i dont care {}
+uh im not interested in the type {}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+im looking for a moderately prices restaurant {'pricerange': ['moderate']}
+irish food {}
+malaysian food malaysian {}
+asian oriental {'food': ['asian oriental']}
+doesnt matter {}
+doesnt matter {}
+doesnt matter {}
+does not matter {}
+dont care {}
+yes i dont care about the price range {}
+dont care {}
+basque {}
+any price range {}
+uh any area {}
+any price range {}
+any area {}
+i dont care {}
+any area {}
+i dont care {}
+i dont care {}
+uh anywhere {}
+anywhere {}
+any price range {}
+looking for a moderately priced creative food {'pricerange': ['moderate']}
+im looking for a restaurant in any area that serves kor {}
+any {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+what asian oriental food {'food': ['asian oriental']}
+are there any serves asian oriental {'food': ['asian oriental']}
+pan asian food {}
+pan asian food {}
+i dont care {}
+i dont care {}
+dont care {}
+dont care {}
+german {}
+i dont care {}
+um anything else please {}
+kosher food {}
+food {}
+moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+dont care {}
+dont care {}
+i dont care {}
+any {}
+im looking for singaporean food {}
+singaporean food {}
+any area {}
+any area {}
+i dont care {}
+doesnt matter {}
+i dont care {}
+doesnt matter {}
+doesnt matter i dont care {}
+doesnt matter {}
+scottish {}
+scottish {}
+danish {}
+danish {}
+danish food {}
+moderately priced danish food {'pricerange': ['moderate']}
+moderately priced danish food {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+it doesnt matter {}
+any {}
+uh center {}
+any {}
+corsica {}
+i do not care {}
+center {}
+i want scottish food {}
+i want scottish food {}
+scottish food {}
+i want scottish food {}
+it doesnt matter {}
+vegetarian food {}
+vegetarian food {}
+central {}
+middle {}
+i dont care {}
+any {}
+noise i am looking for a restaurant {}
+dont matter {}
+any {}
+dont care {}
+im looking for something moderately priced {'pricerange': ['moderate']}
+i dont care {}
+any {}
+danish {}
+moderately price {'pricerange': ['moderate']}
+moderately priced any foo {'pricerange': ['moderate']}
+moderately priced any food {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+food {}
+any {}
+any kind of food {}
+moderately priced {'pricerange': ['moderate']}
+it doesnt matter {}
+it doesnt matter {}
+it doesnt matter {}
+looking for a restaurant in the center that serves {}
+i dont care {}
+i dont care {}
+i dont care {}
+cantonese {}
+any area {}
+any price range {}
+i dont care {}
+any {}
+doesnt matter {}
+a restaurant in the center of town {}
+irish food {}
+center {}
+center {}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+dont care {}
+missing sock {}
+any {}
+in the center {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any where {}
+cross over {}
+cross over {}
+doesnt matter {}
+dont care {}
+any type {}
+american {}
+moderately priced {'pricerange': ['moderate']}
+welsh {}
+any {}
+any {}
+any {}
+any type of food {}
+christmas food {}
+i dont care {}
+any area {}
+i want a restaurant in any area that serves {}
+alright i want a restaurant in any {}
+i want a restaurant in the center of town that serves vinesha {}
+i dont care {}
+iam looking {}
+for a restaurant {}
+i do not care {}
+mexican food {}
+is there not a mexican restaurant near by {}
+it doesnt matter {}
+irish food {}
+moderately priced {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+moderately priced restaurant {'pricerange': ['moderate']}
+moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+austro food {}
+austro food {}
+dont care {}
+dont care {}
+center {}
+indonesian food {}
+indonesian {}
+any is okay {}
+i dont care {}
+i dont care {}
+im looking for {}
+any {}
+russian food {}
+russian {}
+russian {}
+any {}
+i dont care {}
+im looking for a restaurant in any area {}
+uh any area {}
+doesnt matter {}
+i dont care {}
+i dont care {}
+i dont care {}
+i need a restaurant that serves halal food {}
+i dont care {}
+food {}
+english food {}
+it doesnt matter {}
+unintelligible i dont care {}
+any kind {}
+i dont care {}
+i dont care {}
+i want a moderately priced restaurant {'pricerange': ['moderate']}
+it should serve caribbean food {}
+any {}
+i am looking for belgium food {}
+belgium food {}
+of this restaurant {}
+uh it doesnt matter {}
+i dont care thank you good bye {}
+hungarian food {}
+hungarian {}
+hungarian food {}
+any price range {}
+any price range {}
+any price range {}
+food {}
+it doesnt matter {}
+i dont care {}
+it doesnt matter {}
+any {}
+any {}
+any {}
+doesnt matter but it should be moderately priced {'pricerange': ['moderate']}
+dont care {}
+asian oriental food {'food': ['asian oriental']}
+asian oriental food {'food': ['asian oriental']}
+caribbean food {}
+dont care {}
+christmas {}
+any {}
+dont care {}
+i dont care {}
+it doesnt matter {}
+australian food {'food': ['australasian']}
+australian {'food': ['australasian']}
+australian {'food': ['australasian']}
+any {}
+it does not matter {}
+australian food {'food': ['australasian']}
+any {}
+im looking for a restaurant in the center of town that serves {}
+is there a restaurant in the center of town serving {}
+cantonese food {}
+asian oriental {'food': ['asian oriental']}
+center {}
+oh i dont care {}
+doesnt matter {}
+yea im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+id like to find a moderately priced restaurant {'pricerange': ['moderate']}
+caribbean food {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+i dont care {}
+doesnt matter {}
+restaurant {}
+unusal {}
+hungarian food in the center of town {}
+hungarian food {}
+any {}
+it doesnt matter {}
+indonesian food {}
+center {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+inexpensive {'pricerange': ['expensive']}
+i dont care {}
+barbecue {}
+dont care {}
+any {}
+im looking for a restaurant in the center part of town {}
+dont care {}
+im looking for a moderately priced restaurant and it should serve {'pricerange': ['moderate']}
+brazilian food {}
+doesnt matter {}
+doesnt matter {}
+any {}
+im looking for a {}
+i dont care {}
+i dont care {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+it doesnt matter {}
+anything {}
+restaurant {}
+any {}
+center {}
+any {}
+any kind of food {}
+dont care {}
+polish food {}
+dont care {}
+doesnt matter {}
+doesnt matter {}
+dont care {}
+dont care {}
+im looking for singaporean food {}
+mexican food {}
+i dont care {}
+im looking for a moderately priced restaurant serving basque food {'pricerange': ['moderate']}
+danish {}
+danish {}
+any area {}
+i dont care {}
+any type of food {}
+i dont care {}
+moderately priced afghan {'pricerange': ['moderate']}
+dont care {}
+afghan {}
+afghan {}
+afghan {}
+dont care {}
+afghan food {}
+dont care {}
+afghan food {}
+dont care want afghan food afghan food afghan {}
+danish food {}
+any of those things {}
+i want to find a restaurant in the we {}
+with malaysian food {}
+malaysian food {}
+malaysian food {}
+i dont care {}
+center area {}
+im looking for a restaurant that serves vegetarian food {}
+venesian {}
+asian oriental food {'food': ['asian oriental']}
+asian oriental food {'food': ['asian oriental']}
+doesnt matter {}
+center {}
+i dont care {}
+dont care {}
+any type {}
+fast food {}
+basque food {}
+basque food {}
+basque food {}
+any {}
+doesnt matter {}
+any {}
+i am searching for a restaurant in the center that serves {}
+barbecue food {}
+i dont care {}
+restaurant {}
+i dont care {}
+i dont care {}
+i dont care {}
+dont care {}
+food {}
+i dont care {}
+any kind any thing {}
+steak house food {'food': ['steakhouse']}
+steak house {'food': ['steakhouse']}
+im looking for moderately priced restaurant that serves {'pricerange': ['moderate']}
+cantonese food {}
+i dont care {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+im looking for a moderately priced restaurant in the {'pricerange': ['moderate']}
+i dont care {}
+indonesian food {}
+id like a restaurant in the center with russian food {}
+in the center {}
+i dont care {}
+center {}
+center {}
+scottish food {}
+it doesnt matter {}
+any {}
+food {}
+dont care {}
+restaurant {}
+looking for a restaurant in any area {}
+it doesnt matter {}
+any {}
+i dont care {}
+unintelligible food {}
+i dont care {}
+food {}
+food {}
+swedish food {}
+i dont care {}
+christmas {}
+christmas food {}
+food {}
+moderately priced {'pricerange': ['moderate']}
+doesnt matter {}
+it doesnt matter {}
+austria asian restaurant in the center of town {'food': ['australasian']}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+id like a restaurant in any area that serves {}
+i want a moderately priced cantonese restaurant {'pricerange': ['moderate']}
+uh i dont care {}
+i dont care {}
+uh the center {}
+uh center {}
+center {}
+any range {}
+im looking for a {}
+i dont care {}
+doesnt matter {}
+i dont care {}
+i dont care {}
+uh doesnt matter {}
+im looking for a moderately priced restaurant that serves asian {'pricerange': ['moderate']}
+danish food in the center of town {}
+anything {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+center {}
+center {}
+center {}
+dont care {}
+swedish {}
+any {}
+dont care {}
+any type of area {}
+center {}
+center {}
+center part of town {}
+center {}
+any type {}
+looking for austrian food in the center of town {}
+i dont care {}
+i dont care {}
+dont care {}
+dont care {}
+i dont care {}
+caribbean {}
+caribbean food {}
+caribbean foo {}
+caribbean {}
+caribbean {}
+i dont care {}
+i dont care {}
+i dont care {}
+food {}
+dont care {}
+indonesian food {}
+any area {}
+any part of town {}
+any kind of food {}
+uh i dont care {}
+noise malaysian noise {}
+okay im looking for a restaurant serving fre {}
+dont care {}
+i dont care {}
+welsh {}
+center {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+i need a mexican restaurant {}
+pan asian food {}
+im looking for a restaurant {}
+i dont care {}
+im looking for a restaurant serving pan asian foo {}
+im looking for a restaurant serving pan asian foo {}
+im looking for a restaurant serving asian oriental food {'food': ['asian oriental']}
+dont care {}
+moderately priced restaurant {'pricerange': ['moderate']}
+swedish {}
+afghan food {}
+uh afghan food {}
+any {}
+any part of town {}
+any price range {}
+i dont care {}
+i dont care {}
+isian food {}
+dont care {}
+dont care {}
+any type of food {}
+any {}
+any {}
+i dont care {}
+center part of town {}
+center {}
+i dont care {}
+any {}
+dont care {}
+dont care {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+im trying to find a moderately priced restaurant that serves swedish food {'pricerange': ['moderate']}
+it doesnt matter {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+cantonese food {}
+cantonese {}
+any {}
+i dont care {}
+canopus {}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+im looking for {}
+i dont care {}
+um i dont care {}
+i dont care {}
+im looking for a restaurant in the center of town {}
+any area {}
+i want to find a restaurant in any area {}
+i dont care {}
+i dont care {}
+dont care {}
+i would like to find a restaurant that serves halal food {}
+halal {}
+any area {}
+any price range {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+any {}
+any {}
+any {}
+any {}
+any {}
+moderately {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+any {}
+any {}
+any {}
+any area {}
+any price range {}
+mexican food {}
+dont care {}
+dont care {}
+world food {}
+i dont care {}
+center {}
+i dont care {}
+barbecue {}
+dont care {}
+i dont care {}
+it doesnt matter {}
+i dont care {}
+afghan food {}
+i dont care {}
+any area {}
+i dont care {}
+it doesnt matter {}
+doesnt matter {}
+any kind {}
+free food {}
+uh moderately price {'pricerange': ['moderate']}
+any part {}
+um any type {}
+i dont care {}
+i dont care {}
+malaysian {}
+moderately priced {'pricerange': ['moderate']}
+next restaurant {}
+im looking for a restaurant that serves m {}
+i dont care {}
+i do i dont care {}
+is doesnt matter {}
+im looking for a restaurant in the {}
+how bout irish food noise {}
+irish food noise {}
+any price range noise {}
+im looking for a restaurant in the center of town that serves {}
+i dont care {}
+i dont care {}
+i dont care {}
+im looking for a restaurant in the center of town that {}
+modern euorpean {'food': ['modern european']}
+i need a restaurant serving af {}
+afghan {}
+i dont care about price {}
+i need a restaurant {}
+im looking for a restaurant in the center serving russian food {}
+i dont care {}
+i dont care {}
+i dont care {}
+dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+dont care {}
+dont care {}
+i am looking {}
+i am looking for a moderately priced restaurant in the {'pricerange': ['moderate']}
+i am looking for a moderately priced restaurant in the {'pricerange': ['moderate']}
+cantonese {}
+im looking for a restaurant in the center park of town that serves {}
+english food {}
+im looking for a restaurant in the center that serves sea food {'food': ['seafood']}
+pan asian {}
+pan asian {}
+is there is no such venue that have asian oriental type of food {'food': ['asian oriental']}
+i want a moderately priced restaurant that serves {'pricerange': ['moderate']}
+canapes food {}
+it doesnt matter {}
+canapes food {}
+i dont care {}
+im looking for a restaurant in the center {}
+food {}
+unintelligible food {}
+i want a moderately priced restaurant that {'pricerange': ['moderate']}
+i need a restaurant that serves {}
+australian food {'food': ['australasian']}
+i want to find a restaurant in the center that should serve belgian food {}
+any type {}
+moderately priced swedish food {'pricerange': ['moderate']}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+i dont care {}
+im looking for canapes food in any price range {}
+food an {}
+any any part of town {}
+any {}
+swedish food {}
+i want a malaysian restaurant {}
+im looking for a moderately priced restaurant that serves endonesian {'pricerange': ['moderate']}
+im looking for uh restaurant serving caribbean food {}
+any price range {}
+i dont care noise {}
+singapore food {}
+center part of town {}
+any part of town {}
+i dont care {}
+any {}
+center {}
+food {}
+down town {}
+center {}
+center {}
+im looking for a restaurant that serves {}
+i dont care {}
+any price range {}
+anything {}
+english food {}
+i dont care {}
+it doesnt matter {}
+i dont care {}
+caribbean food {}
+spensive {}
+asian {}
+restaurant any area kosher food {}
+kosher {}
+uh can i find a restaurant with asian oriental food {'food': ['asian oriental']}
+dont care {}
+can i have an asian oriental restaurant in the {'food': ['asian oriental']}
+i dont care {}
+swedish food {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+i dont care {}
+doesnt matter {}
+any {}
+a moderately priced restaurant in the {'pricerange': ['moderate']}
+dont care {}
+a moderately place restaurant {'pricerange': ['moderate']}
+russian food {}
+anything {}
+world food {}
+doesnt matter {}
+any part of town please {}
+german food {}
+creative food {}
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+any {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+i dont care {}
+english food {}
+i am looking for asian oriental type food {'food': ['asian oriental']}
+dont care {}
+halal {}
+vegetarian {}
+asian oriental {'food': ['asian oriental']}
+any {}
+greek food {}
+is there greek food {}
+downtown {}
+moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+dont care {}
+any area {}
+any {}
+any kind {}
+any {}
+well i dont care about the price range {}
+i dont care {}
+im looking for a restaurant that serves {}
+are there any cantonese restaurants {}
+are there any restaurants in the center of town {}
+it doesnt matter {}
+portugeuse {'food': ['portuguese']}
+afghan {}
+afghan {}
+that serves takes out food {}
+german food {}
+any {}
+ostro asian {}
+noise any price range {}
+dont care {}
+i dont care {}
+mexican {}
+dont care {}
+a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+for restaurant {}
+scandinavian food {}
+i want to find a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+id like a moderately priced restaurant that serves {'pricerange': ['moderate']}
+could i have the restaurant that serves asian oriental food {'food': ['asian oriental']}
+any area {}
+i dont care {}
+im looking for swedish food {}
+any part of town {}
+uh i dont care {}
+it doesnt matter {}
+any {}
+greek {}
+center {}
+center {}
+i want to find a restaurant in the center that serves irish {}
+any range {}
+im looking for a restaurant that serves irish food {}
+i would like australian asian food {'food': ['australasian']}
+any {}
+i need to find a moderately priced restaurant {'pricerange': ['moderate']}
+any kind {}
+airatarin {}
+airatarin {}
+cantonese {}
+central inaudible {}
+im looking for a moderately priced restaurant that serves {'pricerange': ['moderate']}
+doesnt matter {}
+caribbean food {}
+irish {}
+american {}
+im looking for a restaurant in the center {}
+center of town {}
+that can serve kosher food {}
+im looking for a restaurant that serves english food {}
+i want swedish ffood {}
+any price range {}
+can i have it in any price range {}
+dont care {}
+any price range {}
+any price range {}
+dont care {}
+moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+dont care {}
+creative food {}
+creative food {}
+i am looking for a moderately priced restaurant serving cantonese food {'pricerange': ['moderate']}
+asian oriental {'food': ['asian oriental']}
+i need a restaurant {}
+i need a restaurant that serves {}
+i dont care {}
+uh creative food {}
+im looking for a moderately priced restaurant serve hungarian food {'pricerange': ['moderate']}
+find irish food {}
+find gastro pub type food {'food': ['gastropub']}
+doesnt matter {}
+dont care {}
+any {}
+pan asian food {}
+i dont care {}
+pan asian food {}
+pan asian {}
+i dont care about prices {}
+any {}
+german food {}
+any {}
+german food {}
+portugeuse food {'food': ['portuguese']}
+moderately priced {'pricerange': ['moderate']}
+i dont care {}
+a moderately priced restaurant {'pricerange': ['moderate']}
+doesnt matter {}
+hungarian {}
+hungarian {}
+hungarian food {}
+mexican food {}
+any {}
+i want a restaurant that serves {}
+im looking for a {}
+derately priced {}
+any kind {}
+i dont care {}
+it doesnt matter {}
+any part of town {}
+what ever {}
+um surprise me {}
+australian food {'food': ['australasian']}
+australian food {'food': ['australasian']}
+any {}
+indonesian food {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+sea food restaurant {'food': ['seafood']}
+any {}
+cantonese {}
+irish {}
+doesnt matter {}
+caribbean food {}
+eritrean {}
+eritrean food {}
+does anyone serve eritrean food {}
+eritrean food {}
+eritrean {}
+eritrean {}
+im looking for cross over food {}
+i dont care {}
+i dont care {}
+id like a moderately priced restaurant that serves {'pricerange': ['moderate']}
+any {}
+it doesnt matter {}
+hungarian food {}
+hungarian {}
+i dont care {}
+afghan noise {}
+moderately {'pricerange': ['moderate']}
+moderat {'pricerange': ['moderate']}
+any {}
+i dont care {}
+a moderately priced restaurant that serves {'pricerange': ['moderate']}
+i dont care {}
+any {}
+doesnt matter {}
+caribbean food {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+im looking for {}
+a restaurant {}
+im looking for moderately priced restaurant that serves world food {'pricerange': ['moderate']}
+polish food {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+food {}
+greek {}
+anything {}
+greek {}
+food {}
+im looking for a restaurant in any area serving unintelligible {}
+can i have a caribbean food {}
+i dont care {}
+kosher food {}
+any part of town {}
+im looking for a moderately priced restaurant that serves sea food {'pricerange': ['moderate'], 'food': ['seafood']}
+i dont care {}
+pan asian {}
+pan asian {}
+chinses {}
+barbecue {}
+any {}
+any {}
+im looking for a modreately {}
+greek food {}
+food {}
+vegetarian food {}
+i am looking for {}
+a restaurant that serves german food {}
+any {}
+unusual {}
+unusual {}
+unusual food {}
+unusual {}
+i dont care {}
+bask food {}
+i dont care {}
+im sorry i meant creative food {}
+is there one that serves creative {}
+doesnt matter {}
+doesnt matter {}
+cantonese {}
+steak house {'food': ['steakhouse']}
+moderately priced {'pricerange': ['moderate']}
+any {}
+anything {}
+anywhere {}
+can i have a mexican restaurant {}
+looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+any kind {}
+food {}
+dont care {}
+i dont care {}
+dont care {}
+i do not care {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+moderately priced {'pricerange': ['moderate']}
+can i get a restaurant {}
+steak house {'food': ['steakhouse']}
+can i get a steak house restaurant in any area {'food': ['steakhouse']}
+i dont care {}
+moderately {'pricerange': ['moderate']}
+find me a restaurant in the center of town {}
+doesnt matter {}
+doesnt matter {}
+im looking for a restaurant that serves mexican food {}
+mexican {}
+dont care {}
+central {}
+center {}
+it doesnt matter {}
+barbecue food {}
+i want a restaurant in the we {}
+it doesnt matter {}
+im looking for a eritrean restaurant in the center of town {}
+im looking for a eritrean restaurant {}
+eirtrean {}
+food {}
+i want to find a moderately priced restaurant that serves vietna {'pricerange': ['moderate']}
+any price range {}
+i want sea food {'food': ['seafood']}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+doesnt matter {}
+any kind of food {}
+uh looking for a restaurant in any area and that needs to serve {}
+uh that doesnt matter {}
+venue {}
+venue {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+australian {'food': ['australasian']}
+doesnt matter {}
+kosher food {}
+i dont care {}
+i dont care {}
+a restaurant in the center {}
+im looking for a restaurant in the center {}
+hungarian food {}
+i need a moderately priced restaurant that serves caribbean food {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+it doesnt matter {}
+im looking for unintelligible food {}
+restaurant {}
+welsh food {}
+hungarian food {}
+hungarian {}
+im looking for hungarian food i dont care about the price {}
+i dont care what price range {}
+i am looking for sweedish food {}
+im looking for russian food in the center of town {}
+i dont care {}
+any price range {}
+dont care {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+doesnt matter {}
+i dont know {}
+let me get some world food and i dont care about the price range {}
+polish food {}
+i want to find a restaurant in any area {}
+german food {}
+any {}
+i dont care {}
+what about asian food {}
+im looking for asian food {}
+im looking for asian oriental food {'food': ['asian oriental']}
+i want to find a restaurant {}
+i dont care {}
+any {}
+irish {}
+i dont know {}
+any price range {}
+greek {}
+greek {}
+any {}
+i dont care {}
+moderately {'pricerange': ['moderate']}
+arotrian {}
+asian oriental food {'food': ['asian oriental']}
+i would like to find a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+kosher food {}
+i dont care {}
+find a moderately priced restaurant that serves bask food {'pricerange': ['moderate']}
+any price range {}
+cantonese food {}
+asian oriental food {'food': ['asian oriental']}
+moderately priced {'pricerange': ['moderate']}
+i dont care {}
+kosher {}
+barbecue food {}
+any area {}
+i dont care {}
+i need asian how bout asian food {}
+i need asian food {}
+id like to find a restaurant {}
+restaurant {}
+irish food {}
+serving barbecue food {}
+barbecue food {}
+barbecue food {}
+german food {}
+asian oriental {'food': ['asian oriental']}
+high priced {}
+uh is there a steak house {'food': ['steakhouse']}
+any kind {}
+noise im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+sea food {'food': ['seafood']}
+asian oriental food {'food': ['asian oriental']}
+price does not matter {}
+swedish food {}
+it doesnt matter dear {}
+any price range {}
+any {}
+any price range {}
+im looking for a restaurant in the center {}
+halal food {}
+afghan food {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+does not matter {}
+any type of food is okay {}
+barbecue {}
+dont care {}
+dont care {}
+i want to find a rest {}
+moderately priced {'pricerange': ['moderate']}
+any type {}
+a restaurant in any area {}
+that doesnt matter {}
+belgian food {}
+any {}
+a moderately priced restaurant {'pricerange': ['moderate']}
+it has to serve unusual {}
+restaurant in any area thats {}
+any {}
+any part of town {}
+looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+polish food {}
+dont care {}
+austrian {}
+any kind of food {}
+it doesnt matter {}
+im looking for a restaurant that serves mexican food {}
+im looking for world food {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+doesnt matter {}
+i dont care {}
+scottish food {}
+scottish food {}
+any part {}
+unusual food {}
+unusual {}
+eartrain {}
+eartrain {}
+earatrain {}
+asian {}
+asian food {}
+asian food {}
+what about asian food {}
+kosher for in the central {}
+i dont care {}
+im looking for barbecue food {}
+im looking for a restaurant in the center of town that serves danish food {}
+im looking for a restaurant serving venetian food {}
+im looking for a restaurant serving unintelligible {}
+im looking for a restaurant serving asian oriental {'food': ['asian oriental']}
+i dont care about the price range {}
+any {}
+i dont care about the price range {}
+dont care {}
+um world food {}
+im looking for a restaurant in the center part of town that serves unusual food {}
+im looking for mexican food {}
+breath unusual food {}
+i dont care {}
+food {}
+is there staurant that serves unusual food {}
+ringing i need a moderately priced restaurant {'pricerange': ['moderate']}
+anything {}
+i want to find a restaurant {}
+im looking for a restaurant with irish food {}
+i dont care {}
+i dont care {}
+im looking for something in the center of town {}
+any price range {}
+restaurant {}
+any {}
+any {}
+corsica food {}
+i dont care {}
+christmas food {}
+christmas food {}
+christmas {}
+i dont care {}
+peking restaurant {}
+brazilian food {}
+brazilian food {}
+dont care {}
+dont care {}
+brazilian food {}
+noise im looking for a restaurant serving vegetarian food {}
+vegetarian food {}
+im looking for a restaurant serving vegetarian food {}
+i dont care {}
+i dont care {}
+um anything else {}
+i need a restaurant that serves canape {}
+i need a restaurant that serves canape {}
+i need a restaurant that serves canape {}
+it doesnt matter {}
+um doesnt matter {}
+any {}
+i dont care {}
+doesnt matter {}
+it doesnt matter {}
+welsh food {}
+welsh food {}
+asian oriental {'food': ['asian oriental']}
+it doesnt matter {}
+im looking for a restaurant in the center {}
+i do not care {}
+food {}
+i do not care {}
+again i do not care {}
+a restaurant that serves {}
+asian oriental {'food': ['asian oriental']}
+im looking for a moderately priced restaurant serving world food {'pricerange': ['moderate']}
+im looking for asian oriental type food {'food': ['asian oriental']}
+basque food {}
+any area any price {}
+any price range {}
+i dont care about price range {}
+sea food {'food': ['seafood']}
+moderately priced {'pricerange': ['moderate']}
+i dont care {}
+can i find a moderately priced restaurant {'pricerange': ['moderate']}
+im looking for something moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+any {}
+doesnt matter {}
+any part {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+eritrean {}
+i dont care {}
+swedish {}
+asian oriental {'food': ['asian oriental']}
+i dont care {}
+any part of town {}
+um it doesnt matter {}
+doesnt matter {}
+um swedish food {}
+im looking for a moderately priced restaurant that serves sea food {'pricerange': ['moderate'], 'food': ['seafood']}
+sea food {'food': ['seafood']}
+any {}
+dont care whats the phone number {}
+i dont care {}
+kosher {}
+kosher {}
+um asian oriental restaurant {'food': ['asian oriental']}
+i dont care {}
+i dont care {}
+looking for a restaurant that serves corsica food in any area {}
+food {}
+dont care {}
+dont care {}
+uh just pick a restaurant {}
+i dont care {}
+i dont care {}
+id like to find a restaurant serving crossover food {}
+unusual food {}
+unusual food {}
+unusual food {}
+asian oriental food {'food': ['asian oriental']}
+i dont care {}
+i dont care {}
+eritrean food {}
+im looking for a moderately priced restaurant serving creative food {'pricerange': ['moderate']}
+doesnt matter {}
+dont care {}
+the pizza hutt unintelligent {}
+i would like mexican food {}
+anything is fine {}
+a moderately priced restaurant {'pricerange': ['moderate']}
+any any type {}
+moderately priced {'pricerange': ['moderate']}
+it doesnt matter {}
+any {}
+any {}
+any price range {}
+any price range {}
+middle {}
+any {}
+any {}
+any part {}
+christmas food {}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+restaurant with corsica food {}
+gastro {}
+ah any {}
+any {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+food {}
+center {}
+any {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+indonesian food {}
+any {}
+halo food {}
+moderately {'pricerange': ['moderate']}
+any {}
+moderately {'pricerange': ['moderate']}
+i dont care {}
+im looking for a place that serves mexican food {}
+im looking for a place that serves mexican food {}
+any {}
+doesnt matter {}
+anything {}
+it doesnt matter {}
+irish food {}
+irish {}
+lebanse {'food': ['lebanese']}
+i dont care {}
+uh low price range {}
+hungarian {}
+hungarian {}
+any {}
+i dont care {}
+i dont care {}
+i dont care {}
+serving christmas food {}
+any type of food {}
+australian {'food': ['australasian']}
+i dont care {}
+restaurant there {}
+any area {}
+any price range {}
+polish food {}
+any area {}
+i dont care {}
+i dont care {}
+im looking for a moderately priced restaurant that serves labenese food {'pricerange': ['moderate']}
+i want cantonese food {}
+any price range {}
+indonesian food {}
+indonesian food {}
+dont care {}
+doesnt matter {}
+doesnt matter {}
+does not matter {}
+dont care {}
+dont care {}
+dont care {}
+im looking for a restaurant in the center and it should serve swedish food {}
+dont care {}
+i dont care {}
+swedish food {}
+swedish food {}
+center part of town {}
+i am looking for a restaurant in the center {}
+a restaurant in the center {}
+a restaurant in the center {}
+im looking for a restaurant in the center part of town {}
+belgium food {}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+any {}
+i dont care {}
+want a caribbean restaurant thats moderately priced {'pricerange': ['moderate']}
+i dont care {}
+what about the other restaurant {}
+i dont care {}
+doesnt matter {}
+any part {}
+any range {}
+vegitarian {}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+any {}
+any {}
+australian food {'food': ['australasian']}
+any area {}
+any price range {}
+scandinavian food {}
+scandinavian food {}
+scandinavian {}
+asian {}
+asian {}
+asian {}
+asian {}
+any {}
+doesnt matter {}
+the food {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+doesnt matter {}
+im looking for a restaurant in the center of town that serves russian food {}
+eritrean food {}
+eritrean food {}
+im looking for eritrean food {}
+im looking for eritrean food {}
+im looking for eritrean food {}
+im looking for eritrean food {}
+eritrean food {}
+dont care {}
+asian oriental {'food': ['asian oriental']}
+i dont care {}
+i dont care {}
+im looking for a restaurant in the center of town {}
+unusual food {}
+i dont care {}
+i want a restaurant in the center {}
+singaporean {}
+i want singaporean food {}
+in the center {}
+swedish food {}
+any part of town {}
+moderately priced restaurant in {'pricerange': ['moderate']}
+any {}
+aristrain food {}
+aristrain food {}
+asian oriental {'food': ['asian oriental']}
+any area {}
+asian oriental {'food': ['asian oriental']}
+any {}
+doesnt matter {}
+im looking for a restaurant in the center part of town that serves creative food {}
+in the center part of town {}
+looking for a restaurant in the center that sales creative food {}
+dont care {}
+i dont care {}
+anything {}
+any kind of food {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any type of food {}
+any {}
+moderately {'pricerange': ['moderate']}
+i dont care {}
+canape {}
+canape {}
+canapes {}
+canapes food {}
+canapes {}
+canapes {}
+canapes {}
+canapes {}
+canapes {}
+canapes {}
+canape {}
+i dont care {}
+center {}
+center {}
+i dont care {}
+noise any area {}
+any price range {}
+dont care {}
+im looking for a restaurant that serves singaporean food {}
+any {}
+any {}
+restaurant {}
+chineese {'food': ['chinese']}
+chineese {'food': ['chinese']}
+chineese {'food': ['chinese']}
+asian {}
+i would like to find a moderately priced restaurant and it should serve greek food {'pricerange': ['moderate']}
+i do not care {}
+i need a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+hungarian food {}
+hungarian {}
+hungarian {}
+hungarian food {}
+hungarian food {}
+im looking for a hungarian restaurant {}
+it doesnt matter hungarian food {}
+i am looking for hungarian food {}
+food {}
+hungarian food {}
+hungarian food {}
+id like a moderately priced restaurant {'pricerange': ['moderate']}
+it doesnt matter salad {}
+it doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+i need a restaurant in any area with swedish food {}
+i dont care {}
+i dont care {}
+dont care {}
+asian oriental {'food': ['asian oriental']}
+uh doesnt matter {}
+uh center {}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+i dont care {}
+any area is fine with me {}
+i dont care {}
+i dont care {}
+im looking for russian food {}
+i dont care {}
+i dont care {}
+singaporean food {}
+i would like singaporean food {}
+it doesnt matter {}
+danish {}
+um i dont know {}
+i dont know {}
+breath do you have danish restaurants {}
+breath can you find me danish restaurant {}
+i want a restaurant {}
+food {}
+is there one that serves asian oriental food {'food': ['asian oriental']}
+im looking for one that serves asian oriental food {'food': ['asian oriental']}
+any area {}
+i dont care {}
+looking for a restaurant in any area {}
+any restaurant that serves asian oriental food {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+doesnt matter {}
+i dont care {}
+any {}
+any {}
+it doesnt matter {}
+dont care {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+jamcian food {}
+asian oriental {'food': ['asian oriental']}
+it doesnt matter {}
+any type {}
+center of town {}
+center {}
+mexican food {}
+sells english food {}
+i dont care {}
+i dont care {}
+can i have a restaurant in the center {}
+irish food {}
+irish {}
+can i have a restaurant in the center {}
+can i have a restaurant in the center {}
+it doesnt matter {}
+can i have irish food {}
+what about irish food {}
+dont care {}
+it does not matter {}
+it does not matter {}
+it does not matter {}
+i dont care {}
+anything {}
+any {}
+any type of food {}
+eritrean food {}
+eritrean {}
+i dont care {}
+eritrean {}
+eritrean {}
+i dont care {}
+a restaurant {}
+any type of food {}
+any {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+doesnt matter {}
+noise hungarian {}
+hungarian food {}
+either one {}
+any price range {}
+any price range {}
+any price range {}
+any price range {}
+any kind of food {}
+unintelligible food {}
+i dont care {}
+i wanted moderately priced {'pricerange': ['moderate']}
+im looking for {}
+i dont care {}
+i dont care {}
+hungarian {}
+russian food {}
+i dont care {}
+i dont care {}
+it doesnt matter {}
+uh any {}
+danish food {}
+danish {}
+danish {}
+danish {}
+any {}
+i dont care {}
+world food {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+it doesnt matter {}
+i dont care {}
+i dont care {}
+catalonia food {}
+canapes {}
+it doesnt matter {}
+i would like an africa restaurant in the center {'food': ['african']}
+gastro pub food {'food': ['gastropub']}
+gastro pub food {'food': ['gastropub']}
+dont care {}
+dont care {}
+doesnt matter {}
+any {}
+i dont care {}
+dont care {}
+any type {}
+unusual food {}
+i dont care {}
+im looking for {}
+i dont care {}
+it doesnt matter {}
+anything {}
+a restaurant that serves creative food {}
+creative food {}
+i dont care {}
+it doesnt matter {}
+any area {}
+food {}
+any restaurants {}
+any food {}
+inexpensive {'pricerange': ['expensive']}
+inexpensive {'pricerange': ['expensive']}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+doesnt matter {}
+dont care {}
+it doesnt matter {}
+greek food {}
+i want a moderately priced restaurant {'pricerange': ['moderate']}
+i want asian oriental food {'food': ['asian oriental']}
+any {}
+im looking for a moderately priced restaurant that serves greek foo {'pricerange': ['moderate']}
+greek {}
+thats not important {}
+that information does not matter {}
+dont care {}
+i dont care {}
+greek restauran {}
+i dont care {}
+in the moderately price range {'pricerange': ['moderate']}
+is there greek greek food in the moderately price range {'pricerange': ['moderate']}
+crossover {}
+crossover food {}
+i do not care {}
+any type {}
+i dont care {}
+im looking for a restaurant in the center of town {}
+malaysian {}
+the center {}
+center {}
+the center of town {}
+i dont care {}
+i dont care {}
+im looking for a restaurant in any area that serves belgian food {}
+i dont care {}
+anything {}
+any type {}
+any {}
+enlish {}
+center {}
+center of town {}
+i want a singaporean food restaurant {}
+singapore {}
+i want a singaporean food restaurant in the center {}
+singaporean {}
+dont care {}
+asian {}
+asian oriental {'food': ['asian oriental']}
+it doesnt matter {}
+um medium price range {}
+dont care {}
+dont care {}
+greek {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+any {}
+any moderately {'pricerange': ['moderate']}
+scottish {}
+i do not care {}
+world food {}
+i dont care {}
+any type of food {}
+i dont care {}
+unusual food {}
+unusual {}
+city center {}
+it doesnt matter {}
+it doesnt matter {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any type of food {}
+any kind {}
+austria asian food {'food': ['australasian']}
+australia asian food {'food': ['australasian']}
+asian oriental {'food': ['asian oriental']}
+asian {}
+i do not care {}
+it doesnt matter {}
+any {}
+portugese {'food': ['portuguese']}
+any price range {}
+anything {}
+any area {}
+i dont care {}
+asian oriental {'food': ['asian oriental']}
+asian oriental {'food': ['asian oriental']}
+any {}
+i dont care {}
+i dont care {}
+austallison {}
+austallison {}
+any {}
+im looking for vegetarian food in any price range {}
+any price range {}
+any area {}
+dont care {}
+dont care {}
+moderately {'pricerange': ['moderate']}
+australian {'food': ['australasian']}
+any {}
+any kind {}
+center {}
+food {}
+it doesnt matter {}
+any area {}
+any {}
+any {}
+okay well any price range at all {}
+any {}
+canape {}
+looking for a restaurant in the center that serves vegetarian food {}
+asian oriental type of food {'food': ['asian oriental']}
+i dont care {}
+i dont care {}
+corsica {}
+kosher food {}
+any {}
+i dont care {}
+dont care {}
+any type {}
+food type {}
+i dont care {}
+cantonese {}
+any area {}
+afghan food {}
+it doesnt matter {}
+id like a restaurant in any area that serves vegetarian food {}
+i dont care {}
+im looking for a restaurant serving unusual food {}
+any area {}
+it doesnt matter {}
+russian {}
+russian {}
+dont care {}
+i dont care {}
+english {}
+any price range {}
+any price range {}
+uh im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+any {}
+oh i dont care {}
+any area {}
+any type of food {}
+uh i dont care {}
+i dont care {}
+i dont care {}
+expnsive {'pricerange': ['expensive']}
+center {}
+i dont care {}
+i dont care {}
+can i have moderately priced restaurant {'pricerange': ['moderate']}
+it doesnt matter {}
+any {}
+dont care {}
+dont care {}
+swedish food {}
+swedish {}
+any area {}
+any {}
+any {}
+i would like one thats moderately priced {'pricerange': ['moderate']}
+moderately priced restaraunt {'pricerange': ['moderate']}
+anything {}
+german food {}
+asian oriental food {'food': ['asian oriental']}
+any {}
+any {}
+i dont care {}
+breath i dont care {}
+i dont care noise {}
+i dont care {}
+uh i dont care {}
+breath i dont care noise {}
+i dont care {}
+indonesian food {}
+it doesnt matter {}
+it doesnt matter {}
+it doesnt matter {}
+any kind {}
+doesnt matter {}
+doesnt matter {}
+i dont care {}
+any {}
+i dont care {}
+any kind {}
+im looking for a restaurant in the center {}
+barbecue food {}
+doesnt matter {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+indonesian food {}
+indonesian food {}
+indonesian food {}
+any {}
+any {}
+i dont care {}
+i dont care {}
+any part of town {}
+any {}
+any price range {}
+asian oriental type food {'food': ['asian oriental']}
+asian oriental type of food {'food': ['asian oriental']}
+any part of town {}
+im looking for a restaurant that serves austral austrian food {'food': ['australasian']}
+austrian food {}
+any area {}
+any price range {}
+basque {}
+i dont care {}
+asian oriental {'food': ['asian oriental']}
+any type {}
+steak house food noise steak house food {'food': ['steakhouse']}
+any type {}
+i dont care {}
+i dont care {}
+unintelligible restaurant {}
+food {}
+food {}
+s e a f o o d {}
+indonesian {}
+doesnt matter {}
+indonesian {}
+doesnt matter {}
+dont care {}
+indonesian {}
+um dont care {}
+it doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+anything {}
+i dont care {}
+i dont care {}
+could i have a restaurant that serves asian oriental food {'food': ['asian oriental']}
+like a restaurant that serves asian oriental {'food': ['asian oriental']}
+food {}
+i need a restaurant that serves asian oriental food {'food': ['asian oriental']}
+i need a restaurant that serves {}
+oriental food {}
+i need asian food {}
+asian food {}
+asian oriental food {'food': ['asian oriental']}
+any type {}
+any {}
+looking for a restaurant in any area that serves irish food {}
+any {}
+doesnt matter {}
+dont care {}
+medium priced {}
+moderately priced {'pricerange': ['moderate']}
+christmas food {}
+food {}
+moderately priced restaurant {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+barbecue {}
+any asian oriental {'food': ['asian oriental']}
+i dont care {}
+im looking for eritrean food {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+i dont care {}
+can i get a restaurant in the center {}
+asian food {}
+asian food {}
+id like a restaurant that serves asian food {}
+asian food {}
+any {}
+doesnt matter {}
+any area {}
+um doesnt mater {}
+center {}
+center {}
+any {}
+center area {}
+center area {}
+any {}
+i am looking for a moderately priced restaurant that serves russian food {'pricerange': ['moderate']}
+russian food {}
+russian {}
+i am looking for a moderately priced restaurant that serves russian food {'pricerange': ['moderate']}
+russian {}
+food {}
+any part of town {}
+i am looking for a moderately priced restaurant {'pricerange': ['moderate']}
+russian food {}
+russian food {}
+russian food {}
+russian {}
+food {}
+russian {}
+food {}
+russian {}
+russian {}
+dont care {}
+i dont care {}
+i dont care {}
+brazilian {}
+any {}
+it doesnt matter {}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+any {}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+were else food {}
+world {}
+veitnamese {'food': ['vietnamese']}
+food {}
+vietnam {}
+vietnam {}
+dont care {}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+doesnt matter {}
+doesnt matter {}
+any {}
+indonesian {}
+asian {}
+asian restaurant {}
+asian restaurant {}
+doesnt matter {}
+dont care {}
+any {}
+any kind {}
+im looking for a restaurant in any area that serves cantonese food {}
+i dont care {}
+i am looking for a restaurant in any area and it should serve barbecue food {}
+do not care {}
+i dont care {}
+it doesnt matter {}
+im looking for halal food {}
+i dont care {}
+i dont care {}
+singaporean {}
+singapore {}
+singaporean food {}
+any {}
+singapore {}
+dont care {}
+dont care {}
+singapore {}
+russian food {}
+russian food {}
+russian food {}
+belgian food {}
+asian oriental {'food': ['asian oriental']}
+the center {}
+dont care {}
+uh it does i dont care {}
+any type of food {}
+any price range {}
+any price range {}
+what about the center area {}
+center area {}
+center {}
+i dont care the center part of town {}
+i dont care {}
+i dont care {}
+i dont care {}
+malaysian restaurant {}
+malaysian food {}
+dont care {}
+dont care {}
+i dont care {}
+any {}
+it doesnt matter {}
+i dont care {}
+i dont care {}
+i dont care {}
+christmas food {}
+asian oriental food {'food': ['asian oriental']}
+asian oriental food {'food': ['asian oriental']}
+doesnt matter {}
+doesnt matter {}
+i dont care {}
+doesnt matter {}
+gastro pub {'food': ['gastropub']}
+gastro pub {'food': ['gastropub']}
+hold on im working hold on gastro pub {'food': ['gastropub']}
+i dont care {}
+im looking for pollynasian food {'food': ['polynesian']}
+any type of food {}
+i dont care {}
+american {}
+english food {}
+i dont care {}
+any {}
+next restaurant {}
+dont care {}
+center {}
+caribbean food {}
+dont care {}
+im looking for unintelligible food {}
+i dont care {}
+any area {}
+im looking for a restaurant in any area {}
+i dont care {}
+barbecue food {}
+breath malaysian food {}
+doesnt matter {}
+it doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+any type {}
+i dont care {}
+any area {}
+moderately priced moderately priced {'pricerange': ['moderate']}
+doesnt matter {}
+uh dont care {}
+um dont care {}
+any area {}
+uh medium {}
+any kind of food {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+i do not care {}
+i dont care {}
+restaurants {}
+singaporean {}
+uh it doesnt matter {}
+im looking for a restaurant that serves unusual food {}
+i dont care {}
+unusual {}
+i dont care {}
+scandinavian {}
+afghan {}
+doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+barbecue food {}
+how bout asian oriental {'food': ['asian oriental']}
+any {}
+looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+polish {}
+moderately priced restaurant {'pricerange': ['moderate']}
+serves halal food {}
+any {}
+halal {}
+halal food {}
+any {}
+asian oriental food {'food': ['asian oriental']}
+doesnt matter {}
+it doesnt matter {}
+i want christmas food {}
+uh any type {}
+dont care {}
+restaurant {}
+the turkiesh {'food': ['turkish']}
+the turkiesh food {'food': ['turkish']}
+turkey food {}
+restaurant {}
+turkiesh food {'food': ['turkish']}
+i dont care {}
+i dont care {}
+doesnt matter {}
+any kind {}
+i dont care {}
+any {}
+any type {}
+food type {}
+any {}
+any {}
+i want a restaurant in the center of town {}
+center of town {}
+center of town {}
+center of town {}
+ese food {}
+i want the center of town {}
+center {}
+dont care {}
+dont care dont care dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+i dont care {}
+im looking for world food {}
+gastro pub {'food': ['gastropub']}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+singaporean food {}
+singaporean food {}
+any {}
+im looking for a restaurant that {}
+i dont care {}
+im looking for greek food {}
+id like a restaurant in any area that it serves canapes {}
+canapes {}
+canapes {}
+i dont care {}
+creative food {}
+im looking for belgian food {}
+any area {}
+i dont care {}
+i dont care {}
+uh scandinavian food {}
+any {}
+any area {}
+i dont care {}
+i dont care {}
+doesnt matter {}
+i dont care {}
+chiquito {}
+i dont care {}
+venetian food {}
+any {}
+venetian {}
+venetian {}
+uh doesnt matter {}
+uh it doesnt matter {}
+danish {}
+i dont care {}
+i want malaysian food in any area {}
+uh any type of food {}
+german {}
+german {}
+im looking for moderately priced restaurant and it should serve halal food {'pricerange': ['moderate']}
+any {}
+halal food {}
+what type food {}
+asian oriental type of food {'food': ['asian oriental']}
+dont care {}
+i dont care what part of town {}
+anywhere {}
+what about other parts of town {}
+what about other parts of town {}
+doesnt matter {}
+it doesnt matter {}
+portugese {'food': ['portuguese']}
+greek food {}
+any {}
+dont care {}
+im looking for swedish food {}
+pan asian food {}
+pan asian food {}
+pan asian food {}
+anywhere {}
+i dont care {}
+any {}
+i want to find a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+food {}
+food {}
+food {}
+dont care {}
+i dont care {}
+any {}
+doesnt matter {}
+dont care {}
+scandinavian food {}
+im looking for a restaurant in the center part of town {}
+hungarian food {}
+i dont care {}
+dont care {}
+afghan food {}
+doesnt matter {}
+i dont care {}
+i dont care {}
+it doesnt matter {}
+center {}
+noise center {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+any {}
+polish food {}
+mexican {}
+uh restaurant {}
+it doesnt matter {}
+dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+any {}
+malyasian {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+anything {}
+i dont care {}
+can i have greek food {}
+dont care {}
+dont care {}
+any area {}
+i do not care {}
+it doesnt matter {}
+belgian food {}
+food {}
+any {}
+i want to find a moderately priced restaurant and it should serve asian food {'pricerange': ['moderate']}
+any kind {}
+um is doesnt matter {}
+christmas food {}
+i dont care {}
+i need a moderately priced restaurant that serves world food {'pricerange': ['moderate']}
+i dont care {}
+doesnt matter {}
+class over {}
+cross over {}
+any type {}
+food {}
+brazilian food {}
+i dont care {}
+brazilian {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+restaurant {}
+i dont care {}
+i dont care {}
+im looking for a restaurant {}
+im looking for a restaurant that serves {}
+i dont care about the price range {}
+looking for afghan good {}
+i dont care {}
+any {}
+un unusual food {}
+im looking for a moderately priced labonese restaruant {'pricerange': ['moderate']}
+swedish food {}
+i dont care {}
+i dont care {}
+im looking for a moderately priced restaurant uh serving halal food {'pricerange': ['moderate']}
+it doesnt matter {}
+i do not care {}
+any kind {}
+doesnt matter {}
+i dont care {}
+it doesnt matter {}
+moderately priced restaurant {'pricerange': ['moderate']}
+id like a pan asian restaurant {}
+any part {}
+pan asian {}
+pan asian food {}
+pan asian {}
+pan asian {}
+asian oriental {'food': ['asian oriental']}
+any price range {}
+any {}
+asian ori {}
+asian {}
+oriental {}
+i dont care {}
+dont care {}
+asian oriental {'food': ['asian oriental']}
+i do not care {}
+moderately priced restaurant {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+any {}
+any price range {}
+i dont care {}
+it doesnt matter {}
+restaurant {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+any {}
+any {}
+im looking for something moderately priced {'pricerange': ['moderate']}
+i dont care {}
+i dont care {}
+any {}
+caribbean food {}
+dont care {}
+dont care {}
+caribbean food {}
+i need a moderately priced restaurant that serves bask food {'pricerange': ['moderate']}
+asian oriental {'food': ['asian oriental']}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+what asian oriental type of food {'food': ['asian oriental']}
+asian oriental type of food {'food': ['asian oriental']}
+it doesnt matter {}
+i dont care {}
+any {}
+im looking for {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+any kind {}
+it deosnt matter {}
+any food {}
+any {}
+any area {}
+i dont care {}
+barbecue {}
+barbecue food {}
+barbecue food {}
+fuck the missing sock {}
+can you do anything else beside repeat yourself {}
+barbecue food {}
+barbecue food {}
+any price range {}
+i dont care {}
+dont care {}
+dont care {}
+any thing {}
+i dont care {}
+doesnt matter {}
+find a restaurant in the center of town {}
+can i find a restaurant {}
+i dont care {}
+i would like australian foo {'food': ['australasian']}
+talian food {'food': ['italian']}
+i dont care {}
+world {}
+i dont care {}
+any {}
+sea food {'food': ['seafood']}
+um english {}
+american {}
+caribbean food {}
+any {}
+any {}
+cantonese food {}
+cantonese food {}
+any area {}
+dont care {}
+i dont care {}
+english food {}
+any range {}
+any part of town {}
+im looking for a restaurant in any area and it should serve pan asian food {}
+any range is fine {}
+any price range {}
+i dont care {}
+any {}
+any {}
+corsica {}
+any {}
+portugese {'food': ['portuguese']}
+any kind {}
+i dont care {}
+doesnt matter {}
+doesnt matter {}
+i dont care {}
+irish {}
+i dont care {}
+any type {}
+cantonese food {}
+food {}
+pub {}
+cantonese {}
+any {}
+im looking for a restaurant that serves danish food {}
+any {}
+im looking for a restaurant {}
+asian oriental {'food': ['asian oriental']}
+any kind {}
+moderately priced {'pricerange': ['moderate']}
+i dont care {}
+moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+im looking for a restaurant that serves russian food {}
+i do not care {}
+moderately restaurant {'pricerange': ['moderate']}
+any {}
+moderately priced food {'pricerange': ['moderate']}
+doesnt matter {}
+moderately priced food {'pricerange': ['moderate']}
+can i have a moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+asian oriental {'food': ['asian oriental']}
+any {}
+dont care {}
+i dont care {}
+i dont care {}
+creative food {}
+any {}
+that serves corsica {}
+corsica {}
+food {}
+any part of town {}
+i dont care {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+can i have a moderately priced restaurant on this side of town {'pricerange': ['moderate']}
+food type {}
+looking for a moderately priced restaurant that serves brazilian {'pricerange': ['moderate']}
+how bout asian oriental {'food': ['asian oriental']}
+restaurant {}
+singaporean {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+doesnt matter {}
+any {}
+it doesnt matter {}
+any kind {}
+moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+asian {}
+unintelligible food {}
+unintelligible food {}
+unintelligible food {}
+unintelligible food {}
+unintelligible food {}
+unintelligible food {}
+im looking for a restaurant in any area that serves russian food {}
+russian {}
+uh i want cantonese food {}
+cantonese {}
+any kind {}
+i dont care {}
+i dont care {}
+world food {}
+world food {}
+im looking for corsica food {}
+i want a restaurant serving greek food {}
+i dont care {}
+any {}
+kosher {}
+any {}
+belgian {}
+i dont care {}
+im looking chineese food {'food': ['chinese']}
+i dont care {}
+i dont care {}
+danish food {}
+asian oriental {'food': ['asian oriental']}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+i dont care {}
+world food {}
+any {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+i dont care {}
+dont care {}
+restaurant in center {}
+malaysian food {}
+malaysian food {}
+any {}
+i dont care {}
+moroccon {'food': ['moroccan']}
+doesnt matter {}
+unusual food {}
+unusual food {}
+i dont care {}
+i need a moderately priced restaurant {'pricerange': ['moderate']}
+um doesnt matter {}
+unitelligible food {}
+can i get a restaurant with vegetarian food {}
+i dont care {}
+vegitarian {}
+dont care {}
+it doesnt matter {}
+i dont care {}
+irish food {}
+any fine {}
+center {}
+i dont care {}
+uh it doesnt matter {}
+dont care {}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+i need a restaurant serving corsica food {}
+polynesia food {'food': ['polynesian']}
+the restaurant {}
+any {}
+christmas food {}
+asian oriental {'food': ['asian oriental']}
+any {}
+i dont care {}
+scandinavian food {}
+asian oriental {'food': ['asian oriental']}
+in the moderately price {'pricerange': ['moderate']}
+im looking for a restaurant that serves afghan food {}
+i dont care {}
+i dont care {}
+doesnt matter {}
+center {}
+it doesnt matter {}
+doesnt matter {}
+any {}
+doesnt matter {}
+dont care {}
+dont care {}
+dont care {}
+canapes food {}
+im looking for a {}
+restaurant that serves can canapes food {}
+canapes {}
+canapes {}
+it doesnt matter {}
+scandinavian {}
+any kind of food {}
+it doesnt matter {}
+moderately {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+i want to find a restaurant that serves world food {}
+i dont care {}
+i dont care {}
+i dont care {}
+any part {}
+is there one that serves creative food {}
+doesnt matter {}
+im looking for um {}
+im looking for um {}
+can i get swedish food {}
+swedish food {}
+swedish food {}
+swedish food {}
+can i get swedish food {}
+american {}
+swedish food {}
+can i get american food {}
+im looking for a restaurant in any area {}
+caribbean food {}
+dont care {}
+it doesnt matter {}
+pan asian food {}
+i dont care {}
+any part of town {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+world food {}
+any {}
+anything {}
+greek {}
+unusual food {}
+i dont care {}
+i dont care {}
+asian {}
+asian {}
+i dont care {}
+i dont care {}
+asian {}
+i dont care {}
+doesnt matter {}
+i dont care {}
+any kind of food {}
+i dont care {}
+i dont care {}
+canapes food {}
+it doesnt matter {}
+i want a moderately priced {'pricerange': ['moderate']}
+restaurant and it should serve steak house food {'food': ['steakhouse']}
+im looking for a restaurant serving asian oriental food {'food': ['asian oriental']}
+any {}
+any {}
+any part of town {}
+i dont care about the price {}
+i dont care {}
+i dont care {}
+any {}
+i dont care {}
+it doesnt matter {}
+i dont care {}
+i dont care {}
+crossover food {}
+i would like crossover food {}
+corsica {}
+moderately priced {'pricerange': ['moderate']}
+any food {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+i want to find a restaurant serving world food {}
+looking for moderately priced russian food {'pricerange': ['moderate']}
+russian food {}
+i dont care {}
+any {}
+any {}
+barbecue {}
+barbecue {}
+im looking for a restaurant in the center {}
+i dont care {}
+any address {}
+dont care {}
+i dont care {}
+danish food {}
+danish {}
+doesnt matter {}
+any {}
+i dont care {}
+moderately priced serving gastro pub {'pricerange': ['moderate'], 'food': ['gastropub']}
+any {}
+any {}
+it does not matter {}
+polish food {}
+food type {}
+any type of food {}
+it doesnt matter {}
+any {}
+catalanian {}
+im looking for moderately priced restaurant serving austrian food {'pricerange': ['moderate']}
+serving austrian food {}
+a restaurant with afghan food {}
+any {}
+i dont care {}
+belgium food {}
+dont care {}
+malyasian {}
+moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+moderately priced restaurant that serves creative food {'pricerange': ['moderate']}
+restaurant in the center {}
+afghan {}
+uh it doesnt matter {}
+id like to find a restaurant that serves afghan food {}
+doesnt matter {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+center {}
+i dont care {}
+it doesnt matter {}
+corsica food {}
+corsica food {}
+it doesnt matter {}
+doesnt matter {}
+restaurant in central {}
+unusual food {}
+danish food {}
+food {}
+dont care {}
+moderately {'pricerange': ['moderate']}
+um i dont know {}
+i dont know {}
+any {}
+afghan food {}
+center {}
+afghan {}
+dont care {}
+i am looking for a restaurant serving afghan food {}
+any part of town {}
+um i dont know {}
+moderately priced food {'pricerange': ['moderate']}
+airitran {}
+i dont care {}
+uh i dont care {}
+im looking for a unintelligible food {}
+any {}
+any {}
+dont care {}
+i dont care {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+can you find a moderately priced restaurant {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+id like a moderately price {'pricerange': ['moderate']}
+can i find a moderately priced {'pricerange': ['moderate']}
+restaurant {}
+good food {}
+scottish {}
+american {}
+anything {}
+any {}
+i dont care {}
+moroccon {'food': ['moroccan']}
+food {}
+i dont care {}
+any {}
+creative food {}
+creative {}
+creative food {}
+center {}
+center town {}
+okay i dont care about price range {}
+i dont care {}
+venetian {}
+venetian {}
+okay then any {}
+okay then any part of town {}
+i dont care {}
+vietnam {}
+food {}
+vietnam {}
+barbecue food {}
+i dont care {}
+it doesnt matter {}
+swedish {}
+doesnt matter {}
+any area {}
+i dont care {}
+im looking for a restaurant in the center part of town that serves unintelligible food {}
+doesnt matter {}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+it doesnt matter {}
+scandinavian {}
+any price range is fine {}
+moderately pri {'pricerange': ['moderate']}
+dont care {}
+i dont know {}
+i dont care {}
+moderately priced {'pricerange': ['moderate']}
+any {}
+i want to find a moderately priced restaurant that serves canapes food {'pricerange': ['moderate']}
+tv_noise it doesnt matter {}
+tv_noise im looking for a restaurant in the moderately pri {'pricerange': ['moderate']}
+any type {}
+english food {}
+any {}
+any kind of food {}
+moderately priced restaurant {'pricerange': ['moderate']}
+welsh food {}
+any part {}
+i dont care about the price range {}
+uh world food {}
+barbecue {}
+any price range {}
+doesnt matter {}
+any {}
+hungarian {}
+i dont care {}
+any type {}
+dont care {}
+any {}
+malaysian food {}
+center {}
+moderately priced restaurant {'pricerange': ['moderate']}
+any type {}
+im looking for a restaurant in any area that serves welsh food {}
+any {}
+any {}
+i want vegetarian food {}
+it doesnt matter {}
+vegitarian {}
+jamcian food {}
+any kind {}
+i dont care {}
+im looking for a restaurant in the center that serves caribbean food {}
+and moderately priced {'pricerange': ['moderate']}
+any part of town {}
+any price range {}
+sea food {'food': ['seafood']}
+i dont care {}
+i dont care {}
+im looking for a restaurant in any area of town that serves belgium food {}
+caribbean food {}
+australian {'food': ['australasian']}
+looking for a moderately priced restaurant that serves unusual food {'pricerange': ['moderate']}
+i dont care {}
+scandinavian {}
+scandinavian {}
+asian {}
+asian {}
+asian oriental {'food': ['asian oriental']}
+anything {}
+doesnt matter {}
+doesnt matter {}
+belgium food {}
+i want brazilian food {}
+any food {}
+any kind of food {}
+uh it doesnt matter {}
+brazilian food {}
+doesnt matter as long as it is moderately priced {'pricerange': ['moderate']}
+okay change restaurant {}
+i dont care {}
+cantonese food {}
+i dont care {}
+doesnt it does not matter {}
+restaurant {}
+any {}
+any {}
+restaurant in the center {}
+serving romania food {'food': ['romanian']}
+im looking for a moderately priced restaurant that serves austria asian food {'pricerange': ['moderate'], 'food': ['australasian']}
+the center of town {}
+it doesnt matter {}
+any {}
+any price range {}
+food {}
+im looking for a restaurant in the center of town {}
+asian oriental {'food': ['asian oriental']}
+food type {}
+i dont care {}
+any {}
+austrian food {}
+i dont care {}
+could i have the asian oriental restaurant {'food': ['asian oriental']}
+any {}
+any {}
+swedish food {}
+center {}
+swedish {}
+india {}
+moderately {'pricerange': ['moderate']}
+any {}
+moderately {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+any {}
+i want a restaurant in the center {}
+the center {}
+i want english food in the center of town {}
+venetian {}
+center {}
+vegetarian {}
+asian oriental {'food': ['asian oriental']}
+i dont care {}
+english {}
+i dont care {}
+im looking for swedish food {}
+i need a moderately priced restaurant {'pricerange': ['moderate']}
+it doesnt matter {}
+scandinavian food {}
+any {}
+food {}
+asian oriental type of food {'food': ['asian oriental']}
+im looking for a restaurant that serves mexican food {}
+any {}
+i dont care {}
+do you have christmas food {}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+sea food {'food': ['seafood']}
+could i have brazilian food {}
+korea {}
+i dont care {}
+dont care {}
+food {}
+food {}
+any noise {}
+any {}
+i want to find a restaurant in the center {}
+i dont care {}
+restaurant {}
+german {}
+unintelligible irish food {}
+irish {}
+irish fdod {}
+irish food {}
+irish food {}
+the center of town {}
+barbecue food {}
+um doesnt matter if its in the center of the town {}
+doesnt matter {}
+any where {}
+any {}
+dont care {}
+i dont care {}
+dont care {}
+christmas food {}
+dont care {}
+looking for a sea food restaurant {'food': ['seafood']}
+i dont care {}
+im looking for a sea food restaurant {'food': ['seafood']}
+im looking for a sea food restaurant {'food': ['seafood']}
+i want to find a restaurant in the center and it should serve corsica food {}
+i would like a moderately priced restaurant {'pricerange': ['moderate']}
+uh it doesnt matter {}
+any {}
+dont care {}
+um do not care {}
+i dont care bye {}
+um it doesnt matter {}
+system irish food {}
+any {}
+im looking for a re {}
+in the center of town {}
+i want a restaurant {}
+i want a restaurant that serves cantonese food {}
+doesnt matter {}
+doesnt matter {}
+dont care {}
+dont care {}
+christmas food {}
+asian food {}
+asian oriental {'food': ['asian oriental']}
+i dont care {}
+steak {}
+welch food {}
+center {}
+center {}
+any {}
+dont care {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced restaurant {'pricerange': ['moderate']}
+any {}
+im looking for a restaurant that serves austrian food {}
+austrian food {}
+vegetarian food {}
+asian oriental type of food {'food': ['asian oriental']}
+moderately priced priced restaurant {'pricerange': ['moderate']}
+serving mexican food {}
+steak {}
+any {}
+venue {}
+moderately priced {'pricerange': ['moderate']}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+any food {}
+i need to find a restaurant in the center and it should serve irish food {}
+irish food {}
+a restaurant in the center of town serving carraibean food {}
+caribbean {}
+caribbean {}
+modern euorpean {'food': ['modern european']}
+dont care {}
+im looking for a restaurant that serves scandinavian food {}
+scandinavian food {}
+restaurant in any area {}
+dont care {}
+moderately {'pricerange': ['moderate']}
+dont care {}
+cantonese food {}
+any {}
+food from thailand {}
+mexican food {}
+mexican {}
+i dont care {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+im looking for a moderately priced restaurant that serves scottish food {'pricerange': ['moderate']}
+it doesnt matter {}
+doesnt matter {}
+um anything else {}
+i want a scottish restaurant {}
+i dont care about the price range {}
+world food any price range {}
+any {}
+i dont care {}
+i dont care {}
+any type of food {}
+any {}
+and the food type {}
+i dont care about the price range what is the address {}
+doesnt matter {}
+i want a restaurant that serves welsh food {}
+any area {}
+any part {}
+id like to find a moderately priced restaurant {'pricerange': ['moderate']}
+sea food {'food': ['seafood']}
+any {}
+id like a restaurant in the center that serves danish food {}
+i dont care can i try again {}
+steak house {'food': ['steakhouse']}
+moderately priced restaurant {'pricerange': ['moderate']}
+any part {}
+doesnt matter {}
+looking for moderately priced restaurant that serves creative food {'pricerange': ['moderate']}
+i want a restaurant that serves creative food {}
+im looking for a restaurant in the center {}
+it should serve belgian food {}
+cantonese food {}
+moderately {'pricerange': ['moderate']}
+mexican food {}
+steak house {'food': ['steakhouse']}
+any part {}
+dont care {}
+in the center {}
+mexican food {}
+mexican food {}
+any {}
+in the center {}
+in the center {}
+oh i dont care {}
+brazilian food {}
+any kind {}
+dont care {}
+greek {}
+dont care {}
+welsh food {}
+asian oriental {'food': ['asian oriental']}
+im looking for polish food {}
+im looking for a moderately priced restaurant {'pricerange': ['moderate']}
+it doesnt matter {}
+uh dont care but can it be vegetarian food {}
+i would like a restaurant {}
+belgian food {}
+i dont care {}
+greek food {}
+center {}
+i dont care {}
+any {}
+i dont care {}
+any {}
+any {}
+doesnt matter {}
+i dont care {}
+i would like afghan food {}
+any {}
+afghan food {}
+asian food {}
+i dont care {}
+i dont care {}
+dont care {}
+food {}
+asian oriental {'food': ['asian oriental']}
+asian {}
+oriental {}
+oriental {}
+oriental {}
+oriental {}
+asian {}
+asian oriental {'food': ['asian oriental']}
+greek food {}
+id like to find a moderately priced restaurant {'pricerange': ['moderate']}
+dont care {}
+moderately priced {'pricerange': ['moderate']}
+dont care {}
+im looking for a restaurant in the center of town serving german food {}
+doesnt matter {}
+im looking for a restaurant in a area that serves {}
+moderately priced {'pricerange': ['moderate']}
+im looking for a restaurant {}
+in the center part of {}
+i dont care {}
+australian {'food': ['australasian']}
+looking for caribbean food {}
+looking for welsh food {}
+asian oriental {'food': ['asian oriental']}
+i dont care {}
+id like a restaurant that serves australian asian food {'food': ['australasian']}
+danish {}
+creative food {}
+modereate {'pricerange': ['moderate']}
+any {}
+any {}
+i dont care {}
+im looking for a restaurant in the center of town {}
+any {}
+christmas food {}
+center {}
+i dont care {}
+malaysian {}
+moderately priced {'pricerange': ['moderate']}
+moderately priced {'pricerange': ['moderate']}
+food {}
+food {}
+noise food {}
+irish food {}
+any {}
+any {}
+caribbean food {}
+any {}
+corsica {}
+i would like some danish food {}
+moderately {'pricerange': ['moderate']}
+restaurant {}
+moderately priced restaurant {'pricerange': ['moderate']}
+moderately {'pricerange': ['moderate']}
+tailand {}

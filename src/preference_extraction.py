@@ -1,6 +1,12 @@
 import Levenshtein as lev
 import pandas as pd
 import itertools
+import data_preparation as dp
+# TODO: how to handle "any"
+#       types doesnt exists in DB
+#       center, centre
+#       thai vs Thailand
+#       oriental
 def load_restaurant_data(file_path = 'res/restaurant_info.csv'):
     df = pd.read_csv(file_path)
     # there are some NaN comming in area
@@ -15,6 +21,7 @@ def load_restaurant_data(file_path = 'res/restaurant_info.csv'):
     result["food"] = result["food"].dropna(axis = 0)
     
     return result
+
 def get_combinations(sentence):
     sentence = sentence.split()
     xs = [sentence[i:j] for i, j in itertools.combinations(range(len(sentence)+1), 2)]
@@ -22,6 +29,7 @@ def get_combinations(sentence):
     for i in xs:
         output.append(" ".join(i))
     return output
+
 def get_preference(sentence):
     restaurant_data = load_restaurant_data()
     xs = get_combinations(sentence)
@@ -37,4 +45,26 @@ def get_preference(sentence):
         
     return result
 
-print(get_preference("i want acheap azian orientil food in the center of town"))
+def test():
+    inform_sentences = dp.get_data()
+    inform_sentences = inform_sentences.loc[inform_sentences['label'] == 6]
+    data = load_restaurant_data()
+
+
+    weird_sentence = []
+    for s in inform_sentences["sentence"]:
+        is_weird = True
+        for word in s.split():
+            for key in data.keys():
+                if word in data[key].to_list():
+                    is_weird = False
+        if is_weird:
+            weird_sentence.append(s)
+    txt = ""
+    for ws in weird_sentence:
+        txt = txt + ws +" " + str(get_preference(ws)) + "\n"
+
+    with open('res/test.txt', 'w') as file:
+        file.write(txt)
+
+
