@@ -16,6 +16,8 @@ import model_eval
 import models.decision_tree as decision_tree
 import models.feed_forward as feed_forward
 import models.rule_based as rule_based
+import models.multinomial_nb as multinomial_nb
+import tokenizer
 if __name__ == "__main__":
 
     seed(42) # Fix random seed
@@ -68,13 +70,29 @@ if __name__ == "__main__":
     print(f" macro avg {resultsMajorityClassif_nodup['macro avg']}")
     print(f"weighted avg {resultsMajorityClassif_nodup['weighted avg']}")
     
-    # baseline 2
-
-    # baseline 2 nodup
-
+    m_nb = multinomial_nb.Multinomial_NB()
+    m_nb.train(dialogTrain['sentence'], dialogTrain['label'])   
+    m_nb_result = m_nb.predict(dialogTest['sentence'])
+    print(f"MultinomialNB classif results:")
+    print(f"accuracy {resultsMajorityClassif_nodup['accuracy']}")
+    print(f" macro avg {resultsMajorityClassif_nodup['macro avg']}")
+    print(f"weighted avg {resultsMajorityClassif_nodup['weighted avg']}")
+    
+    m_nb_unique = multinomial_nb.Multinomial_NB()
+    m_nb_unique.train(dialogTrain['sentence'], dialogTrain['label'])   
+    m_nb_unique_result = m_nb_unique.predict(dialogTest['sentence'])
+    print(f"MultinomialNB Unique classif results:")
+    print(f"accuracy {resultsMajorityClassif_nodup['accuracy']}")
+    print(f" macro avg {resultsMajorityClassif_nodup['macro avg']}")
+    print(f"weighted avg {resultsMajorityClassif_nodup['weighted avg']}")
+    
+    
+    
+    tokenizer.fit(dialogTrain['sentence'])
     # ML 1
     # use Decision Tree
-    dt = decision_tree.DecisionTree(dialogTrain['sentence'], dialogTrain['label'])
+    dt = decision_tree.DecisionTree()
+    dt.train(dialogTrain['sentence'], dialogTrain['label'])
     dt_result = dt.predict(dialogTest['sentence'])
     resultDecisionTree = model_eval.model_evaluate(predicted_labels = dt_result, 
                                                   test_labels = dialogTest["label"])
@@ -85,7 +103,10 @@ if __name__ == "__main__":
     print(f"weighted avg {resultDecisionTree['weighted avg']}")
     
     # ML 1 nodup
-    dt_nodup = decision_tree.DecisionTree(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
+    tokenizer.fit(dialogTrain_nodup['sentence'])
+    
+    dt_nodup = decision_tree.DecisionTree()
+    dt_nodup.train(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
     dt_result_nodup = dt_nodup.predict(dialogTest_nodup['sentence'])
     resultDecisionTreeUnique = model_eval.model_evaluate(predicted_labels = dt_result_nodup,
                                                                      test_labels= dialogTest_nodup['label'])
@@ -97,7 +118,9 @@ if __name__ == "__main__":
     
     # ml2 
     # use Feed Forward Network
-    ffn = feed_forward.FeedForwardNetwork(dialogTrain['sentence'], dialogTrain['label'], epochs=10)
+    tokenizer.fit(dialogTrain['sentence'])
+    ffn = feed_forward.FeedForwardNetwork(tokenizer.get_size())
+    ffn.train(dialogTrain['sentence'], dialogTrain['label'], epochs = 10)
     ffn_result = ffn.predict(dialogTest['sentence'])
     
     resultFFN = model_eval.model_evaluate(predicted_labels = ffn_result, 
@@ -111,7 +134,10 @@ if __name__ == "__main__":
     
     #print(f'ffn result labels: {ffn_result}')
     # ml2 nodup
-    ffn_nodup = feed_forward.FeedForwardNetwork(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 10)
+    tokenizer.fit(dialogTrain_nodup['sentence'])
+    
+    ffn_nodup = feed_forward.FeedForwardNetwork(tokenizer.get_size())
+    ffn_nodup.train(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 10)
     ffn_nodup_results = ffn_nodup.predict(dialogTest_nodup['sentence'])
     resultFFNUnique = model_eval.model_evaluate(predicted_labels = ffn_nodup_results, test_labels=dialogTest_nodup['label'])
     print(f"FeedForward Unique Network:")

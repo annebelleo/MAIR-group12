@@ -7,24 +7,21 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import tree
-
+import tokenizer
 
 class DecisionTree():
 
-    def __init__(self, x, y, max_depth = None):
+    def __init__(self, max_depth = None):
+        self.model = tree.DecisionTreeClassifier( max_depth=max_depth)
+        
+    def train(self, x, y):
         # categories y:
         y = y.to_numpy().reshape(y.shape[0])
-        # create the tokenizer for x:
-        self.tokenizer = Tokenizer()
-        # fit the tokenizer on the documents
-        self.tokenizer.fit_on_texts(x)
-        # integer encode documents
-        x = self.tokenizer.texts_to_matrix(x, mode='count')
-
-        self.model = tree.DecisionTreeClassifier( )
+        x = tokenizer.get_tokenized(x)
         self.model.fit(x, y)
-        
+    
+
     def predict(self, x):
-        x = self.tokenizer.texts_to_matrix(x , mode='count')
+        x = tokenizer.get_tokenized(x)
         result = self.model.predict(x) 
         return result
