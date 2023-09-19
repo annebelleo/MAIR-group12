@@ -7,6 +7,18 @@ import data_preparation as dp
 #       center, centre
 #       thai vs Thailand
 #       oriental
+#       indonesian is being categorized india
+alternate_keywords = {"thailand":"thai",
+                      "oriental":"asian oriental",
+                      "asian":"asian oriental",
+                      "gastro":"gastropub",
+                      "hindi":"indian",
+                      "american":"north american",
+                      "steak":"steakhouse",
+                      "turkey":"turkish",
+                      "turk":"turkish",
+                      "vietnam":"vietnamese"
+                      }
 def load_restaurant_data(file_path = 'res/restaurant_info.csv'):
     df = pd.read_csv(file_path)
     # there are some NaN comming in area
@@ -19,7 +31,6 @@ def load_restaurant_data(file_path = 'res/restaurant_info.csv'):
     result["pricerange"] = result["pricerange"].dropna(axis = 0)
     result["area"] = result["area"].dropna(axis = 0)
     result["food"] = result["food"].dropna(axis = 0)
-    
     return result
 
 def get_combinations(sentence):
@@ -31,6 +42,10 @@ def get_combinations(sentence):
     return output
 
 def get_preference(sentence):
+    for input_word, alt in alternate_keywords.items():
+        for lev_word in sentence.split():
+            if lev.distance(input_word,lev_word)<2:
+                sentence= sentence.replace(lev_word,alt)
     restaurant_data = load_restaurant_data()
     xs = get_combinations(sentence)
     result = {}
@@ -42,7 +57,6 @@ def get_preference(sentence):
                     if key not in result:
                         result[key] = []
                         result[key].append(item)
-        
     return result
 
 def test():
@@ -66,5 +80,4 @@ def test():
 
     with open('res/test.txt', 'w') as file:
         file.write(txt)
-
-
+print(get_preference("i want american food"))
