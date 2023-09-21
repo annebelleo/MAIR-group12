@@ -2,8 +2,10 @@ from data_preparation import class2descript
 import pandas as pd
 from preference_extraction import get_preference
 #import preference_extraction
+import models.feed_forward as feed_forward
+import numpy as np
 db = pd.read_csv('res/restaurant_info.csv')
-
+model = feed_forward.get_trained_model()
 frame_suggestion = pd.DataFrame(columns=db.columns) # its empty
 dontcarevalue = 'any'
 
@@ -126,7 +128,7 @@ def state_transition(state, user_message = None):
     
         elif is_current_state('s4_suggest_restaurant'):
             global frame_suggestion
-            if frame_suggestion.empty(): 
+            if frame_suggestion.empty: 
                 load_suggestions()
             suggestion = frame_suggestion.iloc[0]
             if suggestion.empty:
@@ -134,10 +136,12 @@ def state_transition(state, user_message = None):
             frame_suggestion = frame_suggestion.drop([suggestion.name])   
             print(f"I have found {suggestion.restaurantname}. Are you interested in it?")
             user_message = input()
+            label = model.predict(pd.Series(user_message))
+            print(label)
             # get clasification
-            if yes:
+            if label == 1:
                 return 's5_give_info'
-            elif reqalt:
+            elif label == 10:
                 return 's4_suggest_restaurant'
             else:
                 return 's6_bye'
@@ -146,7 +150,9 @@ def state_transition(state, user_message = None):
             print("Which information do you want: Phone number, ")
 
         return 's6_bye'
-        
+    
+    if is_current_state('s6_bye'):
+        return 
     frame_user_input["area"]= "centre"
     frame_user_input["food"]= "italian"
     frame_user_input["pricerange"]= "cheap"
