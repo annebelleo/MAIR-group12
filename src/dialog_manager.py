@@ -44,7 +44,9 @@ dialog_act = [  'ack',
 
 state_list = list(messages.keys())
 
-# TODO handle contact information
+# TODO handle contact information, 
+#       put any inside the frame_user_input,
+#        refactor s4_suggest_restaurant handlung
 def state_transition(state,user_message = None):
 
     def load_suggestions():
