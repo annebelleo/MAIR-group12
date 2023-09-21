@@ -1,5 +1,6 @@
 from data_preparation import class2descript
 import pandas as pd
+from preference_extraction import get_preference
 #import preference_extraction
 db = pd.read_csv('res/restaurant_info.csv')
 
@@ -12,28 +13,22 @@ frame_user_input = {"area": None,
                 
 messages = {
     's0_welcome' : 'Welcome to the chatbot',
-    's1_ask_area' : 'Which area?',
-    's2_suggest_restaurant' : 'Eat at restaurant %s',
-    's3': '',
-    's4' : '',
-    's5' : '',
-    's6' : '',
-    's7' : '',
-    's8' : '',
-    's9' : '',
-    'st_terminate' : 'thanks for using dialog',
-    'sE_invalid_input' : 'error'
+    's1_ask_price' : 'What is your budget?',
+    's2_ask_area' : 'Which area do you prefer?',
+    's3_ask_food': 'What type of food do you like?',
+    's4_suggest_restaurant' : 'I suggest',
+    's5_give_info' : 'give',
+    's6_bye' : 'bye',
+    's7_restart' : 'No suggestion found',
+    
 }
 
 state_list = list(messages.keys())
 
 
-def state_transition(state, userInput = None):
-    
-    def get_suggest():
-        return
-    
+def state_transition(state, user_message = None):
     def load_suggestions():
+        global frame_suggestion 
         for _,value in frame_user_input.items():
             if not value:
                 raise Exception('User input not complete') 
@@ -46,14 +41,13 @@ def state_transition(state, userInput = None):
             query += f'& pricerange == "{frame_user_input["pricerange"]}"'
         query = query[1:]
         if query == "":
-            frame_suggestion = db.copy()
-        else:
-            frame_suggestion = db.query(query)   
-        frame_suggestion.dropna(axis = 0, inplace = True)   
-        
-    load_suggestions() 
+            frame_suggestion = pd.concat([frame_suggestion,  db.copy()])
 
-    def current_state(condition_state : str):
+        else:
+            frame_suggestion = pd.concat([frame_suggestion, db.query(query)])  
+        
+
+    def is_current_state(condition_state : str):
         assert state in state_list
         return state == condition_state
     
@@ -64,12 +58,12 @@ def state_transition(state, userInput = None):
         # Not implemented yet. Use external library
         return 6
         
-    def add_frame_to(preferences : dict):
+    def add_to_user_frame(preferences : dict):
         '''
         updates preferences in frame
         '''
         for key in preferences.keys():
-            frame_user_input['key'] = preferences[key] # modify frame
+            frame_user_input[key] = preferences[key] # modify frame
             
     def get_frame_from():
         # Returns tuple with info
@@ -86,65 +80,76 @@ def state_transition(state, userInput = None):
         frame =  dict(zip(frame_suggestion, [None]*len(frame_suggestion)))
         
     def is_area_expressed():
-        return frame_user_input['area'] == None
-        
+        return not frame_user_input['area'] == None
+
+    def is_food_expressed():
+        return not frame_user_input['food'] == None
+
+    def is_pricerange_expressed():
+        return not frame_user_input['pricerange'] == None
+
+    def print_message():
+        print(messages[state])
+
+
+    def process_current_state():
+        print_message()
+        user_message = input()
+        preference = get_preference(user_message)
+        add_to_user_frame(preference)
+
     
-    # Predict userInput
-    prediction = predict_act(userInput)
-    invalid_input = 'sE_invalid_input'
-    
-    if current_state('s0_welcome'):
-        # Options that are valid in state, and
-        if current_prediction(6):
-            # extract preference
-            preferences = {'area' : 'west'} # hardcoded
-            add_frame_to(preferences)            
-        else: # No valid input provided
-            nextState = state
-            #print(get_statemsg(invalid_input))
-            return nextState
-        
-        if is_area_expressed():
-            nextState = 's1_ask_area'
-            print(messages[nextState]['message'])
-        else:
-            nextState = 's2_suggest_restaurant'
-            print(messages[nextState]['message'])
+
+    def get_next_state():
+        print(state)
+        if is_current_state('s0_welcome'):
+            process_current_state()
+            return 's1_ask_price'
             
-        return nextState
-    
-    elif current_state('s1_ask_area'):
-        if prediction == 6:
-            return 0
+        elif is_current_state('s1_ask_price'):
+            if not is_pricerange_expressed():
+                process_current_state()
+                return 's1_ask_price'
+            return 's2_ask_area'
+            
+        elif is_current_state('s2_ask_area'):
+            if not is_area_expressed():
+                process_current_state()
+                return 's2_ask_area'
+            return 's3_ask_food'
         
-    elif current_state('s2'):
-        pass
+        elif is_current_state('s3_ask_food'):
+            if not is_food_expressed():
+                process_current_state()
+                return 's3_ask_food'
+            return 's4_suggest_restaurant'
     
-    elif current_state('s3'):
-        pass
+        elif is_current_state('s4_suggest_restaurant'):
+            global frame_suggestion 
+            load_suggestions()
+            suggestion = frame_suggestion.iloc[0]
+            if suggestion.empty:
+                return 's7_restart'
+            frame_suggestion = frame_suggestion.drop([suggestion.name])   
+            print(suggestion.restaurantname)
+            user_message = input()
+
+        return 's6_bye'
+        
+    frame_user_input["area"]= "centre"
+    frame_user_input["food"]= "italian"
+    frame_user_input["pricerange"]= "cheap"
     
-    elif current_state('s4'):
-        pass
+    # load_suggestions()
+    # #print_message()    
+   # user_message = input()
+            
+    next_state = get_next_state()
+    state_transition(next_state)
     
-    elif current_state('s5'):
-        pass
-    
-    elif current_state('s6'):
-        pass
-    
-    elif current_state('s7'):
-        pass
-    
-    elif current_state('s8'):
-        pass
-    
-    elif current_state('s9'):
-        pass
-    
-    else:
-        return 0
     
 if __name__ == '__main__':
+    
     state = state_transition('s0_welcome')
     print(state)
 

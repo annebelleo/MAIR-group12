@@ -101,4 +101,3 @@ def test(categories = None):
 
     with open('res/test.txt', 'w') as file:
         file.write(txt)
-test()
