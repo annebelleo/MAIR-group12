@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import tree
-from models.tokenizer import get_trained_tokenizer
+from models.tokenizer import get_tokenizer
 
 class DecisionTree():
 
@@ -17,14 +17,14 @@ class DecisionTree():
     def train(self, x, y):
         # categories y:
         y = y.to_numpy().reshape(y.shape[0])
-        tokenizer =  get_trained_tokenizer()
+        tokenizer =  get_tokenizer()
 
         x = tokenizer.texts_to_matrix(x, mode='count')
         self.model.fit(x, y)
     
 
     def predict(self, x):
-        tokenizer =  get_trained_tokenizer()
+        tokenizer =  get_tokenizer()
         x = tokenizer.texts_to_matrix(x, mode='count')
         result = self.model.predict(x) 
         return result

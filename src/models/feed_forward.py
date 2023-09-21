@@ -5,7 +5,7 @@ import keras
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
-from models.tokenizer import get_trained_tokenizer
+from models.tokenizer import get_tokenizer
 from keras.models import save_model
 import os
 
@@ -26,12 +26,13 @@ def get_model(input_shape= None, model_path = model_default_path):
                     loss='categorical_crossentropy',
                     metrics=['accuracy'])
     model.save(model_path)
+    return model
 
 def train(model, x_train, y_train, epochs, save= True, path_save = model_default_path):
     y = tf.keras.utils.to_categorical(
         y_train.to_numpy().reshape(y_train.shape[0]), num_classes=15, dtype= "int64"
     )
-    tokenizer = get_trained_tokenizer()
+    tokenizer = get_tokenizer()
     x_train = tokenizer.texts_to_matrix(x_train, mode='count')
     model.fit(x_train, y, epochs=epochs, batch_size=128)
     if save:
@@ -39,7 +40,9 @@ def train(model, x_train, y_train, epochs, save= True, path_save = model_default
             model.save(path_save)
 
 def predict(model, x_test):
-    tokenizer = get_trained_tokenizer()
+    if type(x_test) == str:
+        x_test = pd.Series(x_test)
+    tokenizer = get_tokenizer()
     x_test = tokenizer.texts_to_matrix(x_test, mode='count')
     
     result = model.predict(x_test) 

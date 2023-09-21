@@ -17,7 +17,8 @@ import models.decision_tree as decision_tree
 import models.feed_forward as ffn
 import models.rule_based as rule_based
 import models.multinomial_nb as multinomial_nb
-from models.tokenizer import get_trained_tokenizer
+from models.tokenizer import get_tokenizer
+import models.tokenizer as tok
 if __name__ == "__main__":
 
     seed(42) # Fix random seed
@@ -87,7 +88,8 @@ if __name__ == "__main__":
     print(f"weighted avg {resultsMajorityClassif_nodup['weighted avg']}")
     
     
-    tokenizer = get_trained_tokenizer()
+    tokenizer = get_tokenizer()
+    tok.train(tokenizer, dialogTrain)
     # ML 1
     # use Decision Tree
     dt = decision_tree.DecisionTree()
@@ -116,10 +118,10 @@ if __name__ == "__main__":
     
     # ml2 
     # use Feed Forward Network
-    tokenizer = get_trained_tokenizer()
+    tokenizer = get_tokenizer()
     
     model = ffn.get_model(len(tokenizer.word_index)+1 )
-   # ffn.train(model,dialogTrain['sentence'], dialogTrain['label'], epochs = 5)
+    ffn.train(model,dialogTrain['sentence'], dialogTrain['label'], epochs = 5)
     ffn_result = ffn.predict(model,dialogTest['sentence'])
     
     resultFFN = model_eval.model_evaluate(predicted_labels = ffn_result, 

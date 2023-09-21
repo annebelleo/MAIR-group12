@@ -8,7 +8,8 @@ db = pd.read_csv('res/restaurant_info.csv')
 model = ffn.get_model()
 frame_suggestion = pd.DataFrame(columns=db.columns) # its empty
 dontcarevalue = 'any'
-
+list_turns = []
+list_denied_restaurants = []
 frame_user_input = {"area": None,
                     "food": None,
                     "pricerange": None}
@@ -24,14 +25,31 @@ messages = {
     's7_restart' : 'No suggestion found',
     
 }
+dialog_act = [  'ack', 
+                'affirm', 
+                'bye', 	
+                'confirm',
+                'deny',
+                'hello',
+                'inform',   
+                'negate',
+                'null',
+                'repeat',
+                'reqalts',
+                'reqmore',
+                'request',
+                'restart',
+                'thankyou'
+]
 
 state_list = list(messages.keys())
 
+# TODO handle contact information
+def state_transition(state,user_message = None):
 
-def state_transition(state, user_message = None):
     def load_suggestions():
         global frame_suggestion 
-        for _,value in frame_user_input.items():
+        for key, value in frame_user_input.items():
             if not value:
                 raise Exception('User input not complete') 
         query = ""
@@ -51,17 +69,19 @@ def state_transition(state, user_message = None):
     def is_suggestions_empty():
         return frame_suggestion.empty
         
-
+    def current_turn():
+        return list_turns[-1]
+    
     def is_current_state(condition_state : str):
         assert state in state_list
         return state == condition_state
     
-    def current_prediction(dialog_act_no : int):
-        return prediction == dialog_act_no
+    def is_current_prediction(dialog_act_no : int):
+        return dialog_act[current_turn['dialog_act']] == dialog_act_no
     
     def predict_act(sentence : str):
-        # Not implemented yet. Use external library
-        return 6
+        print((ffn.predict(model, sentence)[0]))
+        return dialog_act[(ffn.predict(model, sentence)[0])]
         
     def add_to_user_frame(preferences : dict):
         '''
@@ -69,6 +89,7 @@ def state_transition(state, user_message = None):
         '''
         for key in preferences.keys():
             frame_user_input[key] = preferences[key] # modify frame
+    
             
     def get_frame_from():
         # Returns tuple with info
@@ -92,10 +113,30 @@ def state_transition(state, user_message = None):
 
     def is_pricerange_expressed():
         return not frame_user_input['pricerange'] == None
-
+    
     def print_message():
-        print(messages[state])
+        message = messages[state]
+        print(message)
+        return message
 
+    def turn(system_message= None):
+        if system_message:
+            print(system_message)
+        else:
+            system_message = print_message()
+        user_message = input()
+        turn_frame = {"system_message": system_message, "user_message":user_message,
+                       'dialog_act_system': predict_act(system_message),'dialog_act_user': predict_act(user_message),
+                       "turn_index": len(list_turns)}
+        if turn_frame['dialog_act_user'] == "inform":
+            preference = get_preference(user_message)
+            add_to_user_frame(preference)
+        print(turn_frame)
+        list_turns.append(turn_frame)
+        
+        
+    
+     
     # gets the first suggestion from frame and DELETE it from Frame 
     def pop_suggestion():
         global frame_suggestion
@@ -104,59 +145,66 @@ def state_transition(state, user_message = None):
         return  suggestion  
             
 
-
-    def process_current_state():
-        print_message()
-        user_message = input()
-        preference = get_preference(user_message)
-        add_to_user_frame(preference)
-
     
 
     def get_next_state():
         print(state)
         if is_current_state('s0_welcome'):
-            process_current_state()
+            turn()
             return 's1_ask_price'
             
         elif is_current_state('s1_ask_price'):
             if not is_pricerange_expressed():
-                process_current_state()
+                turn()
                 return 's1_ask_price'
             return 's2_ask_area'
             
         elif is_current_state('s2_ask_area'):
             if not is_area_expressed():
-                process_current_state()
+                turn()
                 return 's2_ask_area'
             return 's3_ask_food'
         
         elif is_current_state('s3_ask_food'):
             if not is_food_expressed():
-                process_current_state()
+                turn()
                 return 's3_ask_food'
             return 's4_suggest_restaurant'
         
-    
+        # TODO : make this pretty
         elif is_current_state('s4_suggest_restaurant'):
             global frame_suggestion
             if is_suggestions_empty(): 
                 load_suggestions()
-            if is_suggestions_empty():
-                return 's7_restart'
             if not is_suggestions_empty():
-                suggestion = pop_suggestion()
-                print(f'how about this restaurant: {suggestion.restaurantname}' )
-            user_message = input()
-            label = model.predict(pd.Series(user_message))
-            print(label)
-            # get clasification
-            if label == 1:
-                return 's5_give_info'
-            elif label == 10:
-                return 's4_suggest_restaurant'
+                found_suggestion = False
+                while not is_suggestions_empty():
+                    suggestion = pop_suggestion()
+                    if  not suggestion.restaurantname in list_denied_restaurants:
+                        
+                        found_suggestion = True
+                        break
+                if found_suggestion:
+                    turn(f'how about this restaurant: {suggestion.restaurantname}')
+                    
+                
+                    # get clasification
+                    if current_turn()["dialog_act_user"] == "affirm":
+                        return 's5_give_info'
+                    elif current_turn()["dialog_act_user"] == 'reqalts':
+                        list_denied_restaurants.append(suggestion.restaurantname)
+                        return 's4_suggest_restaurant'
+                else:
+                    return "s7_restart"
+
+               
             else:
-                return 's6_bye'
+                return "s7_restart"
+            
+        elif is_current_state('s7_restart'):
+            turn(f'didnt found any with{frame_user_input}, start over')
+            
+            return "s1_ask_price"
     
         elif is_current_state('s5_give_info'):
             print("Which information do you want: Phone number, ")
@@ -165,14 +213,11 @@ def state_transition(state, user_message = None):
     
     if is_current_state('s6_bye'):
         return 
-    frame_user_input["area"]= "centre"
-    frame_user_input["food"]= "italian"
-    frame_user_input["pricerange"]= "cheap"
     
     # load_suggestions()
     # #print_message()    
    # user_message = input()
-            
+    
     next_state = get_next_state()
     state_transition(next_state)
     
