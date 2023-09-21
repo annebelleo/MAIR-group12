@@ -2,10 +2,10 @@ from data_preparation import class2descript
 import pandas as pd
 from preference_extraction import get_preference
 #import preference_extraction
-import models.feed_forward as feed_forward
+import models.feed_forward as ffn
 import numpy as np
 db = pd.read_csv('res/restaurant_info.csv')
-model = feed_forward.get_trained_model()
+model = ffn.get_model()
 frame_suggestion = pd.DataFrame(columns=db.columns) # its empty
 dontcarevalue = 'any'
 
