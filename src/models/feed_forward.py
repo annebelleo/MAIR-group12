@@ -1,12 +1,17 @@
 import data_preparation as dp
 import tensorflow as tf
 import pandas as pd
+import keras
 from keras.preprocessing.text import Tokenizer
 import sklearn
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
 import tokenizer
+from keras.models import save_model
+import os
+
+model_path = "res/models/feed_forward.h5"
 class FeedForwardNetwork():
     def __init__(self,input_shape):
         self.model = tf.keras.Sequential([
@@ -32,3 +37,14 @@ class FeedForwardNetwork():
         result = self.model.predict(x_test) 
         result = np.argmax(result, axis=1)
         return result
+    
+def get_trained_model():
+    if os.path.exists(model_path):
+        return keras.models.load_model(model_path)
+
+    dialogDF = dp.get_data(drop_duplicates=False)
+    dialogTrain, dialogTest = train_test_split(dialogDF, test_size=0.15, random_state=42)
+    model = FeedForwardNetwork(input_shape=tokenizer.get_size())
+    model.train(dialogTrain["sentence"], dialogTrain["label"], epochs=10)
+    model.model.save(model_path)
+    return model

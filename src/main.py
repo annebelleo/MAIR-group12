@@ -88,7 +88,7 @@ if __name__ == "__main__":
     
     
     
-    tokenizer.fit(dialogTrain['sentence'])
+    tokenizer.fit()
     # ML 1
     # use Decision Tree
     dt = decision_tree.DecisionTree()
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     print(f"weighted avg {resultDecisionTree['weighted avg']}")
     
     # ML 1 nodup
-    tokenizer.fit(dialogTrain_nodup['sentence'])
+    tokenizer.fit()
     
     dt_nodup = decision_tree.DecisionTree()
     dt_nodup.train(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     
     # ml2 
     # use Feed Forward Network
-    tokenizer.fit(dialogTrain['sentence'])
+    tokenizer.fit()
     ffn = feed_forward.FeedForwardNetwork(tokenizer.get_size())
     ffn.train(dialogTrain['sentence'], dialogTrain['label'], epochs = 10)
     ffn_result = ffn.predict(dialogTest['sentence'])
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     
     #print(f'ffn result labels: {ffn_result}')
     # ml2 nodup
-    tokenizer.fit(dialogTrain_nodup['sentence'])
+    tokenizer.fit()
     
     ffn_nodup = feed_forward.FeedForwardNetwork(tokenizer.get_size())
     ffn_nodup.train(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 10)
