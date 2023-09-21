@@ -1,52 +1,89 @@
 from data_preparation import class2descript
-import preference_extraction
+import pandas
+#import preference_extraction
 frame_schema = ["restaurantname","pricerange","area","food","phone","addr","postcode"]
-frame =  dict(zip(frame_schema, [None]*len(frame_schema)))
-
+frame_suggestion =  dict(zip(frame_schema, [None]*len(frame_schema)))
+db = pandas.read_csv('res/restaurant_info.csv')
+frame_user = {
+    'pricerange' : None,
+    'area' : None,
+    'food' : None,
+    'denied_restaurant' : []
+}
 print(class2descript)
 
 messages = {
-    's0_welcome' : {'message' : 'Welcome to the chatbot'},
-    's1_ask_area' : {'message' : 'Which area?'},
-    's2_suggest_restaurant' : {'message' : 'Eat at restaurant x'},
-    'sn_terminate' : {'message' : 'thanks for using dialog'},
-    'sE_invalid_input' : {'message' : 'error'}
+    's0_welcome' : 'Welcome to the chatbot',
+    's1_ask_area' : 'Which area?',
+    's2_suggest_restaurant' : 'Eat at restaurant %s',
+    's3': '',
+    's4' : '',
+    's5' : '',
+    's6' : '',
+    's7' : '',
+    's8' : '',
+    's9' : '',
+    'st_terminate' : 'thanks for using dialog',
+    'sE_invalid_input' : 'error'
 }
+
+state_list = list(messages.keys())
 
 
 def state_transition(state, userInput = None):
     
-    def add_preferences(preferences : dict):
+    def get_suggest():
+        return
+    
+    def current_state(condition_state : str):
+        assert state in state_list
+        return state == condition_state
+    
+    def current_prediction(dialog_act_no : int):
+        return prediction == dialog_act_no
+    
+    def predict_act(sentence : str):
+        # Not implemented yet. Use external library
+        return 6
+        
+    def add_frame_to(preferences : dict):
         '''
         updates preferences in frame
         '''
         for key in preferences.keys():
-            frame['key'] = preferences[key] # modify frame
+            frame_user['key'] = preferences[key] # modify frame
             
+    def get_frame_from():
+        # Returns tuple with info
+        return 0
+    
     def get_statemsg(state : str):
-        messages[state]['message']
+        messages[state]
         return
     
     def clear_frame():
+        '''
+        empties current frame
+        '''
         frame =  dict(zip(frame_schema, [None]*len(frame_schema)))
         
     def is_area_expressed():
-        return frame['area'] == None
+        return frame_suggestion['area'] == None
         
     
     # Predict userInput
-    prediction = 6 # Hardcoded 'inform'
+    prediction = predict_act(userInput)
     invalid_input = 'sE_invalid_input'
     
-    if state == 's0_welcome':
+    if current_state('s0_welcome'):
         # Options that are valid in state, and
-        if prediction == 6:
+        if current_prediction(6):
             # extract preference
             preferences = {'area' : 'west'} # hardcoded
-            add_preferences(preferences)            
+            add_frame_to(preferences)            
         else: # No valid input provided
             nextState = state
-            print(get_statemsg(invalid_input))
+            #print(get_statemsg(invalid_input))
             return nextState
         
         if is_area_expressed():
@@ -57,9 +94,35 @@ def state_transition(state, userInput = None):
             print(messages[nextState]['message'])
             
         return nextState
-    elif state == 's1_ask_area':
+    
+    elif current_state('s1_ask_area'):
         if prediction == 6:
             return 0
+        
+    elif current_state('s2'):
+        pass
+    
+    elif current_state('s3'):
+        pass
+    
+    elif current_state('s4'):
+        pass
+    
+    elif current_state('s5'):
+        pass
+    
+    elif current_state('s6'):
+        pass
+    
+    elif current_state('s7'):
+        pass
+    
+    elif current_state('s8'):
+        pass
+    
+    elif current_state('s9'):
+        pass
+    
     else:
         return 0
     
