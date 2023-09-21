@@ -125,14 +125,25 @@ def state_transition(state, user_message = None):
             return 's4_suggest_restaurant'
     
         elif is_current_state('s4_suggest_restaurant'):
-            global frame_suggestion 
-            load_suggestions()
+            global frame_suggestion
+            if frame_suggestion.empty(): 
+                load_suggestions()
             suggestion = frame_suggestion.iloc[0]
             if suggestion.empty:
                 return 's7_restart'
             frame_suggestion = frame_suggestion.drop([suggestion.name])   
-            print(suggestion.restaurantname)
+            print(f"I have found {suggestion.restaurantname}. Are you interested in it?")
             user_message = input()
+            # get clasification
+            if yes:
+                return 's5_give_info'
+            elif reqalt:
+                return 's4_suggest_restaurant'
+            else:
+                return 's6_bye'
+    
+        elif is_current_state('s5_give_info'):
+            print("Which information do you want: Phone number, ")
 
         return 's6_bye'
         
