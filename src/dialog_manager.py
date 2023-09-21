@@ -47,6 +47,9 @@ def state_transition(state, user_message = None):
 
         else:
             frame_suggestion = pd.concat([frame_suggestion, db.query(query)])  
+
+    def is_suggestions_empty():
+        return frame_suggestion.empty
         
 
     def is_current_state(condition_state : str):
@@ -93,6 +96,14 @@ def state_transition(state, user_message = None):
     def print_message():
         print(messages[state])
 
+    # gets the first suggestion from frame and DELETE it from Frame 
+    def pop_suggestion():
+        global frame_suggestion
+        suggestion = frame_suggestion.iloc[0]
+        frame_suggestion = frame_suggestion.drop([suggestion.name])
+        return  suggestion  
+            
+
 
     def process_current_state():
         print_message()
@@ -125,16 +136,17 @@ def state_transition(state, user_message = None):
                 process_current_state()
                 return 's3_ask_food'
             return 's4_suggest_restaurant'
+        
     
         elif is_current_state('s4_suggest_restaurant'):
             global frame_suggestion
-            if frame_suggestion.empty: 
+            if is_suggestions_empty(): 
                 load_suggestions()
-            suggestion = frame_suggestion.iloc[0]
-            if suggestion.empty:
+            if is_suggestions_empty():
                 return 's7_restart'
-            frame_suggestion = frame_suggestion.drop([suggestion.name])   
-            print(f"I have found {suggestion.restaurantname}. Are you interested in it?")
+            if not is_suggestions_empty():
+                suggestion = pop_suggestion()
+                print(f'how about this restaurant: {suggestion.restaurantname}' )
             user_message = input()
             label = model.predict(pd.Series(user_message))
             print(label)
