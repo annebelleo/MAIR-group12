@@ -1,17 +1,15 @@
 from data_preparation import class2descript
-import pandas
+import pandas as pd
 #import preference_extraction
-frame_schema = ["restaurantname","pricerange","area","food","phone","addr","postcode"]
-frame_suggestion =  dict(zip(frame_schema, [None]*len(frame_schema)))
-db = pandas.read_csv('res/restaurant_info.csv')
-frame_user = {
-    'pricerange' : None,
-    'area' : None,
-    'food' : None,
-    'denied_restaurant' : []
-}
-print(class2descript)
+db = pd.read_csv('res/restaurant_info.csv')
 
+frame_suggestion = pd.DataFrame(columns=db.columns) # its empty
+dontcarevalue = 'any'
+
+frame_user_input = {"area": None,
+                    "food": None,
+                    "pricerange": None}
+                
 messages = {
     's0_welcome' : 'Welcome to the chatbot',
     's1_ask_area' : 'Which area?',
@@ -35,6 +33,26 @@ def state_transition(state, userInput = None):
     def get_suggest():
         return
     
+    def load_suggestions():
+        for _,value in frame_user_input.items():
+            if not value:
+                raise Exception('User input not complete') 
+        query = ""
+        if frame_user_input['food'] != dontcarevalue:
+            query += f'& food == "{frame_user_input["food"]}"'
+        if frame_user_input["area"] != dontcarevalue:
+            query += f'& area == "{frame_user_input["area"]}"'
+        if frame_user_input["pricerange"] != dontcarevalue:
+            query += f'& pricerange == "{frame_user_input["pricerange"]}"'
+        query = query[1:]
+        if query == "":
+            frame_suggestion = db.copy()
+        else:
+            frame_suggestion = db.query(query)   
+        frame_suggestion.dropna(axis = 0, inplace = True)   
+        
+    load_suggestions() 
+
     def current_state(condition_state : str):
         assert state in state_list
         return state == condition_state
@@ -51,7 +69,7 @@ def state_transition(state, userInput = None):
         updates preferences in frame
         '''
         for key in preferences.keys():
-            frame_user['key'] = preferences[key] # modify frame
+            frame_user_input['key'] = preferences[key] # modify frame
             
     def get_frame_from():
         # Returns tuple with info
@@ -65,10 +83,10 @@ def state_transition(state, userInput = None):
         '''
         empties current frame
         '''
-        frame =  dict(zip(frame_schema, [None]*len(frame_schema)))
+        frame =  dict(zip(frame_suggestion, [None]*len(frame_suggestion)))
         
     def is_area_expressed():
-        return frame_suggestion['area'] == None
+        return frame_user_input['area'] == None
         
     
     # Predict userInput
