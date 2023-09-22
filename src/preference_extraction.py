@@ -116,6 +116,6 @@ def request_extraction(sentence, file_path = 'res/restaurant_info.csv'):
                 max_distance = len(word)//3
                 if lev.distance(word, item) < max_distance:
                     result.append(key)
-    return result
+    return list(set(result))
 
-print(request_extraction("can I have the phine number and the post code?"))
+print(request_extraction("cphone numbet"))
