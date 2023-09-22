@@ -1,3 +1,4 @@
+import pandas as pd
 class Suggestion_Manager:
     #config
     dontcarevalue = 'any'
@@ -52,7 +53,7 @@ class Suggestion_Manager:
         
     def get_suggestion_information(self, query : list):
         # Assertion to verify if input is valid
-        assert set(query).issubset(set(self.suggestion_fields)), 'Query does not correspond to fields'
+       # assert set(query).issubset(set(self.suggestion_fields)), 'Query does not correspond to fields'
         assert self.is_initialized, 'please make a suggestion first before asking for information.'
         data = []
         for q in query:
