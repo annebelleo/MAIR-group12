@@ -1,18 +1,22 @@
 from data_preparation import class2descript
 import pandas as pd
 from preference_extraction import get_preference
+from suggestion_manager import Suggestion_Manager
 #import preference_extraction
 import models.feed_forward as ffn
 import numpy as np
-db = pd.read_csv('res/restaurant_info.csv')
+
+
 model = ffn.get_model()
-frame_suggestion = pd.DataFrame(columns=db.columns) # its empty
-dontcarevalue = 'any'
+suggestions = Suggestion_Manager()
+
 list_turns = []
-list_denied_restaurants = []
+
 frame_user_input = {"area": None,
                     "food": None,
                     "pricerange": None}
+
+
                 
 messages = {
     's0_welcome' : 'Welcome to the chatbot',
@@ -48,28 +52,6 @@ state_list = list(messages.keys())
 #       put any inside the frame_user_input,
 #        refactor s4_suggest_restaurant handlung
 def state_transition(state,user_message = None):
-
-    def load_suggestions():
-        global frame_suggestion 
-        for key, value in frame_user_input.items():
-            if not value:
-                raise Exception('User input not complete') 
-        query = ""
-        if frame_user_input['food'] != dontcarevalue:
-            query += f'& food == "{frame_user_input["food"]}"'
-        if frame_user_input["area"] != dontcarevalue:
-            query += f'& area == "{frame_user_input["area"]}"'
-        if frame_user_input["pricerange"] != dontcarevalue:
-            query += f'& pricerange == "{frame_user_input["pricerange"]}"'
-        query = query[1:]
-        if query == "":
-            frame_suggestion = pd.concat([frame_suggestion,  db.copy()])
-
-        else:
-            frame_suggestion = pd.concat([frame_suggestion, db.query(query)])  
-
-    def is_suggestions_empty():
-        return frame_suggestion.empty
         
     def current_turn():
         return list_turns[-1]
@@ -136,18 +118,6 @@ def state_transition(state,user_message = None):
         print(turn_frame)
         list_turns.append(turn_frame)
         
-        
-    
-     
-    # gets the first suggestion from frame and DELETE it from Frame 
-    def pop_suggestion():
-        global frame_suggestion
-        suggestion = frame_suggestion.iloc[0]
-        frame_suggestion = frame_suggestion.drop([suggestion.name])
-        return  suggestion  
-            
-
-    
 
     def get_next_state():
         print(state)
@@ -175,33 +145,31 @@ def state_transition(state,user_message = None):
         
         # TODO : make this pretty
         elif is_current_state('s4_suggest_restaurant'):
-            global frame_suggestion
-            if is_suggestions_empty(): 
-                load_suggestions()
-            if not is_suggestions_empty():
-                found_suggestion = False
-                while not is_suggestions_empty():
-                    suggestion = pop_suggestion()
-                    if  not suggestion.restaurantname in list_denied_restaurants:
-                        
-                        found_suggestion = True
-                        break
-                if found_suggestion:
-                    turn(f'how about this restaurant: {suggestion.restaurantname}')
+            
+            suggestions.load_suggestions(frame_user_input,
+                                         path = 'res/restaurant_info.csv')
+            suggestions.propose_suggestion()
+            if suggestions.is_suggestions_exhausted():
+                suggestions.reset_suggestions()
+                return 's7_restart'
+            
+            else:
+                # NOTE: Example of querying the data from the current suggestion
+                suggestion_data = suggestions.get_suggestion_information(["restaurantname","pricerange","area","food"])
+                turn("I have found %s. It is an %s restaurant in the %s part of town that serves %s food.\
+                    \nAre you interested in it?" % suggestion_data)
                     
                 
-                    # get clasification
-                    if current_turn()["dialog_act_user"] == "affirm":
-                        return 's5_give_info'
-                    elif current_turn()["dialog_act_user"] == 'reqalts':
-                        list_denied_restaurants.append(suggestion.restaurantname)
-                        return 's4_suggest_restaurant'
-                else:
-                    return "s7_restart"
+                # get clasification
+                if current_turn()["dialog_act_user"] == "affirm":
+                    return 's5_give_info'
+                elif current_turn()["dialog_act_user"] == 'reqalts':
+                    #list_denied_restaurants.append(suggestion.restaurantname)
+                    return 's4_suggest_restaurant'
 
-               
-            else:
-                return "s7_restart"
+
+            
+       
             
         elif is_current_state('s7_restart'):
             turn(f'didnt found any with{frame_user_input}, start over')
