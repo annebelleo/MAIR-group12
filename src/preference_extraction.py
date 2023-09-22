@@ -117,5 +117,3 @@ def request_extraction(sentence, file_path = 'res/restaurant_info.csv'):
                 if lev.distance(word, item) < max_distance:
                     result.append(key)
     return list(set(result))
-
-print(request_extraction("cphone numbet"))
