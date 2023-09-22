@@ -1,5 +1,9 @@
 # MAIR-group12
+
+figs/1b_dialogdiagram.drawio.png
+
 run dialog_manager.py
+
 example output:
 (uu_courses) (base) robin@Ideapad:~/uu/mair_chat/MAIR-group12$ /home/robin/anaconda3/envs/uu_courses/bin/python /home/robin/uu/mair_chat/MAIR-group12/src/dialog_manager.py
 s0_welcome
