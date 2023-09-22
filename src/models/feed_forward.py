@@ -45,7 +45,7 @@ def predict(model, x_test):
     tokenizer = get_tokenizer()
     x_test = tokenizer.texts_to_matrix(x_test, mode='count')
     
-    result = model.predict(x_test) 
+    result = model.predict(x_test, verbose=0) 
     result = np.argmax(result, axis=1)
     return result
 
