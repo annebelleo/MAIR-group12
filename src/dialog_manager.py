@@ -1,6 +1,6 @@
 from data_preparation import class2descript
 import pandas as pd
-from preference_extraction import get_preference
+from preference_extraction import get_preference, request_extraction
 from suggestion_manager import Suggestion_Manager
 #import preference_extraction
 import models.feed_forward as ffn
@@ -48,9 +48,6 @@ dialog_act = [  'ack',
 
 state_list = list(messages.keys())
 
-# TODO handle contact information, 
-#       put any inside the frame_user_input,
-#        refactor s4_suggest_restaurant handlung
 def state_transition(state,user_message = None):
         
     def current_turn():
@@ -64,7 +61,6 @@ def state_transition(state,user_message = None):
         return dialog_act[current_turn['dialog_act']] == dialog_act_no
     
     def predict_act(sentence : str):
-        print((ffn.predict(model, sentence)[0]))
         return dialog_act[(ffn.predict(model, sentence)[0])]
         
     def add_to_user_frame(preferences : dict):
@@ -82,13 +78,7 @@ def state_transition(state,user_message = None):
     def get_statemsg(state : str):
         messages[state]
         return
-    
-    def clear_frame():
-        '''
-        empties current frame
-        '''
-        frame =  dict(zip(frame_suggestion, [None]*len(frame_suggestion)))
-        
+     
     def is_area_expressed():
         return not frame_user_input['area'] == None
 
@@ -112,34 +102,39 @@ def state_transition(state,user_message = None):
         turn_frame = {"system_message": system_message, "user_message":user_message,
                        'dialog_act_system': predict_act(system_message),'dialog_act_user': predict_act(user_message),
                        "turn_index": len(list_turns)}
-        if turn_frame['dialog_act_user'] == "inform":
-            preference = get_preference(user_message)
-            add_to_user_frame(preference)
         print(turn_frame)
         list_turns.append(turn_frame)
         
-
+    def ask_for_inform(category = None):
+        turn()
+        if current_turn()['dialog_act_user'] == "inform":
+                preference = get_preference(current_turn()["user_message"], category)
+                add_to_user_frame(preference)
+                print(frame_user_input)
+               
+            
+            
     def get_next_state():
         print(state)
         if is_current_state('s0_welcome'):
-            turn()
+            ask_for_inform()
             return 's1_ask_price'
             
         elif is_current_state('s1_ask_price'):
             if not is_pricerange_expressed():
-                turn()
+                ask_for_inform("pricerange")
                 return 's1_ask_price'
             return 's2_ask_area'
             
         elif is_current_state('s2_ask_area'):
             if not is_area_expressed():
-                turn()
+                ask_for_inform("area")
                 return 's2_ask_area'
             return 's3_ask_food'
         
         elif is_current_state('s3_ask_food'):
             if not is_food_expressed():
-                turn()
+                ask_for_inform("food")
                 return 's3_ask_food'
             return 's4_suggest_restaurant'
         
@@ -159,29 +154,37 @@ def state_transition(state,user_message = None):
                 turn("I have found %s. It is an %s restaurant in the %s part of town that serves %s food.\
                     \nAre you interested in it?" % suggestion_data)
                     
-                
+     
                 # get clasification
                 if current_turn()["dialog_act_user"] == "affirm":
                     return 's5_give_info'
-                elif current_turn()["dialog_act_user"] == 'reqalts':
+                elif current_turn()["dialog_act_user"] == 'reqalts' or current_turn()["dialog_act_user"] == 'negate':
                     #list_denied_restaurants.append(suggestion.restaurantname)
                     return 's4_suggest_restaurant'
 
-
-            
-       
+        
+        elif is_current_state('s5_give_info'):
+            turn("What information do you want to know?")
+            if current_turn()["dialog_act_user"] == "request":
+                contact_information = request_extraction(current_turn()["user_message"])
+                data = suggestions.get_suggestion_information(contact_information)
+                turn(f"Here is the{contact_information}: {data}. Do you need more information?")
+                if current_turn()["dialog_act_user"] == "request":
+                    return "s5_give_info"
+                else:
+                    return "s6_bye"
+            else:
+                return "s6_bye"
             
         elif is_current_state('s7_restart'):
             turn(f'didnt found any with{frame_user_input}, start over')
             
             return "s1_ask_price"
-    
-        elif is_current_state('s5_give_info'):
-            print("Which information do you want: Phone number, ")
 
         return 's6_bye'
     
     if is_current_state('s6_bye'):
+        print("Good bye")
         return 
     
     # load_suggestions()

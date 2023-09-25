@@ -108,14 +108,12 @@ def test(categories = None):
 
 def request_extraction(sentence, file_path = 'res/restaurant_info.csv'):
     xs = get_combinations(sentence)
-    result = {'phone':False,'addr': False,'postcode':False }
+    result = []
     df = pd.DataFrame(data= {'phone': ["phone","number"], 'addr': ["where","address"],'postcode':["postcode","code"]})
     for word in xs:
         for key in df.keys():
             for item in df[key]:
                 max_distance = len(word)//3
                 if lev.distance(word, item) < max_distance:
-                    result[key]=(True)
-    return result
-
-print(request_extraction("can I have the phine number and the post code?"))
+                    result.append(key)
+    return list(set(result))
