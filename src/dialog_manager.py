@@ -110,7 +110,7 @@ def state_transition(state,user_message = None):
         if current_turn()['dialog_act_user'] == "inform":
                 preference = get_preference(current_turn()["user_message"], category)
                 if len(preference) == 0:
-                    return
+                    ask_for_inform(message=f"I didn't understand: {current_turn()['user_message']}")
                 is_used_leven = not list(preference.values())[0] in current_turn()["user_message"].split()
                 if is_ask_levenstein and is_used_leven:
                     turn(f"did you mean {list(preference.values())[0]}?")
