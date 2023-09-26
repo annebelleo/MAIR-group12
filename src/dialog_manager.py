@@ -9,7 +9,7 @@ import numpy as np
 
 model = ffn.get_model()
 suggestions = Suggestion_Manager()
-
+is_ask_levenstein = True
 list_turns = []
 
 frame_user_input = {"area": None,
@@ -105,14 +105,24 @@ def state_transition(state,user_message = None):
         print(turn_frame)
         list_turns.append(turn_frame)
         
-    def ask_for_inform(category = None):
-        turn()
+    def ask_for_inform(category = None, message = None):
+        turn(message)
         if current_turn()['dialog_act_user'] == "inform":
                 preference = get_preference(current_turn()["user_message"], category)
-                add_to_user_frame(preference)
-                print(frame_user_input)
-               
-            
+                if len(preference) == 0:
+                    return
+                is_used_leven = not list(preference.values())[0] in current_turn()["user_message"].split()
+                if is_ask_levenstein and is_used_leven:
+                    turn(f"did you mean {list(preference.values())[0]}?")
+                    if current_turn()["dialog_act_user"] == "affirm":
+                        add_to_user_frame(preference)
+                        print(frame_user_input)
+                    else: 
+                        ask_for_inform(message=f"what {list(preference.keys())[0]} did you mean?")
+                else:                    
+                    add_to_user_frame(preference)
+                    print(frame_user_input)
+                
             
     def get_next_state():
         print(state)
