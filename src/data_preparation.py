@@ -1,7 +1,8 @@
 # By MatthijsvL
 import pandas as pd
 from random import randint
-
+import models.tokenizer as tk
+from sklearn.model_selection import train_test_split
 ### deprecated: included in main
 descriptions = ['ack','affirm','bye','confirm','deny','hello',
                   'inform','negate','null', 'repeat', 'reqalts',
@@ -58,6 +59,10 @@ def CSV_add_qualities(path_origin, path_destination):
   DF_restaurants.to_csv(path_destination)
   
 if __name__ == '__main__':
-  CSV_add_qualities(path_origin='res/restaurant_info.csv', path_destination='res/restaurant_extra_info.csv')
-
-
+  dialogDF = get_data(drop_duplicates=False)
+  dialogTrain, dialogTest = train_test_split(dialogDF, test_size=0.15, random_state=42)
+  tok = tk.get_tokenizer()
+  tk.train(tok,dialogTrain)
+  test = tok.texts_to_matrix( ["äöä öäö hello"], mode='count')
+  print((test[0]))
+  
