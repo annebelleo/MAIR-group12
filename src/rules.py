@@ -25,13 +25,23 @@ class Reasoner:
             res = findall(r'\(.*?\)', query)
             res = res[0][1:-1]
             query =query.replace(res,camel_case(res))
-            return self.new_kb.query(pl.Expr(query))
+            return self.new_kb.query(pl.Expr(query),show_path=True)
     def addFacts(self,df):
         for i in range(df.shape[0]):
             # restaurant(Name,quality,crowd,length,food,price)
             x = f"restaurant({camel_case(df.restaurantname[i])},{camel_case(df.food_quality[i])},{camel_case(df.crowdedness[i])},{camel_case(df.length_of_stay[i])},{camel_case(df.food[i])},{camel_case(df.pricerange[i])})"
             self.new_kb([x])
+def filter(prefiltered_list,filters):
+    output=[]
+    test = Reasoner()
+    test.addFacts(pd.read_csv('res/restaurant_extra_info.csv'))
+    for x in range(prefiltered_list.shape):
+        q=test.query(f"{filters}({prefiltered_list[x].names}))")
+        if q[0]=="Yes":
+            output.append(prefiltered_list[x])
+    return output
 if __name__ == '__main__':
     test = Reasoner()
     test.addFacts(pd.read_csv('res/restaurant_extra_info.csv'))
-    print(test.query("touristic(the missing sock))")) 
+    q=test.query("touristic(the missing sock))")
+    print(q)
