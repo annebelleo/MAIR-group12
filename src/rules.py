@@ -32,16 +32,18 @@ class Reasoner:
             x = f"restaurant({camel_case(df.restaurantname[i])},{camel_case(df.food_quality[i])},{camel_case(df.crowdedness[i])},{camel_case(df.length_of_stay[i])},{camel_case(df.food[i])},{camel_case(df.pricerange[i])})"
             self.new_kb([x])
 def filter(prefiltered_list,filters):
-    output=[]
-    test = Reasoner()
-    test.addFacts(pd.read_csv('res/restaurant_extra_info.csv'))
-    for x in range(prefiltered_list.shape):
-        q=test.query(f"{filters}({prefiltered_list[x].names}))")
-        if q[0]=="Yes":
-            output.append(prefiltered_list[x])
+    output= []
+    reasoner = Reasoner()
+    reasoner.addFacts(pd.read_csv('res/restaurant_extra_info.csv'))
+    for x in range(prefiltered_list.shape[0]):
+        q=reasoner.query(f"{filters}({prefiltered_list.iloc[x].restaurantname}))")
+        if q[0]==["Yes"]:
+           # output = pd.concat([output, prefiltered_list.iloc[x]], join='inner')
+            output.append(prefiltered_list.iloc[x])
+    output = pd.DataFrame(output)
+    output.drop(["Unnamed: 0"], axis = 1, inplace=True)
     return output
 if __name__ == '__main__':
-    test = Reasoner()
-    test.addFacts(pd.read_csv('res/restaurant_extra_info.csv'))
-    q=test.query("touristic(the missing sock))")
-    print(q)
+    
+    l = pd.read_csv('res/restaurant_extra_info.csv')
+    filter(l, "romantic")
