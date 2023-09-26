@@ -38,7 +38,7 @@ def CSV_add_qualities(path_origin, path_destination):
   nrows = DF_restaurants.shape[0]
   
   vals_food_quality = ['good', 'mid', 'bad', 'trash']
-  vals_crowdedness = ['crowded', 'quiet']
+  vals_crowdedness = ['busy', 'quiet']
   vals_length_of_stay = ['short', 'moderate' ,'long']
   
   DF_restaurants['food_quality'] = DF_restaurants.apply(
