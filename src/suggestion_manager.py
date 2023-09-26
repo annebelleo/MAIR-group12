@@ -1,15 +1,16 @@
 import pandas as pd
+import rules
 class Suggestion_Manager:
     #config
     dontcarevalue = 'any'
     #control
     suggestions_initialized = False #Use to control when to populate suggestion list
     #data
-    suggestion_dicts = [] # Stores a set of suggestions in dictionary form
+    suggestion_list = [] # Stores a set of suggestions in dictionary form
     suggestion_fields = [] # Stores column names of suggestion for input verification
     suggestion_current = dict() # Stores the current suggestion retreived from the list above.
         
-    def load_suggestions(self, input_frame : dict, path = 'res/restaurant_info.csv'):
+    def load_suggestions(self, input_frame : dict, path = 'res/restaurant_extra_info.csv', rules = ""):
         if self.is_initialized():
             # Skip this function if initialization already done.
             # Use reload to reset state of initialization
@@ -40,13 +41,13 @@ class Suggestion_Manager:
             df_suggestions = pd.concat([df_suggestions, df_restaurant.query(query)])  
         
         # Turns dataframe query into list of dictionaries
-        self.suggestion_dicts = df_suggestions.to_dict('records')
+        self.suggestion_list = df_suggestions.to_dict('records')
         self.suggestions_initialized = True
         return
      
     def propose_suggestion(self):
-        if len(self.suggestion_dicts) > 0:
-            self.suggestion_current = self.suggestion_dicts.pop(0)
+        if len(self.suggestion_list) > 0:
+            self.suggestion_current = self.suggestion_list.pop(0)
         else:
             self.suggestion_current = None
         return self.suggestion_current
@@ -68,10 +69,10 @@ class Suggestion_Manager:
         '''
         Determines whether the current selection and backlog are exhausted
         '''
-        return len(self.suggestion_dicts) == 0 and not self.suggestion_current
+        return len(self.suggestion_list) == 0 and not self.suggestion_current
     
     def initialize(self):
-        self.suggestion_dicts = []
+        self.suggestion_list = []
         self.suggestion_fields = []
         self.suggestion_current = dict()
         
@@ -82,7 +83,13 @@ class Suggestion_Manager:
         # USE THIS FUNCTION IF STATE 5 RESULTS IN A COMPLETE DO-OVER
         self.suggestions_initialized = False
         self.initialize()
-        
+
+    def get_number_suggestions(self):
+        return len(self.suggestion_list)    
+    
+    def filter(self, filter):
+        self.suggestion_list =  rules.filter(pd.DataFrame(self.suggestion_list), filter)
+
     
     def __init__(self):
         self.initialize()

@@ -3,7 +3,7 @@ import pandas as pd
 import itertools
 import data_preparation as dp
 # TODO: 
-#       how to handle "any"
+#       
 #       types doesnt exists in DB
 alternate_keywords = {"thailand":"thai",
                       "oriental":"asian oriental",
@@ -105,11 +105,9 @@ def test(categories = None):
 
 
 
-
-def request_extraction(sentence, file_path = 'res/restaurant_info.csv'):
+def extraction(sentence, df):
     xs = get_combinations(sentence)
     result = []
-    df = pd.DataFrame(data= {'phone': ["phone","number"], 'addr': ["where","address"],'postcode':["postcode","code"]})
     for word in xs:
         for key in df.keys():
             for item in df[key]:
@@ -117,3 +115,9 @@ def request_extraction(sentence, file_path = 'res/restaurant_info.csv'):
                 if lev.distance(word, item) < max_distance:
                     result.append(key)
     return list(set(result))
+
+def consequent_extraction(sentence):
+    return extraction(sentence, pd.DataFrame(data= {'romantic': ["romantic"], 'touristic': ["touristic"],'assigned seats':["assigned seats"], 'children': ['children']}))
+
+def request_extraction(sentence):
+    return extraction(sentence, pd.DataFrame(data= {'phone': ["phone","number"], 'addr': ["where","address"],'postcode':["postcode","code"]}))

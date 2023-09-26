@@ -1,11 +1,11 @@
 from data_preparation import class2descript
 import pandas as pd
-from preference_extraction import get_preference, request_extraction
+from preference_extraction import get_preference, request_extraction, consequent_extraction
 from suggestion_manager import Suggestion_Manager
 #import preference_extraction
 import models.feed_forward as ffn
 import numpy as np
-
+import rules
 
 model = ffn.get_model()
 suggestions = Suggestion_Manager()
@@ -152,7 +152,18 @@ def state_transition(state,user_message = None):
         elif is_current_state('s4_suggest_restaurant'):
             
             suggestions.load_suggestions(frame_user_input,
-                                         path = 'res/restaurant_info.csv')
+                                         path = 'res/restaurant_extra_info.csv')
+            if suggestions.get_number_suggestions() > 1:
+                turn("Do you have additional requirements?")
+                if not current_turn()["dialog_act_user"] == "negate":
+                    preference = consequent_extraction(current_turn()["user_message"])
+                    print(preference)
+                    if len(preference) > 0:
+                        suggestions.filter(preference[0]) 
+                    else:
+                        return 's4_suggest_restaurant'
+            
+
             suggestions.propose_suggestion()
             if suggestions.is_suggestions_exhausted():
                 suggestions.reset_suggestions()
