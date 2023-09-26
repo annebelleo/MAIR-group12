@@ -22,22 +22,22 @@ alternate_keywords = {"thailand":"thai",
                       "western":"west",
                       "southern":"south"
                       }
-any_alternate_keywords = {"dont care":"any"}
+any_alternate_keywords = {"care":"any","anything":"any"}
 def load_restaurant_data(category, file_path = 'res/restaurant_info.csv'):
     df = pd.read_csv(file_path)
     result = {}
     if category == "pricerange":
         result["pricerange"] = df["pricerange"].drop_duplicates()
         result["pricerange"] = result["pricerange"].dropna(axis = 0)
-        result["pricerange"].append("any")
+        result["pricerange"]= pd.concat([result["pricerange"],pd.Series(["any"])],ignore_index=True)
     elif category == "area":
         result["area"] = df["area"].drop_duplicates()
         result["area"] = result["area"].dropna(axis = 0)
-        result["area"].append("any")
+        result["area"]= pd.concat([result["area"],pd.Series(["any"])],ignore_index=True)
     elif category == "food":
         result["food"] = df["food"].drop_duplicates()
         result["food"] = result["food"].dropna(axis = 0)
-        result["food"].append("any")
+        result["food"]= pd.concat([result["food"],pd.Series(["any"])],ignore_index=True)
     elif category == None:
         result["food"] = df["food"].drop_duplicates()
         result["pricerange"] = df["pricerange"].drop_duplicates()
@@ -60,7 +60,7 @@ def get_combinations(sentence):
 def get_preference(sentence, categories = None):
     dict = {}
     if categories:
-      dict = dict.append(alternate_keywords, any_alternate_keywords)
+      dict = {**alternate_keywords,**any_alternate_keywords}
     else:
       dict = alternate_keywords
     for input_word, alt in dict.items():
@@ -80,10 +80,10 @@ def get_preference(sentence, categories = None):
                         result[key]=(item)
     return result
 
-def test():
+def test(categories = None):
     inform_sentences = dp.get_data()
     inform_sentences = inform_sentences.loc[inform_sentences['label'] == 6]
-    data = load_restaurant_data(category=None)
+    data = load_restaurant_data(category=categories)
 
 
     weird_sentence = []
@@ -97,8 +97,23 @@ def test():
             weird_sentence.append(s)
     txt = ""
     for ws in weird_sentence:
-        txt = txt + ws +" " + str(get_preference(ws)) + "\n"
+        txt = txt + ws +" " + str(get_preference(ws,categories=categories)) + "\n"
 
     with open('res/test.txt', 'w') as file:
         file.write(txt)
-print(get_preference("i want moderately priced japanes in the eestern part of town"))
+
+
+
+
+
+def request_extraction(sentence, file_path = 'res/restaurant_info.csv'):
+    xs = get_combinations(sentence)
+    result = []
+    df = pd.DataFrame(data= {'phone': ["phone","number"], 'addr': ["where","address"],'postcode':["postcode","code"]})
+    for word in xs:
+        for key in df.keys():
+            for item in df[key]:
+                max_distance = len(word)//3
+                if lev.distance(word, item) < max_distance:
+                    result.append(key)
+    return list(set(result))

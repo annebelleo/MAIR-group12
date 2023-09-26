@@ -1,34 +1,53 @@
 import data_preparation as dp
 import tensorflow as tf
 import pandas as pd
-from keras.preprocessing.text import Tokenizer
-import sklearn
+import keras
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
-import tokenizer
-class FeedForwardNetwork():
-    def __init__(self,input_shape):
-        self.model = tf.keras.Sequential([
-            tf.keras.layers.Flatten(input_shape=(input_shape,)),
-            tf.keras.layers.Dense(256, activation='relu'),
-            tf.keras.layers.Dense(128, activation='relu'),
-            tf.keras.layers.Dense(15, activation="softmax")
-        ])
-        self.model.compile(optimizer='adam',
+from models.tokenizer import get_tokenizer
+from keras.models import save_model
+import os
+
+
+model_default_path = "res/models/feed_forward.h5"
+
+def get_model(input_shape= None, model_path = model_default_path):
+    if os.path.exists(model_path):
+        return keras.models.load_model(model_path) 
+    if not input_shape:
+        raise Exception("Input shape requert")
+    
+    model = tf.keras.Sequential()
+    model.add(tf.keras.layers.Flatten(input_shape=(input_shape,)))
+    model.add(    tf.keras.layers.Dense(256, activation='relu'))
+    model.add(tf.keras.layers.Dense(15, activation="softmax"))
+    model.compile(optimizer='adam',
                     loss='categorical_crossentropy',
                     metrics=['accuracy'])
-        
+    model.save(model_path)
+    return model
 
-    def train(self, x_train, y_train, epochs):
-        y = tf.keras.utils.to_categorical(
-            y_train.to_numpy().reshape(y_train.shape[0]), num_classes=15, dtype= "int64"
-        )
-        x = tokenizer.get_tokenized(x_train)
-        self.model.fit(x, y, epochs=epochs, batch_size=128)
+def train(model, x_train, y_train, epochs, save= True, path_save = model_default_path):
+    y = tf.keras.utils.to_categorical(
+        y_train.to_numpy().reshape(y_train.shape[0]), num_classes=15, dtype= "int64"
+    )
+    tokenizer = get_tokenizer()
+    x_train = tokenizer.texts_to_matrix(x_train, mode='count')
+    model.fit(x_train, y, epochs=epochs, batch_size=128)
+    if save:
+        with open(path_save, 'wb') as handle:
+            model.save(path_save)
 
-    def predict(self, x_test):
-        x_test = tokenizer.get_tokenized(x_test)
-        result = self.model.predict(x_test) 
-        result = np.argmax(result, axis=1)
-        return result
+def predict(model, x_test):
+    if type(x_test) == str:
+        x_test = pd.Series(x_test)
+    tokenizer = get_tokenizer()
+    x_test = tokenizer.texts_to_matrix(x_test, mode='count')
+    
+    result = model.predict(x_test, verbose=0) 
+    result = np.argmax(result, axis=1)
+    return result
+
+
+    

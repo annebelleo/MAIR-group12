@@ -14,10 +14,11 @@ import data_preparation
 import visualization
 import model_eval
 import models.decision_tree as decision_tree
-import models.feed_forward as feed_forward
+import models.feed_forward as ffn
 import models.rule_based as rule_based
 import models.multinomial_nb as multinomial_nb
-import tokenizer
+from models.tokenizer import get_tokenizer
+import models.tokenizer as tok
 if __name__ == "__main__":
 
     seed(42) # Fix random seed
@@ -87,8 +88,8 @@ if __name__ == "__main__":
     print(f"weighted avg {resultsMajorityClassif_nodup['weighted avg']}")
     
     
-    
-    tokenizer.fit(dialogTrain['sentence'])
+    tokenizer = get_tokenizer()
+    tok.train(tokenizer, dialogTrain)
     # ML 1
     # use Decision Tree
     dt = decision_tree.DecisionTree()
@@ -103,7 +104,6 @@ if __name__ == "__main__":
     print(f"weighted avg {resultDecisionTree['weighted avg']}")
     
     # ML 1 nodup
-    tokenizer.fit(dialogTrain_nodup['sentence'])
     
     dt_nodup = decision_tree.DecisionTree()
     dt_nodup.train(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'])
@@ -118,10 +118,11 @@ if __name__ == "__main__":
     
     # ml2 
     # use Feed Forward Network
-    tokenizer.fit(dialogTrain['sentence'])
-    ffn = feed_forward.FeedForwardNetwork(tokenizer.get_size())
-    ffn.train(dialogTrain['sentence'], dialogTrain['label'], epochs = 10)
-    ffn_result = ffn.predict(dialogTest['sentence'])
+    tokenizer = get_tokenizer()
+    
+    model = ffn.get_model(len(tokenizer.word_index)+1 )
+    ffn.train(model,dialogTrain['sentence'], dialogTrain['label'], epochs = 5)
+    ffn_result = ffn.predict(model,dialogTest['sentence'])
     
     resultFFN = model_eval.model_evaluate(predicted_labels = ffn_result, 
                                                   test_labels = dialogTest["label"])
@@ -134,11 +135,10 @@ if __name__ == "__main__":
     
     #print(f'ffn result labels: {ffn_result}')
     # ml2 nodup
-    tokenizer.fit(dialogTrain_nodup['sentence'])
     
-    ffn_nodup = feed_forward.FeedForwardNetwork(tokenizer.get_size())
-    ffn_nodup.train(dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 10)
-    ffn_nodup_results = ffn_nodup.predict(dialogTest_nodup['sentence'])
+    model_fnn_nodup = ffn.get_model(len(tokenizer.word_index)+1, model_path= "res/models/feed_forward_unique.h5")
+    ffn.train(model_fnn_nodup,dialogTrain_nodup['sentence'], dialogTrain_nodup['label'], epochs = 5)
+    ffn_nodup_results = ffn.predict(model_fnn_nodup,dialogTest_nodup['sentence'])
     resultFFNUnique = model_eval.model_evaluate(predicted_labels = ffn_nodup_results, test_labels=dialogTest_nodup['label'])
     print(f"FeedForward Unique Network:")
     print(f"accuracy {resultFFNUnique['accuracy']}")
