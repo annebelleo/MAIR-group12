@@ -166,6 +166,9 @@ class Dialog_Manager():
             # get clasification
             if self.get_current_turn()["dialog_act_user"] == "affirm":
                 self.state = 's5_give_info'
+            elif self.get_current_turn()["dialog_act_user"] == "request":
+                self.state = 's5_give_info'
+                self.give_contact_information()
             elif self.get_current_turn()["dialog_act_user"] == 'reqalts' or self.get_current_turn()["dialog_act_user"] == 'negate':
                 #list_denied_restaurants.append(suggestion.restaurantname)
                 self.state = 's4_suggest_restaurant'
@@ -173,20 +176,18 @@ class Dialog_Manager():
     
     # first make a turn to ask which information the user wants,
     # extract the information from the user message and make a turn with the information   
-    def ask_and_give_information(self, message = None):
-        if not message:
-            self.turn("What information do you want to know?")
-        else:
-            self.turn(message)
+    def give_contact_information(self):
         if self.get_current_turn()["dialog_act_user"] == "request":
             contact_information = request_extraction(self.get_current_turn()["user_message"])
             if len(contact_information) > 0:
                 data = self.suggestion_manager.get_suggestion_information(contact_information)
-                self.ask_and_give_information(f"Here is the{contact_information}: {data}. Do you need more information?")
+                self.turn(f"Here is the{contact_information}: {data}. Do you need more information?")
+                self.give_contact_information()
         elif self.get_current_turn()["dialog_act_user"] == "negate":
             self.state = 's6_bye'
         else:
-            self.ask_and_give_information("I don't understand, what information do you want to know?")
+            self.turn(f"I don't understand, what information do you want to know?")
+            self.give_contact_information()
             
     # process the current state
     # this followes the diagram
@@ -222,7 +223,8 @@ class Dialog_Manager():
             self.suggest_restaurant()
            
         elif self.is_current_state('s5_give_info'):
-            self.ask_and_give_information()
+            self.turn("What information do you want to know?")
+            self.give_contact_information()
         elif self.is_current_state('s7_restart'):
             self.turn(f'didnt found any with{self.frame_user_input}, start over')
             
