@@ -5,7 +5,7 @@ from suggestion_manager import Suggestion_Manager
 #import preference_extraction
 import models.feed_forward as ffn
 import numpy as np
-import rules
+import reasoner
 
 model = ffn.get_model()
 suggestions = Suggestion_Manager()

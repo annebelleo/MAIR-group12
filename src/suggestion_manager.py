@@ -1,5 +1,5 @@
 import pandas as pd
-import rules
+import reasoner
 class Suggestion_Manager:
     #config
     dontcarevalue = 'any'
@@ -88,7 +88,7 @@ class Suggestion_Manager:
         return len(self.suggestion_list)    
     
     def filter(self, filter):
-        self.suggestion_list =  rules.filter(pd.DataFrame(self.suggestion_list), filter)
+        self.suggestion_list =  reasoner.filter(pd.DataFrame(self.suggestion_list), filter)
 
     
     def __init__(self):
