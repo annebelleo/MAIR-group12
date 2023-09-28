@@ -6,11 +6,11 @@ from suggestion_manager import Suggestion_Manager
 import models.feed_forward as ffn
 import numpy as np
 import reasoner
-
+import logging
 
 is_ask_levenstein = True
-
-                
+logging_level = 10
+logging.getLogger().setLevel(11)             
 
 
 dialog_act = [  'ack', 
@@ -85,7 +85,7 @@ class Dialog_Manager():
         turn_frame = {"system_message": system_message, "user_message":user_message,
                     'dialog_act_system': self.predict_act(system_message),'dialog_act_user': self.predict_act(user_message),
                     "turn_index": len(self.list_turns)}
-        print(turn_frame)
+        logging.log(logging_level,turn_frame)
         self.list_turns.append(turn_frame)
     
     
@@ -100,19 +100,19 @@ class Dialog_Manager():
                 self.turn(f"did you mean {list(preference.values())[0]}?")
                 if self.current_turn()["dialog_act_user"] == "affirm":
                     self.add_to_user_frame(preference)
-                    print(self.frame_user_input)
+                    logging.log(logging_level,self.frame_user_input)
                 else: 
                     self.ask_for_inform(message=f"what {list(preference.keys())[0]} did you mean?")
             else:                    
                 self.add_to_user_frame(preference)
-                print(self.frame_user_input)
+                logging.log(logging_level,self.frame_user_input)
 
 
     def ask_additional_requierments(self):
         self.turn("Do you have additional requirements?")
         if not self.current_turn()["dialog_act_user"] == "negate":
             additional_req = consequent_extraction(self.current_turn()["user_message"])
-            print(additional_req)
+            logging.log(logging_level,additional_req)
             if len(additional_req) > 0:
                 self.suggestion_manager.filter(additional_req[0]) 
                 return additional_req[0]
@@ -159,7 +159,7 @@ class Dialog_Manager():
             
             
     def get_next_state(self):
-        print(self.state)
+        logging.log(logging_level,self.state)
         if self.is_current_state('s0_welcome'):
             self.ask_for_inform(message= "Hi how can I help you?")
             self.state =  's1_ask_price'
