@@ -79,12 +79,15 @@ class Dialog_Manager():
     # checks if area is already in the user frame
     def is_area_expressed(self):
         return not self.frame_user_input['area'] == None
+    
     # checks if food is already in the user frame
     def is_food_expressed(self):
         return not self.frame_user_input['food'] == None
+    
     # checks if the pricerange is already in the user frame
     def is_pricerange_expressed(self):
         return not self.frame_user_input['pricerange'] == None
+    
     # make a turn:
     # 1. print system message
     # 2. ask for user input (user message)
@@ -182,7 +185,7 @@ class Dialog_Manager():
     # process the current state
     # this followes the diagram
     #   
-    def process_state(self):
+    def process_states(self):
         logging.log(logging_level,self.state)
         if self.is_current_state('s0_welcome'):
             self.ask_for_inform(message= "Hi how can I help you?")
@@ -219,7 +222,7 @@ class Dialog_Manager():
             self.state =  's6_bye'
         
         if not self.is_current_state('s6_bye'):
-            self.process_state()    
+            self.process_states()    
 
     
 
@@ -228,5 +231,5 @@ class Dialog_Manager():
     
 if __name__ == '__main__':
     diaglog_manager = Dialog_Manager()
-    diaglog_manager.process_state()
+    diaglog_manager.process_states()
     
