@@ -115,6 +115,7 @@ class Dialog_Manager():
             print(additional_req)
             if len(additional_req) > 0:
                 self.suggestion_manager.filter(additional_req[0]) 
+                return additional_req[0]
             else:
                 self.ask_additional_requierments()
             
@@ -123,8 +124,9 @@ class Dialog_Manager():
 
         self.suggestion_manager.load_suggestions(self.frame_user_input,
                                         path = 'res/restaurant_extra_info.csv')
+        additional_req = None
         if self.suggestion_manager.get_number_suggestions() > 1:
-            self.ask_additional_requierments()
+            additional_req = self.ask_additional_requierments()
 
         self.suggestion_manager.propose_suggestion()
         if self.suggestion_manager.is_suggestions_exhausted():
@@ -132,8 +134,11 @@ class Dialog_Manager():
             self.state = 's7_restart'
         else:
             suggestion_data = self.suggestion_manager.get_suggestion_information(["restaurantname","pricerange","area","food"])
-            self.turn("I have found %s. It is an %s restaurant in the %s part of town that serves %s food.\
-                \nAre you interested in it?" % suggestion_data)
+            suggestion_message = "I have found %s. It is an %s restaurant in the %s part of town that serves %s food." % suggestion_data
+            if additional_req:
+                suggestion_message = suggestion_message + reasoner.get_reasoning(additional_req)
+            suggestion_message = suggestion_message + "\nAre you interested in it?"
+            self.turn(suggestion_message)
             # get clasification
             if self.current_turn()["dialog_act_user"] == "affirm":
                 self.state = 's5_give_info'

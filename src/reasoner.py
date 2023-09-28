@@ -62,7 +62,7 @@ def get_reasoning(q):
         if rule[i] !="_":
             output.update({rule_format[i]:rule[i]})
     output.update({"rule":q})
-    string = f'{output["name"]} is {un_camel_caseify(output["rule"])} because '
+    string = f'It is {un_camel_caseify(output["rule"])} because '
     keys = list(output.keys())
     if len(output)==3:
         string = string + f'the {un_camel_caseify(keys[1])} is {output[get_nth_key(output,1)]}'
