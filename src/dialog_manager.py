@@ -2,14 +2,12 @@ from data_preparation import class2descript
 import pandas as pd
 from preference_extraction import get_preference, request_extraction, consequent_extraction
 from suggestion_manager import Suggestion_Manager
-#import preference_extraction
 import models.feed_forward as ffn
 import numpy as np
 import reasoner
 import logging
-# test 1, tomas
-# test 2 model problem
-# test 3, not in chart
+
+# TODO: handle goodbye!
 
 
 is_ask_levenstein = True
