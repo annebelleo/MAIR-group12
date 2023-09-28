@@ -14,7 +14,7 @@ import logging
 
 is_ask_levenstein = True
 logging_level = 10
-logging.getLogger().setLevel(11)             
+logging.getLogger().setLevel(9)             
 
 
 dialog_act = [  'ack', 
@@ -103,7 +103,7 @@ class Dialog_Manager():
         self.list_turns.append(turn_frame)
     
     # makes a turn to ask the user for information about a category (area, food or pricerange)
-    # first checks if user dialog act is a inform, otherwise TODO what is happening??
+    # first checks if user dialog act is a inform, otherwise we dont to do anything 
     # if the user input is not clear, the system will ask again (user message is unclear if levenstein is used)
     # if the user input is clear, the system will add the preference to the user frame
     def ask_for_inform(self,category = None, message = None):
@@ -195,19 +195,22 @@ class Dialog_Manager():
             if not self.is_pricerange_expressed():
                 self.ask_for_inform("pricerange", message= "What is your budget?")
                 self.state = 's1_ask_price'
-            self.state = 's2_ask_area'
+            else:
+                self.state = 's2_ask_area'
             
         elif self.is_current_state('s2_ask_area'):
             if not self.is_area_expressed():
                 self.ask_for_inform("area", message= "Which area you want to go?")
                 self.state =  's2_ask_area'
-            self.state =  's3_ask_food'
+            else:
+                self.state =  's3_ask_food'
         
         elif self.is_current_state('s3_ask_food'):
             if not self.is_food_expressed():
                 self.ask_for_inform("food", message= "What type of food do you want?")
                 self.state = 's3_ask_food'
-            self.state = 's4_suggest_restaurant'
+            else:
+                self.state = 's4_suggest_restaurant'
         
         elif self.is_current_state('s4_suggest_restaurant'):
             self.suggest_restaurant()
