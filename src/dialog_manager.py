@@ -11,8 +11,12 @@ import logging
 
 
 is_ask_levenstein = True
-logging_level = 10
-logging.getLogger().setLevel(9)             
+log_frames_level = 10
+
+# if you want information about frames: log_frames_level < log_frames_level
+# else log_frames_level >= log_frames_level
+logging_level = 9
+logging.getLogger().setLevel(logging_level)             
 
 
 dialog_act = [  'ack', 
@@ -97,7 +101,7 @@ class Dialog_Manager():
         turn_frame = {"system_message": system_message, "user_message":user_message,
                     'dialog_act_system': self.predict_act(system_message),'dialog_act_user': self.predict_act(user_message),
                     "turn_index": len(self.list_turns)}
-        logging.log(logging_level,turn_frame)
+        logging.log(log_frames_level,turn_frame)
         self.list_turns.append(turn_frame)
     
     # makes a turn to ask the user for information about a category (area, food or pricerange)
@@ -115,12 +119,12 @@ class Dialog_Manager():
                 self.turn(f"did you mean {list(preference.values())[0]}?")
                 if self.get_current_turn()["dialog_act_user"] == "affirm":
                     self.add_to_user_frame(preference)
-                    logging.log(logging_level,self.frame_user_input)
+                    logging.log(log_frames_level,self.frame_user_input)
                 else: 
                     self.ask_for_inform(message=f"what {list(preference.keys())[0]} did you mean?")
             else:                    
                 self.add_to_user_frame(preference)
-                logging.log(logging_level,self.frame_user_input)
+                logging.log(log_frames_level,self.frame_user_input)
 
     # ask for addional requirements like (romantic or touristic...)
     # if no additional requirements are given, we just move on
@@ -129,7 +133,7 @@ class Dialog_Manager():
         self.turn("Do you have additional requirements?")
         if not self.get_current_turn()["dialog_act_user"] == "negate":
             additional_req = consequent_extraction(self.get_current_turn()["user_message"])
-            logging.log(logging_level,additional_req)
+            logging.log(log_frames_level,additional_req)
             if len(additional_req) > 0:
                 self.suggestion_manager.filter(additional_req[0]) 
                 return additional_req[0]
@@ -169,22 +173,26 @@ class Dialog_Manager():
     
     # first make a turn to ask which information the user wants,
     # extract the information from the user message and make a turn with the information   
-    def ask_and_give_information(self):
-        self.turn("What information do you want to know?")
+    def ask_and_give_information(self, message = None):
+        if not message:
+            self.turn("What information do you want to know?")
+        else:
+            self.turn(message)
         if self.get_current_turn()["dialog_act_user"] == "request":
             contact_information = request_extraction(self.get_current_turn()["user_message"])
-            data = self.suggestion_manager.get_suggestion_information(contact_information)
-            self.turn(f"Here is the{contact_information}: {data}. Do you need more information?")
-            if self.get_current_turn()["dialog_act_user"] == "request":
-                self.state = "s5_give_info"
-                return
-        self.state = "s6_bye"
+            if len(contact_information) > 0:
+                data = self.suggestion_manager.get_suggestion_information(contact_information)
+                self.ask_and_give_information(f"Here is the{contact_information}: {data}. Do you need more information?")
+        elif self.get_current_turn()["dialog_act_user"] == "negate":
+            self.state = 's6_bye'
+        else:
+            self.ask_and_give_information("I don't understand, what information do you want to know?")
             
     # process the current state
     # this followes the diagram
     #   
     def process_states(self):
-        logging.log(logging_level,self.state)
+        logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
             self.ask_for_inform(message= "Hi how can I help you?")
             self.state =  's1_ask_price'
@@ -222,13 +230,11 @@ class Dialog_Manager():
         else: 
             self.state =  's6_bye'
         
-        if not self.is_current_state('s6_bye'):
-            self.process_states()    
-
-    
-
-
-    
+        if self.is_current_state('s6_bye'):
+            self.turn("good bye")    
+        else:
+            self.process_states()
+            
     
 if __name__ == '__main__':
     diaglog_manager = Dialog_Manager()
