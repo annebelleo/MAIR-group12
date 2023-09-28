@@ -20,7 +20,7 @@ class Reasoner:
                 "neq(notRomantic(X),romantic(X))"])
     def query(self,query,find_all = False):
         if find_all==True:
-            return self.new_kb.query(pl.Expr(query))
+            return self.new_kb.query(pl.Expr(query),show_path=True)
         else:
             res = findall(r'\(.*?\)', query)
             res = res[0][1:-1]
@@ -43,7 +43,40 @@ def filter(prefiltered_list,filters):
             output.append(prefiltered_list.iloc[x])
     return output
 
+def get_nth_key(dictionary, n=0):
+    if n < 0:
+        n += len(dictionary)
+    for i, key in enumerate(dictionary.keys()):
+        if i == n:
+            return key
+    raise IndexError("dictionary index out of range")
+def un_camel_caseify(string):
+    return sub(r'((?<=[a-z])[A-Z]|(?<!\A)[A-Z](?=[a-z]))', r' \1', string).lower()
+def get_reasoning(q):
+    rule_format = ["name","quality","crowd","lengthOfStay","foodType","price"]
+    reasoner= Reasoner()
+    rule = str(reasoner.new_kb.db[q]["facts"][0])
+    rule = rule.split("(")[-1][:-1].split(",")
+    output = dict()
+    for i in range(len(rule)):
+        if rule[i] !="_":
+            output.update({rule_format[i]:rule[i]})
+    output.update({"rule":q})
+    string = f'{output["name"]} is {un_camel_caseify(output["rule"])} because '
+    keys = list(output.keys())
+    if len(output)==3:
+        string = string + f'the {un_camel_caseify(keys[1])} is {output[get_nth_key(output,1)]}'
+    elif len(output)==4:
+        string = string + f'the {un_camel_caseify(keys[1])} is {output[get_nth_key(output,1)]} and the {un_camel_caseify(keys[2])} is {output[get_nth_key(output,2)]}'
+    else:
+        for x in range(1,len(output)-1):
+            string = string + f'the {un_camel_caseify(keys[x])} is {output[get_nth_key(output,x)]}, '
+    return string
+
+
 if __name__ == '__main__':
     
     l = pd.read_csv('res/restaurant_extra_info.csv')
-    filter(l, "romantic")
+    q = "notTouristic"
+    print(filter(l, q))
+    print(get_reasoning(q))
