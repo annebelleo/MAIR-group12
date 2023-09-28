@@ -113,7 +113,8 @@ class Dialog_Manager():
         if self.get_current_turn()['dialog_act_user'] == "inform":
             preference = get_preference(self.get_current_turn()["user_message"], category)
             if len(preference) == 0:
-                self.ask_for_inform(message=f"I didn't understand: {self.get_current_turn()['user_message']}")
+                self.ask_for_inform(message=f"I didn't understand: {self.get_current_turn()['user_message']}", category=category)
+                return
             is_used_leven = not list(preference.values())[0] in self.get_current_turn()["user_message"].split()
             if is_ask_levenstein and is_used_leven:
                 self.turn(f"did you mean {list(preference.values())[0]}?")
@@ -170,7 +171,6 @@ class Dialog_Manager():
                 self.state = 's5_give_info'
                 self.give_contact_information()
             elif self.get_current_turn()["dialog_act_user"] == 'reqalts' or self.get_current_turn()["dialog_act_user"] == 'negate':
-                #list_denied_restaurants.append(suggestion.restaurantname)
                 self.state = 's4_suggest_restaurant'
     
     
