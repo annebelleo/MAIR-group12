@@ -22,7 +22,7 @@ alternate_keywords = {"thailand":"thai",
                       "western":"west",
                       "southern":"south"
                       }
-any_alternate_keywords = {"care":"any","anything":"any"}
+any_alternate_keywords = {"care":"any","anything":"any","matter":"any"}
 def load_restaurant_data(category, file_path = 'res/restaurant_info.csv'):
     df = pd.read_csv(file_path)
     result = {}
