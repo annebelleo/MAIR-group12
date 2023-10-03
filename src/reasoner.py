@@ -80,7 +80,3 @@ def get_reasoning(q): # String manipulation to turn the rule applied to a natura
 
 if __name__ == '__main__':
     pass
-    # l = pd.read_csv('res/restaurant_extra_info.csv')
-    # q = "notTouristic"
-    # print(filter(l, q))
-    # print(get_reasoning(q))
