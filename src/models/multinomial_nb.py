@@ -7,10 +7,10 @@ from sklearn.pipeline import Pipeline
 
 class Multinomial_NB:
     def __init__(self):
-        self.pipeline_clf = Pipeline([('vect', CountVectorizer()),('tfidf', TfidfTransformer()),('clf', MultinomialNB())])
+        self.pipeline_clf = Pipeline([('clf', MultinomialNB())])
         
-    def train(self, x_train, y_test):
-        self.pipeline_clf.fit(x_train,y_test)
+    def train(self, X_train, y_train):
+        self.pipeline_clf.fit(X_train, y_train)
 
     def predict(self,test):
         return self.pipeline_clf.predict(test)

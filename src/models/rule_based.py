@@ -23,7 +23,7 @@ def rule_baseline(data_df):
                     break
         if flag == False:
             output.append(6)
-    return output
+    return np.array(output,dtype = np.int64)
 
 if __name__ == '__main__':
     train, test = sklearn.model_selection.train_test_split(get_data(),test_size=0.15)

@@ -19,25 +19,50 @@ class Tokenizer_Manual:
     
     self.token2int = {k: v for v, k in enumerate(token_frequences.keys())}
     self.int2token = {v: k for k, v in self.token2int.items()}
-    self.inputshape = len(self.token2int)
+    self.input_shape = len(self.token2int)
     self.initialized = True
-  
-  def __call__(self, sentence : str):
+    
+  def map_bag(self, input_sentences : list):
     if not self.initialized:
       raise Exception("Please initialize tokenizer before usage")
     
-    wordcount_array = np.zeros(shape = self.inputshape, dtype = np.int64)
-    for token in sentence.split():
-      if token not in self.token2int:
-        token = self.unknowntoken
-      wordcount_array[self.token2int[token]] += 1
+    def vectorize_sent(sentence : str, dictionary_length : int):
+      wordcount_array = np.zeros(shape = dictionary_length, dtype = np.int16)
+      for token in sentence.split():
+        if token not in self.token2int:
+          token = self.unknowntoken
+        wordcount_array[self.token2int[token]] += 1
+        
+      return wordcount_array
+    
+    if type(input_sentences) == str:
+      return vectorize_sent(sentence = input_sentences, dictionary_length=self.input_shape)
+    else:
+      arr = np.zeros(shape = (input_sentences.shape[0], self.input_shape), dtype = np.int16)
+      for i in range(len(input_sentences)):
+        arr[i,:] = vectorize_sent(input_sentences[i], self.input_shape)
+      #v_vectorize_sent = np.vectorize(vectorize_sent)
+      return arr#v_vectorize_sent(input_sentences)
       
-    return wordcount_array
+  def get_train_mapping(self):
+    # Return an array with words at the indices where their counts would be stored.
+    raise NotImplementedError
+  
+  def get_wordcount_dict(self):
+    # returns a dictionary with wordcounts
+    wc_dict = {}
+    raise NotImplementedError
+    return wc_dict
+    
+    
+  
+  def __call__(self, input_sentences : str):
+    return self.map_bag(input_sentences)
   
   def __init__(self):
     self.tokens2int = {}
     self.int2token = {}
-    self.inputshape = 0
+    self.input_shape = 0
     self.initialized = False
     
 if __name__ == '__main__':
