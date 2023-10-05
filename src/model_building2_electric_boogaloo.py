@@ -1,6 +1,7 @@
 # Import Libaries
 import numpy as np
 import pandas as pd
+from collections import defaultdict
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
@@ -17,7 +18,7 @@ import models.rule_based as rule_based
 from models.decision_tree import DecisionTree
 from models.multinomial_nb import Multinomial_NB
 from sklearn.ensemble import RandomForestClassifier
-import models.feed_forward as ffn
+#import models.feed_forward as ffn
 
 seed(42) # Fix random seed  
     
@@ -29,7 +30,7 @@ data_Xsent = dialogDF['sentence'].to_numpy()
 data_y = dialogDF['label'].to_numpy()
 
 # Config for test suite
-n_splits = 1#5
+n_splits = 5
 test_proportion = 0.15
 data_size = data_Xsent.shape[0]#len(dialogDF.index)
 
@@ -41,9 +42,9 @@ for i in range(n_splits):
     test_splits[i][np.random.choice(np.arange(data_size), size = test_size, replace=False)] = True
 
 # ResultStructures
-scores_macrof1 = {}
-scores_macroAcc = {}
-scores_microF1 = {}
+scores_accuracy = defaultdict(list)
+scores_macroF1 = defaultdict(list)
+#scores_microF1 = {} # Unused: not going to go this deep in analysis
 
 
 
@@ -77,6 +78,8 @@ for i in range(n_splits):
                                             test_labels = y_test)
     print('Majority label classification:')
     print(resultsMajorityClassif)
+    scores_macroF1['majority_classification'].append(resultsMajorityClassif['macro avg']['f1-score'])
+    scores_accuracy['majority_classification'].append(resultsMajorityClassif['accuracy'])
     
     
     # Baseline: Rule
@@ -85,6 +88,8 @@ for i in range(n_splits):
                                             test_labels = y_test)
     print('\nRule Based Classification:')
     print(resultRuleBase)
+    scores_macroF1['rule_based'].append(resultRuleBase['macro avg']['f1-score'])
+    scores_accuracy['rule_based'].append(resultRuleBase['accuracy'])
     
     # Model: Decision Tree
     decision_tree_model = DecisionTree()
@@ -94,6 +99,8 @@ for i in range(n_splits):
                                                     test_labels = y_test)
     print('\n Decision Tree Classification: ')
     print(result_decisiontree)
+    scores_macroF1['decision_tree'].append(result_decisiontree['macro avg']['f1-score'])
+    scores_accuracy['decision_tree'].append(result_decisiontree['accuracy'])
     
     # Model: Random Forest Classifier
     forest = RandomForestClassifier(
@@ -111,6 +118,8 @@ for i in range(n_splits):
                                                  test_labels =  y_test)
     print('\nRandom Forest Classification:')
     print(resultRandForest)
+    scores_macroF1['random_forest'].append(resultRandForest['macro avg']['f1-score'])
+    scores_accuracy['random_forest'].append(resultRandForest['accuracy'])
     
     # Model: Naive Bayes
     multinomial_bayes = Multinomial_NB()
@@ -120,14 +129,20 @@ for i in range(n_splits):
                                                    test_labels=y_test)
     print('\nNaiveBayes Classifier:')
     print(results_naivebayes)
+    scores_macroF1['naive_bayes'].append(results_naivebayes['macro avg']['f1-score'])
+    scores_accuracy['naive_bayes'].append(results_naivebayes['accuracy'])
     
-    model = ffn.get_model(input_shape = Tokenizer.input_shape)
-    ffn.train(model,X_train_vect, y_train, epochs = 5)
-    ffn_result = ffn.predict(model, X_test_vect)
+    # model = ffn.get_model(input_shape = tokenizer.input_shape)
+    # ffn.train(model,X_train_vect, y_train, epochs = 5)
+    # ffn_result = ffn.predict(model, X_test_vect)
     
-    resultFFN = model_eval.model_evaluate(predicted_labels = ffn_result, 
-                                                  test_labels = y_test)
-    
+    # resultFFN = model_eval.model_evaluate(predicted_labels = ffn_result, 
+    #                                               test_labels = y_test)
+print()
+print('accuracy: ',scores_accuracy)
+print()
+print('F1: ',scores_macroF1)
+
 
     
     
