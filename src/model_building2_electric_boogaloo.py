@@ -11,7 +11,7 @@ import data_preparation
 import visualization
 import model_eval
 from tokenizer_manual import Tokenizer_Manual as Tokenizer
-
+import models.feed_forward as ffn
 # Models
 import models.majority_classification as majority_classification
 import models.rule_based as rule_based
@@ -61,6 +61,7 @@ def perform_test_suite(setup_name : str,
         
         tokenizer = Tokenizer()
         tokenizer.train(X_train_sent)
+        tokenizer.save(f"res/models/tokenizer_{iter}.pkl")
         
         X_train_vect = tokenizer(X_train_sent)
         X_test_vect = tokenizer(X_test_sent)
@@ -91,20 +92,33 @@ def perform_test_suite(setup_name : str,
         # Model: Decision Tree
         model_decision_tree = DecisionTree()
         model_decision_tree.train(X_train_vect, y_train)
-        model_decision_tree.predict(X_test_vect)
+        y_pred = model_decision_tree.predict(X_test_vect)
         model_classification_report = model_eval.model_evaluate(predicted_labels=y_pred,
                                                         test_labels = y_test)
-        
         suite_results.add_record(model_name='decision tree',
                         iteration_num=iter_num,
                         setup_description=setup_name,
                         classification_report=model_classification_report)
         
+        # FFN Model
+        model_ffn = ffn.FeedForward(input_shape = tokenizer.input_shape)
+        model_ffn.train(X_train_vect, y_train, epochs=10)
+        y_pred = model_ffn.predict(X_test_vect)
+        model_ffn.save(f"res/models/feed_forward_{iter}.h5")
+        model_classification_report = model_eval.model_evaluate(predicted_labels=y_pred,
+                                                        test_labels = y_test)
+        
+        suite_results.add_record(model_name='feed forward network',
+                        iteration_num=iter_num,
+                        setup_description=setup_name,
+                        classification_report=model_classification_report)
+        
+        
         # Model: Random Forest
         model_random_forest_ensemble = RandomForest()
         model_random_forest_ensemble.train(list(X_train_vect), y_train)
         y_pred = model_random_forest_ensemble.predict(list(X_test_vect))
-        
+        model_random_forest_ensemble.save(f"res/models/random_forest_{iter}.pkl")
         model_classification_report = model_eval.model_evaluate(predicted_labels= y_pred,
                                                     test_labels =  y_test)
 

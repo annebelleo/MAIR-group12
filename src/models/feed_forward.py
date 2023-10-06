@@ -8,46 +8,39 @@ import numpy as np
 from keras.models import save_model
 import os
 
+import pickle
 
-model_default_path = "res/models/feed_forward.h5"
+class FeedForward():
 
-def get_model(input_shape= None, model_path = model_default_path, overwrite : bool = False):
-    if not overwrite:
-        if os.path.exists(model_path):
-            return keras.models.load_model(model_path) 
-    if not input_shape:
-        raise Exception("Input shape requert")
+    def __init__(self, input_shape= None):
+        if input_shape:            
+            self.model = tf.keras.Sequential()
+            self.model.add(tf.keras.layers.Flatten(input_shape=(input_shape,)))
+            self.model.add(tf.keras.layers.Dense(256, activation='relu'))
+            self.model.add(tf.keras.layers.Dense(15, activation="softmax"))
+            self.model.compile(optimizer='adam',
+                            loss='categorical_crossentropy',
+                            metrics=['accuracy'])
+            return
+        raise Exception("Please provide either input_shape or model_path")
     
-    model = tf.keras.Sequential()
-    model.add(tf.keras.layers.Flatten(input_shape=(input_shape,)))
-    model.add(    tf.keras.layers.Dense(256, activation='relu'))
-    model.add(tf.keras.layers.Dense(15, activation="softmax"))
-    model.compile(optimizer='adam',
-                    loss='categorical_crossentropy',
-                    metrics=['accuracy'])
-    model.save(model_path)
-    return model
+    def train(self, X_train, y_train, epochs = 10	):
+        y = tf.keras.utils.to_categorical(
+            y_train.reshape(y_train.shape[0]), num_classes=15, dtype= "int64"
+        )
+        self.model.fit(X_train, y, epochs=epochs, batch_size=128)
 
-def train(model, X_train, y_train, epochs, save= True, path_save = model_default_path):
-    y = tf.keras.utils.to_categorical(
-        y_train.reshape(y_train.shape[0]), num_classes=15, dtype= "int64"
-    )
-    #tokenizer = get_tokenizer()
-    #X_train = tokenizer.texts_to_matrix(X_train, mode='count')
-    model.fit(X_train, y, epochs=epochs, batch_size=128)
-    if save:
-        with open(path_save, 'wb') as handle:
-            model.save(path_save)
+    def save(self, path = "res/models/feed_forward.h5"):
+        with open(path, 'wb') as handle:
+            pickle.dump(self, handle)
 
-def predict(model, X_test):
-    if type(X_test) == str:
-        X_test = pd.Series(X_test)
-    #tokenizer = get_tokenizer()
-    #x_test = tokenizer.texts_to_matrix(x_test, mode='count')
-    
-    result = model.predict(X_test, verbose=0) 
-    result = np.argmax(result, axis=1)
-    return result
+    def predict(self, X_test):
+        result = self.model.predict(X_test, verbose=0) 
+        result = np.argmax(result, axis=1)
+        return result
+
+def load_model(model_path = "res/models/feed_forward.h5"):
+      with open(model_path, 'rb') as handle:
+        return pickle.load(handle)
 
 
-    

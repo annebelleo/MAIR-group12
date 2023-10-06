@@ -3,6 +3,9 @@ import pandas as pd
 from preference_extraction import get_preference, request_extraction, consequent_extraction
 from suggestion_manager import Suggestion_Manager
 import models.feed_forward as ffn
+import models.random_forest as rf
+
+import tokenizer_manual as tok
 import numpy as np
 import reasoner
 import logging
@@ -46,7 +49,8 @@ class Dialog_Manager():
                             's6_bye',
                             's7_restart']
         self.state = self.state_list[0]
-        self.model = ffn.get_model()
+        self.tokenizer = tok.load_tokenizer("res/models/tokenizer_0.pkl")
+        self.model = rf.load_model("res/models/random_forest_0.pkl")
         self.suggestion_manager = Suggestion_Manager()
         self.list_turns = []
 
@@ -68,7 +72,8 @@ class Dialog_Manager():
     
     # return the dialog act of a sentence 
     def predict_act(self,sentence : str):
-        return dialog_act[(ffn.predict(self.model, sentence)[0])]
+        embedded_sentence = self.tokenizer(pd.Series([sentence]))
+        return dialog_act[self.model.predict((embedded_sentence))[0]]
     
     # add preference to user frame
     def add_to_user_frame(self,preferences : dict):

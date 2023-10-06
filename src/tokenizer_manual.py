@@ -1,7 +1,7 @@
 from collections import defaultdict
 import pandas as pd
 import numpy as np
-
+import pickle
 class Tokenizer_Manual:
   unknowntoken = '/unk/'
   
@@ -53,7 +53,10 @@ class Tokenizer_Manual:
     wc_dict = {}
     raise NotImplementedError
     return wc_dict
-    
+  
+  def save(self, path : str):
+    with open(path, 'wb') as f:
+      pickle.dump(self,f)    
     
   
   def __call__(self, input_sentences : str):
@@ -64,7 +67,12 @@ class Tokenizer_Manual:
     self.int2token = {}
     self.input_shape = 0
     self.initialized = False
-    
+
+
+def load_tokenizer(path):
+  with open(path, 'rb') as handle:
+    return pickle.load(handle)
+
 if __name__ == '__main__':
   import data_preparation
   from sklearn.model_selection import train_test_split
