@@ -41,7 +41,7 @@ def plotTokenFrequencyPerClass(frame : pd.DataFrame):
     frame['tokenized'] = frame['sentence'].apply(sentence_tokenize)
     frame = frame.explode('tokenized')[['label', 'tokenized']]
     frame = frame.groupby(by=["label", "tokenized"], as_index=False).value_counts()
-    print(frame.loc[frame['label'] == 0])
+    #print(frame.loc[frame['label'] == 0])
 
 def plotSentenceFrequency(sentences: pd.Series, top = 8):
     '''
@@ -84,6 +84,26 @@ def plotModelPerformance(modelresultscollection, measure = 'accuracy', title = '
     plt.savefig(imgPath+title)
     return 0
 
+def plotModelPerformance2(data : pd.DataFrame, 
+                          index = 'Iteration',
+                          model_col = 'Model',
+                          measure_col = 'accuracy', 
+                          title = 'title', 
+                          xlabel = '', ylabel = '',
+                          img_name : str = 'model_performance',
+                          img_path = 'figs/'):
+
+    df_wide = data.pivot(index=index, columns=model_col, values=measure_col)
+    print(df_wide)
+    fix, ax = plt.subplots()
+    ax.set_title(title)
+    ax.boxplot(df_wide, labels=df_wide.columns)
+    ax.set_ylim(0, 1)
+    plt.xticks(rotation=6.6, ha='right')
+    plt.savefig(img_path+img_name)
+    
+    return 0
+
 
     
 
@@ -102,6 +122,18 @@ if __name__ == '__main__':
     #plotSentenceFrequency(dialogDF['sentence'])
     plotLabelFrequency(dialogDF['label'])
     #plotTokenFrequencyPerClass(dialogDF) #wip
-        
+    df = pd.DataFrame([
+        [1, 'mod1', 0.1321],
+        [1, 'mod2', 0.4242],
+        [2, 'mod1', 0.954313],
+        [3,'mod1', 0.923135],
+        [2, 'mod2', 0.9231235],
+        [3, 'mod2', 0.435],
+        ],
+        columns=['Col1', 'Col2', 'Col3'])
+    print(df)
+    plotModelPerformance2(df, index = 'Col1',measure_col='Col3', model_col='Col2',
+                          title='Henlo', img_name='test_model_performance')
+    #plotModelPerformance2(model_col='')
 
 

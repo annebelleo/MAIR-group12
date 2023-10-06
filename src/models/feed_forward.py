@@ -30,7 +30,7 @@ def get_model(input_shape= None, model_path = model_default_path, overwrite : bo
 
 def train(model, X_train, y_train, epochs, save= True, path_save = model_default_path):
     y = tf.keras.utils.to_categorical(
-        y_train.to_numpy().reshape(y_train.shape[0]), num_classes=15, dtype= "int64"
+        y_train.reshape(y_train.shape[0]), num_classes=15, dtype= "int64"
     )
     #tokenizer = get_tokenizer()
     #X_train = tokenizer.texts_to_matrix(X_train, mode='count')

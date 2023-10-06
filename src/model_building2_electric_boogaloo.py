@@ -26,9 +26,9 @@ seed(42) # Fix random seed
 def EDA():
     '''exploratory data analysis'''
     dialogDF = data_preparation.get_data(drop_duplicates=False)
-    visualization.plotTokenFrequency(dialogDF['sentences'])
+    visualization.plotTokenFrequency(dialogDF['sentence'])
     visualization.plotTokenFrequencyPerClass(dialogDF)
-    visualization.plotLabelFrequency(dialogDF['labels'])
+    visualization.plotLabelFrequency(dialogDF['label'])
     
 
 
@@ -135,12 +135,25 @@ if __name__ == '__main__':
                                            n_iterations=5,
                                            drop_duplicate_sentences=False)
     print(results_base)
-    results_nodup = perform_test_suite('nodup',
-                                       test_proportion=0.15,
-                                       n_iterations=5,
-                                       drop_duplicate_sentences=True)
-    print(results_nodup)
-    # Prepare datasets
+    # results_nodup = perform_test_suite('nodup',
+    #                                    test_proportion=0.15,
+    #                                    n_iterations=5,
+    #                                    drop_duplicate_sentences=True)
+
+    
+    visualization.plotModelPerformance2(results_base,
+                                        model_col ='Model',
+                                        measure_col = 'accuracy',
+                                        index='Iteration',
+                                        title='Model Accuracy',
+                                        img_name='model_performance_accuracy')
+    visualization.plotModelPerformance2(results_base,
+                                        model_col ='Model',
+                                        measure_col = 'macro_F1',
+                                        index='Iteration',
+                                        title='Model F1',
+                                        img_name='model_performance_F1')
+
 
 
     
