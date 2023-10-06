@@ -61,7 +61,6 @@ def perform_test_suite(setup_name : str,
         
         tokenizer = Tokenizer()
         tokenizer.train(X_train_sent)
-        tokenizer.save(f"res/models/tokenizer_{iter}.pkl")
         
         X_train_vect = tokenizer(X_train_sent)
         X_test_vect = tokenizer(X_test_sent)
@@ -104,7 +103,6 @@ def perform_test_suite(setup_name : str,
         model_ffn = ffn.FeedForward(input_shape = tokenizer.input_shape)
         model_ffn.train(X_train_vect, y_train, epochs=10)
         y_pred = model_ffn.predict(X_test_vect)
-        model_ffn.save(f"res/models/feed_forward_{iter}.h5")
         model_classification_report = model_eval.model_evaluate(predicted_labels=y_pred,
                                                         test_labels = y_test)
         
@@ -118,7 +116,6 @@ def perform_test_suite(setup_name : str,
         model_random_forest_ensemble = RandomForest()
         model_random_forest_ensemble.train(list(X_train_vect), y_train)
         y_pred = model_random_forest_ensemble.predict(list(X_test_vect))
-        model_random_forest_ensemble.save(f"res/models/random_forest_{iter}.pkl")
         model_classification_report = model_eval.model_evaluate(predicted_labels= y_pred,
                                                     test_labels =  y_test)
 

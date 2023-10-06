@@ -9,11 +9,23 @@ import tokenizer_manual as tok
 import numpy as np
 import reasoner
 import logging
+import time
+#Waits 1 second
 
 # TODO: handle goodbye!
 
 
-is_ask_levenstein = True
+
+# extra feature configuration
+is_ask_levenstein_correction = True # (Ask user about correctness of match for Levenshtein results)
+answer_delay = 0 # Introduce a delay before showing system responses
+is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
+is_text_to_speech = True #Use text-to-speech for system utterances (requires pyttsx3)
+if is_text_to_speech:
+    import pyttsx3
+    text_to_speech_engine = pyttsx3.init()
+
+
 log_frames_level = 10
 
 # if you want information about frames: log_frames_level < log_frames_level
@@ -101,7 +113,16 @@ class Dialog_Manager():
     # 3. predict dialog act of system message and user message
     # 4. add turn_frame to list of turns
     def turn(self,system_message):
-        print(system_message)
+        if not self.is_current_state('s0_welcome'):
+            time.sleep(answer_delay)
+        if is_text_to_speech:
+            text_to_speech_engine.say(system_message)
+          #  text_to_speech_engine.runAndWait()
+        else:
+            if is_output_caps:
+                print(system_message.upper())
+            else:
+                print(system_message.lower())
         user_message = input()
         turn_frame = {"system_message": system_message, "user_message":user_message,
                     'dialog_act_system': self.predict_act(system_message),'dialog_act_user': self.predict_act(user_message),
@@ -121,7 +142,7 @@ class Dialog_Manager():
                 self.ask_for_inform(message=f"I didn't understand: {self.get_current_turn()['user_message']}", category=category)
                 return
             is_used_leven = not list(preference.values())[0] in self.get_current_turn()["user_message"].split()
-            if is_ask_levenstein and is_used_leven:
+            if is_ask_levenstein_correction and is_used_leven:
                 self.turn(f"did you mean {list(preference.values())[0]}?")
                 if self.get_current_turn()["dialog_act_user"] == "affirm":
                     self.add_to_user_frame(preference)
