@@ -21,7 +21,7 @@ is_ask_levenstein_correction = True # (Ask user about correctness of match for L
 answer_delay = 0 # Introduce a delay before showing system responses
 is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
 is_text_to_speech = False #Use text-to-speech for system utterances (requires pyttsx3)
-is_direct_search = True # Start offering suggestions 
+is_direct_search = False # Start offering suggestions 
                          # after the first preference type is recognized vs. wait until all preference types are recognized
                          # BUG: if direct search is enabled, the system will not ask for additional requirements 
 if is_text_to_speech:
@@ -161,15 +161,16 @@ class Dialog_Manager():
     # if no additional requirements are given, we just move on
     # otherwise filter in the suggestion manager for the additional requirement
     def ask_additional_requierments(self):
-        self.turn("Do you have additional requirements?")
+        self.turn("what additional requirements do you have?")
         if not self.get_current_turn()["dialog_act_user"] == "negate":
             additional_req = consequent_extraction(self.get_current_turn()["user_message"])
             logging.log(log_frames_level,additional_req)
             if len(additional_req) > 0:
                 self.suggestion_manager.filter(additional_req[0]) 
                 return additional_req[0]
+                
             else:
-                self.ask_additional_requierments()
+                return self.ask_additional_requierments()
             
     # suggestion a restaurant
     # 1 we load the suggestions from the csv file with the user frame
