@@ -29,6 +29,7 @@ def EDA():
     visualization.plotTokenFrequency(dialogDF['sentence'])
     visualization.plotTokenFrequencyPerClass(dialogDF)
     visualization.plotLabelFrequency(dialogDF['label'])
+    visualization.tableLabelFreqs(precision=3, img_name='table_labelfrequencies')
     
 
 
@@ -151,7 +152,7 @@ if __name__ == '__main__':
     #                                    n_iterations=5,
     #                                    drop_duplicate_sentences=True)
 
-    
+
     visualization.plotModelPerformance2(results_base,
                                         model_col ='Model',
                                         measure_col = 'accuracy',
