@@ -10,12 +10,7 @@ import numpy as np
 import reasoner
 import logging
 import time
-#Waits 1 second
-
-# TODO: handle goodbye!
-
-
-
+    
 # extra feature configuration
 is_ask_levenstein_correction = True # (Ask user about correctness of match for Levenshtein results)
 answer_delay = 0 # Introduce a delay before showing system responses
