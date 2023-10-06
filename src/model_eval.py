@@ -1,3 +1,4 @@
+from typing import Any
 import numpy as np
 import pandas as pd
 import sklearn
@@ -6,26 +7,7 @@ import sklearn
 import data_preparation
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-### Deprecated: included in main
 
-def model_evaluate_accuracy(predicted_labels, test_labels):
-    '''
-    predicted_labels: one dimensional array like
-    test_labels: one dimensional array like
-    Array length is required to be the same.
-    '''
-
-    predicted_labels = np.asarray(predicted_labels,dtype=np.int16)
-    test_labels = np.asarray(test_labels,dtype=np.int16)
-    assert (predicted_labels.shape == test_labels.shape), 'Different shapes: ' + predicted_labels.shape + 'vs' + test_labels.shape
-    
-    labels = np.union1d(predicted_labels, test_labels)
-
-    classif_report = sklearn.metrics.classification_report(y_true = test_labels,
-                                                           y_pred=predicted_labels, 
-                                                           labels=labels,
-                                                           output_dict=True)
-    return classif_report
 
 def model_evaluate(predicted_labels, test_labels):
     '''
@@ -46,28 +28,28 @@ def model_evaluate(predicted_labels, test_labels):
                                            zero_division=0.0)
     return classif_report
 
-if __name__ == "__main__":
-    pass
-    # Example line
-    #model_evaluate_accuracy(dialoguePredictions_baseline[:,], dialogueTest.iloc[:,0])
-
-
-    # # load data:
-    # df = data_preparation.get_data(path_dialog_acts = "res/dialog_acts.dat", drop_duplicates=False)
-
-    # # split it to test and train:
-    # x, y = df["lines"], df["class"]
-    # x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=42)
-
-    # # use Decision Tree
-    # dt = decision_tree.DecisionTree(x_train, y_train)
-    # dt_result = dt.predict(x_test)
-    # print(f'descision tree result labels: {dt_result}')
-
-    # # use Feed Forward Network
-    # ffn = feed_forward.FeedForwardNetwork(x_train, y_train, epochs=10)
-    # ffn_result = ffn.predict(x_test)
-    # print(f'ffn result labels: {ffn_result}')
-
-    # # get data without duplicates:
-    # df_unique = data_preparation.get_data(path_dialog_acts = "res/dialog_acts.dat", drop_duplicates=True)
+class ResultsFrame:
+    columns = ['Model', 
+                'Iteration', 
+                'Setup', 
+                'accuracy',
+                'macro_F1']
+    def add_record(self, model_name : str, iteration_num: int, 
+                   setup_description : str, classification_report : dict):
+        record = pd.DataFrame([{
+            self.columns[0] : model_name,
+            self.columns[1] : iteration_num,
+            self.columns[2] : setup_description,
+            self.columns[3] : classification_report['accuracy'],
+            self.columns[4] : classification_report['macro avg']['f1-score']
+        }])
+        self.data_frame = pd.concat([self.data_frame, record],
+                                    ignore_index=True)
+        
+    def get_frame(self):
+        return self.data_frame       
+        
+    
+    def __init__(self):
+        self.data_frame = pd.DataFrame(columns = self.columns)
+        

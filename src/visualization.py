@@ -66,7 +66,7 @@ def plotLabelFrequency(labels : pd.Series):
     ax.tick_params(axis = 'x', rotation=45)
     plt.savefig(imgPath+'label_freqs')
     
-def plotModelMetric(modelresultscollection, measure = 'accuracy', title = 'title', xlabel = '', ylabel = ''):
+def plotModelPerformance(modelresultscollection, measure = 'accuracy', title = 'title', xlabel = '', ylabel = ''):
     x = list(modelresultscollection.keys())
     y = []
     for model in modelresultscollection.keys():
