@@ -10,7 +10,7 @@ class Suggestion_Manager:
     suggestion_fields = [] # Stores column names of suggestion for input verification
     suggestion_current = dict() # Stores the current suggestion retreived from the list above.
         
-    def load_suggestions(self, input_frame : dict, path = 'res/restaurant_extra_info.csv', rules = ""):
+    def load_suggestions(self, input_frame : dict, path = 'res/restaurant_extra_info.csv', is_user_frame_complete = True):
         if self.is_initialized():
             # Skip this function if initialization already done.
             # Use reload to reset state of initialization
@@ -22,10 +22,45 @@ class Suggestion_Manager:
         
         # Determines whether user input is complete
         for _,value in input_frame.items():
-            if not value:
+            if not value and is_user_frame_complete:
                 raise Exception('User input not complete')
             
         # Performs query on restaurant csv 
+        query = ""
+        if is_user_frame_complete:
+            query = self.query_user_frame_complete(input_frame)
+        else:
+            query = self.query_user_frame_incomplete(input_frame)
+
+        if query == "":
+            df_suggestions = pd.concat([df_suggestions,  df_restaurant.copy()])
+
+        else:
+            df_suggestions = pd.concat([df_suggestions, df_restaurant.query(query)])  
+
+
+        # Turns dataframe query into list of dictionaries
+        self.suggestion_list = df_suggestions.to_dict('records')
+        self.suggestions_initialized = True
+        if not is_user_frame_complete:
+            if not self.get_number_suggestions() == 1:
+                self.reset_suggestions()
+
+        return
+    
+        
+    def query_user_frame_incomplete(self, input_frame : dict):
+        query = ""
+        if input_frame['food'] != None and input_frame['food'] != self.dontcarevalue:
+            query += f'& food == "{input_frame["food"]}"'
+        if input_frame["area"] != None and input_frame["area"] != self.dontcarevalue:
+            query += f'& area == "{input_frame["area"]}"'
+        if input_frame["pricerange"] != None and input_frame["pricerange"] != self.dontcarevalue:
+            query += f'& pricerange == "{input_frame["pricerange"]}"'
+        query = query[1:]
+        return query
+
+    def query_user_frame_complete(self, input_frame : dict):
         query = ""
         if input_frame['food'] != self.dontcarevalue:
             query += f'& food == "{input_frame["food"]}"'
@@ -34,17 +69,8 @@ class Suggestion_Manager:
         if input_frame["pricerange"] != self.dontcarevalue:
             query += f'& pricerange == "{input_frame["pricerange"]}"'
         query = query[1:]
-        if query == "":
-            df_suggestions = pd.concat([df_suggestions,  df_restaurant.copy()])
+        return query
 
-        else:
-            df_suggestions = pd.concat([df_suggestions, df_restaurant.query(query)])  
-        
-        # Turns dataframe query into list of dictionaries
-        self.suggestion_list = df_suggestions.to_dict('records')
-        self.suggestions_initialized = True
-        return
-     
     def propose_suggestion(self):
         if len(self.suggestion_list) > 0:
             self.suggestion_current = self.suggestion_list.pop(0)

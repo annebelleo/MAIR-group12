@@ -20,7 +20,10 @@ import time
 is_ask_levenstein_correction = True # (Ask user about correctness of match for Levenshtein results)
 answer_delay = 0 # Introduce a delay before showing system responses
 is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
-is_text_to_speech = True #Use text-to-speech for system utterances (requires pyttsx3)
+is_text_to_speech = False #Use text-to-speech for system utterances (requires pyttsx3)
+is_direct_search = True # Start offering suggestions 
+                         # after the first preference type is recognized vs. wait until all preference types are recognized
+                         # BUG: if direct search is enabled, the system will not ask for additional requirements 
 if is_text_to_speech:
     import pyttsx3
     text_to_speech_engine = pyttsx3.init()
@@ -59,7 +62,8 @@ class Dialog_Manager():
                             's4_suggest_restaurant',
                             's5_give_info',
                             's6_bye',
-                            's7_restart']
+                            's7_restart',
+                            's8_suggestion_available']
         self.state = self.state_list[0]
         self.tokenizer = tok.load_tokenizer("res/models/tokenizer_0.pkl")
         self.model = rf.load_model("res/models/random_forest_0.pkl")
@@ -174,7 +178,7 @@ class Dialog_Manager():
     def suggest_restaurant(self):
 
         self.suggestion_manager.load_suggestions(self.frame_user_input,
-                                        path = 'res/restaurant_extra_info.csv')
+                                        path = 'res/restaurant_extra_info.csv', is_user_frame_complete= not is_direct_search)
         additional_req = None
         if self.suggestion_manager.get_number_suggestions() > 1:
             additional_req = self.ask_additional_requierments()
@@ -214,32 +218,46 @@ class Dialog_Manager():
         else:
             self.turn(f"I don't understand, what information do you want to know?")
             self.give_contact_information()
-            
+        
+    def is_suggestion_available(self):
+        self.suggestion_manager.load_suggestions(self.frame_user_input,
+                                        path = 'res/restaurant_extra_info.csv', is_user_frame_complete =not is_direct_search)
+        return not self.suggestion_manager.is_suggestions_exhausted()
+       
     # process the current state
     # this followes the diagram
     #   
     def process_states(self):
+
+        
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
             self.ask_for_inform(message= "Hi how can I help you?")
             self.state =  's1_ask_price'
-            
+        
+
         elif self.is_current_state('s1_ask_price'):
-            if not self.is_pricerange_expressed():
+            if is_direct_search and self.is_suggestion_available():
+                self.state = 's4_suggest_restaurant'
+            elif not self.is_pricerange_expressed():
                 self.ask_for_inform("pricerange", message= "What is your budget?")
                 self.state = 's1_ask_price'
             else:
                 self.state = 's2_ask_area'
             
         elif self.is_current_state('s2_ask_area'):
-            if not self.is_area_expressed():
+            if is_direct_search and self.is_suggestion_available():
+                self.state = 's4_suggest_restaurant'
+            elif not self.is_area_expressed():
                 self.ask_for_inform("area", message= "Which area you want to go?")
                 self.state =  's2_ask_area'
             else:
                 self.state =  's3_ask_food'
         
         elif self.is_current_state('s3_ask_food'):
-            if not self.is_food_expressed():
+            if is_direct_search and self.is_suggestion_available():
+                self.state = 's4_suggest_restaurant'
+            elif not self.is_food_expressed():
                 self.ask_for_inform("food", message= "What type of food do you want?")
                 self.state = 's3_ask_food'
             else:
