@@ -95,7 +95,7 @@ def plotModelPerformance2(data : pd.DataFrame,
 
     df_wide = data.pivot(index=index, columns=model_col, values=measure_col)
     print(df_wide)
-    fix, ax = plt.subplots()
+    fig, ax = plt.subplots()
     ax.set_title(title)
     ax.boxplot(df_wide, labels=df_wide.columns)
     ax.set_ylim(0, 1)
@@ -104,8 +104,18 @@ def plotModelPerformance2(data : pd.DataFrame,
     
     return 0
 
-
+def tableLabelFreqs(precision = 3, drop_duplicates = False, img_name = 'table_labelfrequencies', table_path = 'figs/'):
+    dialogDF = data_preparation.get_data(drop_duplicates=drop_duplicates)
+    label_frequency = dialogDF['label'].value_counts(sort = True, normalize = True).round(decimals=precision)
+    label_frequency_cumu = dialogDF['label'].value_counts(sort = True, normalize = True).cumsum().round(decimals=precision)
+    labelframe = pd.concat([label_frequency, label_frequency_cumu], axis = 1, ignore_index=False)
+    labelframe.columns = ['frequency', 'cumulative']
+    labelframe['label'] = labelframe.index
+    labelframe = labelframe[['frequency', 'cumulative']].transpose()
     
+    labelframe.to_csv(path_or_buf=table_path+img_name,index_label='label')
+    
+    return 0
 
 
 
@@ -115,7 +125,8 @@ if __name__ == '__main__':
     dialogDF = data_preparation.get_data(drop_duplicates=False)
     dialogTrain, dialogTest = train_test_split(dialogDF, test_size=0.15, random_state=42)
     #print(dialogDF)
-    
+    tableLabelFreqs(dialogDF)
+    raise NotImplementedError
     
     #print(bag_valueCounts)
     plotTokenFrequency(dialogDF['sentence'])
