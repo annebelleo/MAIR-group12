@@ -16,7 +16,7 @@ is_ask_levenstein_correction = True # (Ask user about correctness of match for L
 answer_delay = 0 # Introduce a delay before showing system responses
 is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
 is_text_to_speech = False #Use text-to-speech for system utterances (requires pyttsx3)
-is_direct_search = False # Start offering suggestions 
+is_direct_search = True # Start offering suggestions 
                          # after the first preference type is recognized vs. wait until all preference types are recognized
                          # BUG: if direct search is enabled, the system will not ask for additional requirements 
 if is_text_to_speech:
@@ -215,9 +215,13 @@ class Dialog_Manager():
             self.turn(f"I don't understand, what information do you want to know?")
             self.give_contact_information()
         
+    # load suggestions and check if there is exactly one suggestion available
+    # if there are more than one suggestion available we reset the suggestions
     def is_suggestion_available(self):
         self.suggestion_manager.load_suggestions(self.frame_user_input,
                                         path = 'res/restaurant_extra_info.csv', is_user_frame_complete =not is_direct_search)
+        if not self.suggestion_manager.get_number_suggestions() == 1:
+                self.suggestion_manager.reset_suggestions()
         return not self.suggestion_manager.is_suggestions_exhausted()
        
     # process the current state

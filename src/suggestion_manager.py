@@ -42,9 +42,7 @@ class Suggestion_Manager:
         # Turns dataframe query into list of dictionaries
         self.suggestion_list = df_suggestions.to_dict('records')
         self.suggestions_initialized = True
-        if not is_user_frame_complete:
-            if not self.get_number_suggestions() == 1:
-                self.reset_suggestions()
+
 
         return
     
