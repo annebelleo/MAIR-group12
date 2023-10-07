@@ -1,42 +1,37 @@
+### Test suite to compare model performance.
+### Results saved to '/figs' directory
+
 # Import Libaries
 import numpy as np
 import pandas as pd
 from collections import defaultdict
-
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from random import seed
 
+# Import Modules
 import data_preparation
 import visualization
 import model_eval
 from tokenizer_manual import Tokenizer_Manual as Tokenizer
-import models.feed_forward as ffn
-# Models
+
+
+# Import Models
 import models.majority_classification as majority_classification
 import models.rule_based as rule_based
+import models.feed_forward as ffn
 from models.decision_tree import DecisionTree
-from models.multinomial_nb import Multinomial_NB
-from sklearn.ensemble import RandomForestClassifier
 from models.random_forest import RandomForest
-#import models.feed_forward as ffn
+from models.multinomial_nb import Multinomial_NB
+
 
 seed(42) # Fix random seed  
-
-def EDA():
-    '''exploratory data analysis'''
-    dialogDF = data_preparation.get_data(drop_duplicates=False)
-    visualization.plotTokenFrequency(dialogDF['sentence'])
-    visualization.plotTokenFrequencyPerClass(dialogDF)
-    visualization.plotLabelFrequency(dialogDF['label'])
-    visualization.tableLabelFreqs(precision=3, img_name='table_labelfrequencies')
-    
-
-
+  
 def perform_test_suite(setup_name : str,
                        test_proportion : float = 0.15,
                        n_iterations : int = 5,
                        drop_duplicate_sentences : bool = False):
+    
     suite_results = model_eval.ResultsFrame()
     
     dialogDF = data_preparation.get_data(drop_duplicates=drop_duplicate_sentences)
@@ -132,7 +127,7 @@ def perform_test_suite(setup_name : str,
         model_classification_report = model_eval.model_evaluate(predicted_labels=y_pred,
                                                     test_labels=y_test)
 
-        suite_results.add_record(model_name='multinonial naive bayes',
+        suite_results.add_record(model_name='multinomial naive bayes',
                         iteration_num=iter_num,
                         setup_description=setup_name,
                         classification_report=model_classification_report)
@@ -140,31 +135,67 @@ def perform_test_suite(setup_name : str,
     return suite_results.get_frame()
 
 if __name__ == '__main__':
-    EDA() # Performs Exploratory Data Analysis steps and makes plots.
+    # Performs Exploratory Data Analysis steps and makes plots.
+    dialogDF = data_preparation.get_data(drop_duplicates=False)
+    visualization.plotTokenFrequency(dialogDF['sentence'])
+    visualization.plotLabelFrequency(dialogDF['label'])
+    visualization.tableLabelFreqs(precision=3, drop_duplicates = False, table_name='table_labelfrequencies.csv')
+    visualization.tableLabelFreqs(precision=3, drop_duplicates=True, table_name='table_labelfrequencies_nodup.csv')
+    
     ### Experiment suite 1: Unpreprocessed Data
     results_base = perform_test_suite('base',
                                            test_proportion=0.15,
                                            n_iterations=5,
                                            drop_duplicate_sentences=False)
-    print(results_base)
-    # results_nodup = perform_test_suite('nodup',
-    #                                    test_proportion=0.15,
-    #                                    n_iterations=5,
-    #                                    drop_duplicate_sentences=True)
+    results_base.to_csv('figs/results_base.csv')
+    
+    visualization.table_result_statistics(results=results_base,
+                                          measure = 'accuracy',
+                                          table_name='table_results_base_acc.csv')
+    visualization.table_result_statistics(results=results_base,
+                                          measure = 'macro_F1',
+                                          table_name='table_results_base_F1.csv')
 
-
-    visualization.plotModelPerformance2(results_base,
+    visualization.plotModelPerformance(results_base,
                                         model_col ='Model',
                                         measure_col = 'accuracy',
                                         index='Iteration',
-                                        title='Model Accuracy',
+                                        title='Model Performance: Accuracy',
                                         img_name='model_performance_accuracy')
-    visualization.plotModelPerformance2(results_base,
+    visualization.plotModelPerformance(results_base,
                                         model_col ='Model',
                                         measure_col = 'macro_F1',
                                         index='Iteration',
-                                        title='Model F1',
+                                        title='Model Performance: Macro-F1',
                                         img_name='model_performance_F1')
+    
+    ### Experiment suite 2: Remove duplicate sentences
+    
+    results_nodup = perform_test_suite('nodup',
+                                       test_proportion=0.15,
+                                       n_iterations=5,
+                                       drop_duplicate_sentences=True)
+    results_base.to_csv('figs/results_nodup.csv')
+    visualization.table_result_statistics(results=results_nodup,
+                                          measure = 'accuracy',
+                                          table_name='table_results_nodup_acc.csv')
+    visualization.table_result_statistics(results=results_nodup,
+                                          measure = 'macro_F1',
+                                          table_name='table_results_nodup_F1.csv')
+
+    visualization.plotModelPerformance(results_nodup,
+                                        model_col ='Model',
+                                        measure_col = 'accuracy',
+                                        index='Iteration',
+                                        title='Model Performance, Accuracy\nremoved duplicates',
+                                        img_name='model_nodup_performance_accuracy')
+    visualization.plotModelPerformance(results_nodup,
+                                        model_col ='Model',
+                                        measure_col = 'macro_F1',
+                                        index='Iteration',
+                                        title='Model Performance, Macro-F1\nremoved duplicates',
+                                        img_name='model_nodup_performance_F1')
+    
 
 
 
