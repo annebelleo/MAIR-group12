@@ -11,10 +11,3 @@
 Here you can find all ressources. You can find the database and the stored models here.
 ## figures (root/fig):
 here you can find all figures and tables which are importent to the project.  
-
-# TODOs:
-* add missing comments: all models, model_eval, model_testing_methods, preference extraction, tokenizer, visualization II
-* redunatant descriptions and dialog manager (dialog act ) II
-* DOuble Check: Configurations (Chapter 5)
-* Conclusion (Chapter 6)
-* remove unased imports

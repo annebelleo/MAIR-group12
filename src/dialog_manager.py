@@ -12,7 +12,7 @@ import logging
 import time
     
 # extra feature configuration
-is_ask_additional_requirement = False # (Ask user for additional requirements, such as romantic)
+is_ask_additional_requirement = True # (Ask user for additional requirements, such as romantic)
 is_ask_levenstein_correction = False # (Ask user about correctness of match for Levenshtein results)
 answer_delay = 0 # Introduce a delay before showing system responses (in seconds)
 is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
@@ -158,7 +158,7 @@ class Dialog_Manager():
     # if no additional requirements are given, we just move on
     # otherwise filter in the suggestion manager for the additional requirement
     def ask_additional_requierments(self):
-        self.turn("what additional requirements do you have?")
+        self.turn("do you have additional requirements? If so, what are they?")
         if not self.frame_current_turn["dialog_act_user"] == "negate":
             additional_req = consequent_extraction(self.frame_current_turn["user_message"])
             logging.log(log_frames_level,additional_req)
@@ -191,7 +191,7 @@ class Dialog_Manager():
             suggestion_message = "I have found %s. It is an %s restaurant in the %s part of town that serves %s food." % suggestion_data
             if additional_req:
                 suggestion_message = suggestion_message + reasoner.get_reasoning(additional_req)
-            suggestion_message = suggestion_message + "\nAre you interested in it?"
+            suggestion_message = suggestion_message + "\nAre you interested in this restaurant?"
             self.turn(suggestion_message)
             # get clasification
             if self.frame_current_turn["dialog_act_user"] == "affirm":
@@ -235,7 +235,7 @@ class Dialog_Manager():
         
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
-            self.ask_for_inform(message= "Hi how can I help you?")
+            self.ask_for_inform(message= "Hi, how can I help you?")
             self.state =  's1_ask_price'
         
 
@@ -252,7 +252,7 @@ class Dialog_Manager():
             if is_direct_search and self.is_suggestion_available():
                 self.state = 's4_suggest_restaurant'
             elif not self.is_area_expressed():
-                self.ask_for_inform("area", message= "Which area you want to go?")
+                self.ask_for_inform("area", message= "Which area do you want to go?")
                 self.state =  's2_ask_area'
             else:
                 self.state =  's3_ask_food'
