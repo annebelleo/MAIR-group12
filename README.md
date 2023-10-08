@@ -15,10 +15,6 @@ here you can find all figures and tables which are importent to the project.
 # TODOs:
 * add missing comments: all models, model_eval, model_testing_methods, preference extraction, tokenizer, visualization II
 * redunatant descriptions and dialog manager (dialog act ) II
-* check function names II
-* check comments II
-*  Descripton (Chapter 3) 
-* Configurations (Chapter 5)
+* DOuble Check: Configurations (Chapter 5)
 * Conclusion (Chapter 6)
-* solve diagram: we change to suggest restaurant directly and in suggest restaurant we check if combo exists, if solved use in exaple suggestion available.
-* diagram please start at 0!
+* remove unased imports
