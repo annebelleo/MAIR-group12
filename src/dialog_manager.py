@@ -1,4 +1,4 @@
-from data_preparation import class2descript
+
 import pandas as pd
 from preference_extraction import get_preference, request_extraction, consequent_extraction
 from suggestion_manager import Suggestion_Manager
@@ -12,24 +12,26 @@ import logging
 import time
     
 # extra feature configuration
-is_ask_additional_requerment = False # (Ask user for additional requirements, such as romantic)
+is_ask_additional_requirement = False # (Ask user for additional requirements, such as romantic)
 is_ask_levenstein_correction = False # (Ask user about correctness of match for Levenshtein results)
-answer_delay = 0 # Introduce a delay before showing system responses
+answer_delay = 0 # Introduce a delay before showing system responses (in seconds)
 is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
-is_text_to_speech = False #Use text-to-speech for system utterances (requires pyttsx3)
-is_direct_search = False # Start offering suggestions 
+is_direct_search = True # Start offering suggestions 
                          # after the first preference type is recognized vs. wait until all preference types are recognized
                          # BUG: if direct search is enabled, the system will not ask for additional requirements 
-if is_text_to_speech:
-    import pyttsx3
-    text_to_speech_engine = pyttsx3.init()
+is_show_debug_information = False # Show debug information
+
 
 
 log_frames_level = 10
 
 # if you want information about frames: log_frames_level < log_frames_level
 # else log_frames_level >= log_frames_level
-logging_level = 9
+logging_level = 0
+if is_show_debug_information:
+    logging_level = 9
+else:
+    logging_level = 11
 logging.getLogger().setLevel(logging_level)             
 
 
@@ -117,14 +119,10 @@ class Dialog_Manager():
     def turn(self,system_message):
         if not self.is_current_state('s0_welcome'):
             time.sleep(answer_delay)
-        if is_text_to_speech:
-            text_to_speech_engine.say(system_message)
-          #  text_to_speech_engine.runAndWait()
+        if is_output_caps:
+            print(system_message.upper())
         else:
-            if is_output_caps:
-                print(system_message.upper())
-            else:
-                print(system_message.lower())
+            print(system_message.lower())
         user_message = input()
         turn_frame = {"system_message": system_message, "user_message":user_message,
                     'dialog_act_system': self.predict_act(system_message),'dialog_act_user': self.predict_act(user_message),
@@ -180,7 +178,7 @@ class Dialog_Manager():
         self.suggestion_manager.load_suggestions(self.frame_user_input,
                                         path = 'res/restaurant_extra_info.csv', is_user_frame_complete= not is_direct_search)
         additional_req = None
-        if self.suggestion_manager.get_number_suggestions() > 1 and is_ask_additional_requerment:
+        if self.suggestion_manager.get_number_suggestions() > 1 and is_ask_additional_requirement:
             additional_req = self.ask_additional_requierments()
         logging.log(log_frames_level,f'Suggestion available: {not self.suggestion_manager.is_suggestions_exhausted()}')
         self.suggestion_manager.propose_suggestion()
