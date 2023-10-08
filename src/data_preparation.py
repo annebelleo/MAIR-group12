@@ -4,13 +4,13 @@ import numpy as np
 from random import randint
 from sklearn.model_selection import train_test_split
 
-### deprecated: included in main
 descriptions = ['ack','affirm','bye','confirm','deny','hello',
                   'inform','negate','null', 'repeat', 'reqalts',
                     'reqmore', 'request', 'restart','thankyou']
 descript2class = {k: v for v, k in enumerate(descriptions)}
-class2descript = {v: k for k, v in descript2class.items()}
 
+
+# load the data to a pands dataframe
 def get_data(path_dialog_acts = 'res/dialog_acts.dat', drop_duplicates = False): 
   
   dialogue_df = pd.DataFrame(columns = ['label', 'sentence'])
@@ -31,7 +31,8 @@ def get_data(path_dialog_acts = 'res/dialog_acts.dat', drop_duplicates = False):
 
   return dialogue_df
 
-def CSV_add_qualities(path_origin, path_destination):
+# add randomly qualities to the restaurants
+def csv_add_qualities(path_origin, path_destination):
   
   assert path_origin != path_destination, 'lets not overwrite old file'
   

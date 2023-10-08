@@ -9,7 +9,9 @@ class Suggestion_Manager:
     suggestion_list = [] # Stores a set of suggestions in dictionary form
     suggestion_fields = [] # Stores column names of suggestion for input verification
     suggestion_current = dict() # Stores the current suggestion retreived from the list above.
-        
+    
+
+    # load suggestions from csv
     def load_suggestions(self, input_frame : dict, path = 'res/restaurant_extra_info.csv', is_user_frame_complete = True):
         if self.is_initialized():
             # Skip this function if initialization already done.
@@ -46,7 +48,7 @@ class Suggestion_Manager:
 
         return
     
-        
+    # query for suggestions if user frame is not completed  
     def query_user_frame_incomplete(self, input_frame : dict):
         query = ""
         if input_frame['food'] != None and input_frame['food'] != self.dontcarevalue:
@@ -58,6 +60,7 @@ class Suggestion_Manager:
         query = query[1:]
         return query
 
+    # query for suggestions if user frame is completed
     def query_user_frame_complete(self, input_frame : dict):
         query = ""
         if input_frame['food'] != self.dontcarevalue:
@@ -69,13 +72,15 @@ class Suggestion_Manager:
         query = query[1:]
         return query
 
+    # pops the next suggestion from the list
     def propose_suggestion(self):
         if len(self.suggestion_list) > 0:
             self.suggestion_current = self.suggestion_list.pop(0)
         else:
             self.suggestion_current = None
         return self.suggestion_current
-        
+    
+    # returns information for a suggestion, like the name of the restaurant
     def get_suggestion_information(self, query : list):
         # Assertion to verify if input is valid
        # assert set(query).issubset(set(self.suggestion_fields)), 'Query does not correspond to fields'
@@ -86,31 +91,29 @@ class Suggestion_Manager:
             
         return tuple(data)
     
+    # check if suggestions are initialized
     def is_initialized(self):
         return self.suggestions_initialized
     
+    # Determines whether the current selection and backlog are exhausted  
     def is_suggestions_exhausted(self):
-        '''
-        Determines whether the current selection and backlog are exhausted
-        '''
         return len(self.suggestion_list) == 0 and not self.suggestion_current
-    
+    #init
     def initialize(self):
         self.suggestion_list = []
         self.suggestion_fields = []
         self.suggestion_current = dict()
-        
+    
+    # clear suggestion
+    # USE THIS FUNCTION IF STATE 5 RESULTS IN A COMPLETE DO-OVER
     def reset_suggestions(self):
-        '''
-        
-        '''
-        # USE THIS FUNCTION IF STATE 5 RESULTS IN A COMPLETE DO-OVER
         self.suggestions_initialized = False
         self.initialize()
-
+    # number of available suggestions
     def get_number_suggestions(self):
-        return len(self.suggestion_list)    
-    
+        return len(self.suggestion_list)
+        
+    # filter for additional requiremts
     def filter(self, filter):
         self.suggestion_list =  reasoner.filter(pd.DataFrame(self.suggestion_list), filter)
 

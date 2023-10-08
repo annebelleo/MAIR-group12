@@ -12,11 +12,12 @@ import logging
 import time
     
 # extra feature configuration
-is_ask_levenstein_correction = True # (Ask user about correctness of match for Levenshtein results)
+is_ask_additional_requerment = False # (Ask user for additional requirements, such as romantic)
+is_ask_levenstein_correction = False # (Ask user about correctness of match for Levenshtein results)
 answer_delay = 0 # Introduce a delay before showing system responses
 is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
 is_text_to_speech = False #Use text-to-speech for system utterances (requires pyttsx3)
-is_direct_search = True # Start offering suggestions 
+is_direct_search = False # Start offering suggestions 
                          # after the first preference type is recognized vs. wait until all preference types are recognized
                          # BUG: if direct search is enabled, the system will not ask for additional requirements 
 if is_text_to_speech:
@@ -63,18 +64,20 @@ class Dialog_Manager():
         self.tokenizer = tok.load_tokenizer("res/models/tokenizer_0.pkl")
         self.model = rf.load_model("res/models/random_forest_0.pkl")
         self.suggestion_manager = Suggestion_Manager()
-        self.list_turns = []
+        self.turn_index = 0
+        self.frame_current_turn = None
 
         self.frame_user_input = {"area": None,
                             "food": None,
                             "pricerange": None}
+        
 
+    # clears user frame for restarting
+    def clear_frame_user(self):
+        self.frame_user_input = {"area": None,
+                    "food": None,
+                    "pricerange": None}
 
-    
-    # returns current turn of conversation
-    # each turn is a message from the system and the user 
-    def get_current_turn(self):
-        return self.list_turns[-1]
     
     # check if current state is the same as the condition state
     def is_current_state(self,condition_state : str):
@@ -125,25 +128,26 @@ class Dialog_Manager():
         user_message = input()
         turn_frame = {"system_message": system_message, "user_message":user_message,
                     'dialog_act_system': self.predict_act(system_message),'dialog_act_user': self.predict_act(user_message),
-                    "turn_index": len(self.list_turns)}
+                    "turn_index": self.turn_index}
         logging.log(log_frames_level,turn_frame)
-        self.list_turns.append(turn_frame)
-    
+        self.turn_index += 1
+        self.frame_current_turn = turn_frame
+       
     # makes a turn to ask the user for information about a category (area, food or pricerange)
     # first checks if user dialog act is a inform, otherwise we dont to do anything 
     # if the user input is not clear, the system will ask again (user message is unclear if levenstein is used)
     # if the user input is clear, the system will add the preference to the user frame
     def ask_for_inform(self,category = None, message = None):
         self.turn(message)
-        if self.get_current_turn()['dialog_act_user'] == "inform":
-            preference = get_preference(self.get_current_turn()["user_message"], category)
+        if self.frame_current_turn['dialog_act_user'] == "inform":
+            preference = get_preference(self.frame_current_turn["user_message"], category)
             if len(preference) == 0:
-                self.ask_for_inform(message=f"I didn't understand: {self.get_current_turn()['user_message']}", category=category)
+                self.ask_for_inform(message=f"I didn't understand: {self.frame_current_turn['user_message']}", category=category)
                 return
-            is_used_leven = not list(preference.values())[0] in self.get_current_turn()["user_message"].split()
+            is_used_leven = not list(preference.values())[0] in self.frame_current_turn["user_message"].split()
             if is_ask_levenstein_correction and is_used_leven:
                 self.turn(f"did you mean {list(preference.values())[0]}?")
-                if self.get_current_turn()["dialog_act_user"] == "affirm":
+                if self.frame_current_turn["dialog_act_user"] == "affirm":
                     self.add_to_user_frame(preference)
                     logging.log(log_frames_level,self.frame_user_input)
                 else: 
@@ -157,8 +161,8 @@ class Dialog_Manager():
     # otherwise filter in the suggestion manager for the additional requirement
     def ask_additional_requierments(self):
         self.turn("what additional requirements do you have?")
-        if not self.get_current_turn()["dialog_act_user"] == "negate":
-            additional_req = consequent_extraction(self.get_current_turn()["user_message"])
+        if not self.frame_current_turn["dialog_act_user"] == "negate":
+            additional_req = consequent_extraction(self.frame_current_turn["user_message"])
             logging.log(log_frames_level,additional_req)
             if len(additional_req) > 0:
                 self.suggestion_manager.filter(additional_req[0]) 
@@ -176,14 +180,15 @@ class Dialog_Manager():
         self.suggestion_manager.load_suggestions(self.frame_user_input,
                                         path = 'res/restaurant_extra_info.csv', is_user_frame_complete= not is_direct_search)
         additional_req = None
-        if self.suggestion_manager.get_number_suggestions() > 1:
+        if self.suggestion_manager.get_number_suggestions() > 1 and is_ask_additional_requerment:
             additional_req = self.ask_additional_requierments()
-
+        logging.log(log_frames_level,f'Suggestion available: {not self.suggestion_manager.is_suggestions_exhausted()}')
         self.suggestion_manager.propose_suggestion()
         if self.suggestion_manager.is_suggestions_exhausted():
             self.suggestion_manager.reset_suggestions()
             self.state = 's7_restart'
         else:
+            
             suggestion_data = self.suggestion_manager.get_suggestion_information(["restaurantname","pricerange","area","food"])
             suggestion_message = "I have found %s. It is an %s restaurant in the %s part of town that serves %s food." % suggestion_data
             if additional_req:
@@ -191,25 +196,25 @@ class Dialog_Manager():
             suggestion_message = suggestion_message + "\nAre you interested in it?"
             self.turn(suggestion_message)
             # get clasification
-            if self.get_current_turn()["dialog_act_user"] == "affirm":
+            if self.frame_current_turn["dialog_act_user"] == "affirm":
                 self.state = 's5_give_info'
-            elif self.get_current_turn()["dialog_act_user"] == "request":
+            elif self.frame_current_turn["dialog_act_user"] == "request":
                 self.state = 's5_give_info'
                 self.give_contact_information()
-            elif self.get_current_turn()["dialog_act_user"] == 'reqalts' or self.get_current_turn()["dialog_act_user"] == 'negate':
+            elif self.frame_current_turn["dialog_act_user"] == 'reqalts' or self.frame_current_turn["dialog_act_user"] == 'negate':
                 self.state = 's4_suggest_restaurant'
     
     
     # first make a turn to ask which information the user wants,
     # extract the information from the user message and make a turn with the information   
     def give_contact_information(self):
-        if self.get_current_turn()["dialog_act_user"] == "request":
-            contact_information = request_extraction(self.get_current_turn()["user_message"])
+        if self.frame_current_turn["dialog_act_user"] == "request":
+            contact_information = request_extraction(self.frame_current_turn["user_message"])
             if len(contact_information) > 0:
                 data = self.suggestion_manager.get_suggestion_information(contact_information)
                 self.turn(f"Here is the{contact_information}: {data}. Do you need more information?")
                 self.give_contact_information()
-        elif self.get_current_turn()["dialog_act_user"] == "negate":
+        elif self.frame_current_turn["dialog_act_user"] == "negate":
             self.state = 's6_bye'
         else:
             self.turn(f"I don't understand, what information do you want to know?")
@@ -270,8 +275,8 @@ class Dialog_Manager():
             self.turn("What information do you want to know?")
             self.give_contact_information()
         elif self.is_current_state('s7_restart'):
-            self.turn(f'didnt found any with{self.frame_user_input}, start over')
-            
+            self.clear_frame_user()
+            print("didn't find anything, start over")
             self.state = "s1_ask_price"
         else: 
             self.state =  's6_bye'
