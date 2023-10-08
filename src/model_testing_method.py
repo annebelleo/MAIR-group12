@@ -8,6 +8,7 @@ from collections import defaultdict
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from random import seed
+import csv
 
 # Import Modules
 import data_preparation
@@ -106,6 +107,16 @@ def perform_test_suite(setup_name : str,
                         iteration_num=iter_num,
                         setup_description=setup_name,
                         classification_report=model_classification_report)
+        if iter == 0:
+            with open('figs/FFN_micro_results', 'w', newline="") as fp:
+                report = model_classification_report
+                report.pop('accuracy')
+                report.pop('macro avg')
+                report.pop('weighted avg')
+                writer = csv.DictWriter(fp, fieldnames = report.keys())
+                writer.writeheader()
+                writer.writerow(report)
+                
         
         
         # Model: Random Forest
