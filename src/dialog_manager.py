@@ -16,7 +16,6 @@ import datetime
 import json
 
 
-# TODO: reasoner conf["language"]
 # TODO: Bug reask for additional requirements
 
 
