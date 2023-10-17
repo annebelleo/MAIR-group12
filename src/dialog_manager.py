@@ -227,7 +227,7 @@ class Dialog_Manager():
             suggestion_data = self.suggestion_manager.get_suggestion_information(["restaurantname","pricerange","area","food"])
             suggestion_message = system_messages.MESSAGES["suggest_restaurant"][conf["language"]] % suggestion_data
             if additional_req:
-                suggestion_message = suggestion_message + reasoner.get_reasoning(additional_req)
+                suggestion_message = suggestion_message + reasoner.get_reasoning(additional_req, conf["language"])
             suggestion_message = suggestion_message + system_messages.MESSAGES["suggest_interess"][conf["language"]]
             self.turn(suggestion_message)
             # get clasification

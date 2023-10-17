@@ -55,7 +55,7 @@ MESSAGES = {
         "FORMAL": "It is %s because the %s is %s and the %s is %s.",
         "GENZ": "Its hella %s cause the %s is %s and the %s is %s."
     },
-    "1_factor reasoning": {
+    "1_factor_reasoning": {
         "FORMAL": "It is %s because the %s is %s.",
         "GENZ": "Its %s cause the %s is %s."
     },
