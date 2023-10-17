@@ -51,6 +51,14 @@ MESSAGES = {
         "FORMAL": "Regrettably, no results were found. Shall we commence anew?",
         "GENZ": "Bummer, couldn't find anything. Let's try again from scratch."
     },
+    "2_factor_reasoning": {
+        "FORMAL": "It is %s because the %s is %s and the %s is %s.",
+        "GENZ": "Its hella %s cause the %s is %s and the %s is %s."
+    },
+    "1_factor reasoning": {
+        "FORMAL": "It is %s because the %s is %s.",
+        "GENZ": "Its %s cause the %s is %s."
+    },
     "bye": {
         "FORMAL": "Farewell",
         "GENZ": "Catch you later, fam! 👋"
