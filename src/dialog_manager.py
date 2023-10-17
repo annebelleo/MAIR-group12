@@ -14,6 +14,7 @@ import system_messages
 import socket
 import datetime
 import json
+import uuid
 
 
 # TODO: Bug reask for additional requirements
@@ -26,12 +27,11 @@ conf = {
     "is_ask_levenstein_correction" : False, # (Ask user about correctness of match for Levenshtein results)
     "answer_delay" : 0, # Introduce a delay before showing system responses (in seconds)
     "is_output_caps" : False, #OUTPUT IN ALL CAPS OR NOT
-    "is_direct_search" : True ,# Start offering suggestions 
+    "is_direct_search" : False ,# Start offering suggestions 
                             # after the first preference type is recognized vs. wait until all preference types are recognized
                             # BUG: if direct search is enabled, the system will not ask for additional requirements 
     "is_show_debug_information" : False, # Show debug information
     "language" : "GENZ" # "GENZ" or "FORMAL
-
 }
 
 
@@ -82,12 +82,14 @@ class Dialog_Manager():
         self.turn_index = 0
         self.frame_current_turn = None
         time_stamp = str(datetime.datetime.now()).replace(":", "-").replace(" ", "_")
+        self.uuid = uuid.uuid4()
         self.user_data_frame_json = {
+            "id": str(self.uuid),
             "device_name": socket.gethostname(),
             "time_stamp": time_stamp,
             "configuration": conf,
             "number_suggestions": 0,
-            "number_restarts": 0,
+            "number_restart": 0,
             "turns" : []
         }
         self.frame_user_input = {"area": None,
@@ -268,10 +270,10 @@ class Dialog_Manager():
     # this followes the diagram
     #   
     def process_states(self):
-
         
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
+            print(f"This is your user id: {self.uuid} \nPlease use it in the questionnaire.")
             self.ask_for_inform(message= system_messages.MESSAGES["welcome"][conf["language"]])
             self.state =  's1_ask_price'
         

@@ -16,8 +16,8 @@ MESSAGES = {
         "GENZ": "What's your craving, fam? Food-wise, I mean."
     },
     "re_ask_inform": {
-        "FORMAL": "I apologize for any confusion. Could you please reiterate: %",
-        "GENZ": "Sorry, I'm a bit confused. Can you, like, clarify?"
+        "FORMAL": "I apologize for any confusion. Could you please reiterate: %s",
+        "GENZ": "Sorry, I'm a bit confused. Can you, like, clarify %s?"
     },
     "suggest_restaurant": {
         "FORMAL": "I have identified %s. It is an establishment of %s nature situated in the %s district, renowned for its offerings of %s cuisine.",
