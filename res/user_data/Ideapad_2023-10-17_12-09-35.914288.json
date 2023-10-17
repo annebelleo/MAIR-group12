@@ -1,0 +1,59 @@
+{
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-17_12-09-35.914288",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": true,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "turns": [
+        {
+            "system_message": "Hey there! What's up?",
+            "user_message": "hi",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "hello",
+            "turn_index": 0
+        },
+        {
+            "system_message": "So, what's your budget, fam?",
+            "user_message": "any",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1
+        },
+        {
+            "system_message": "Where you tryna go, my dude?",
+            "user_message": "centre",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2
+        },
+        {
+            "system_message": "What's your craving, fam? Food-wise, I mean.",
+            "user_message": "any",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3
+        },
+        {
+            "system_message": "Anything else I should know? Your preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "reqalts",
+            "dialog_act_user": "negate",
+            "turn_index": 4
+        },
+        {
+            "system_message": "Check this out! I found loch fyne it's a moderate spot in the centre area that serves seafood food. Pretty cool, right?Are you down for this place? \ud83d\ude0e",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 5
+        }
+    ],
+    "number_rejections": 0,
+    "number_restarts": 0
+}
