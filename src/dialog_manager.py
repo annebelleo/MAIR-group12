@@ -14,7 +14,9 @@ import system_messages
 import socket
 import datetime
 import json
-import uuid
+
+# ellora : e1,e2
+# tomas: t1, t2
 
 
 # TODO: Bug reask for additional requirements
@@ -82,9 +84,8 @@ class Dialog_Manager():
         self.turn_index = 0
         self.frame_current_turn = None
         time_stamp = str(datetime.datetime.now()).replace(":", "-").replace(" ", "_")
-        self.uuid = uuid.uuid4()
         self.user_data_frame_json = {
-            "id": str(self.uuid),
+            "user_id": "",
             "device_name": socket.gethostname(),
             "time_stamp": time_stamp,
             "configuration": conf,
@@ -97,7 +98,7 @@ class Dialog_Manager():
                             "pricerange": None}
         
     def save_meta_frame(self):
-        with open(f'res/user_data/{self.user_data_frame_json["device_name"]}_{self.user_data_frame_json["time_stamp"]}.json', 'w') as f:
+        with open(f'res/user_data/{self.user_data_frame_json["user_id"]}_{self.user_data_frame_json["device_name"]}_{self.user_data_frame_json["time_stamp"]}.json', 'w') as f:
             json.dump(self.user_data_frame_json, f, indent=4)
             
         
@@ -273,7 +274,8 @@ class Dialog_Manager():
         
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
-            print(f"This is your user id: {self.uuid} \nPlease use it in the questionnaire.")
+            user_id = input("please write your user number (like  5,...):")
+            self.user_data_frame_json["user_id"] = user_id 
             self.ask_for_inform(message= system_messages.MESSAGES["welcome"][conf["language"]])
             self.state =  's1_ask_price'
         
@@ -320,6 +322,7 @@ class Dialog_Manager():
             self.state =  's6_bye'
         
         if self.is_current_state('s6_bye'):
+            print(f"This is your user id: {self.user_id} \nPlease use it in the questionnaire.")
             self.turn(system_messages.MESSAGES["bye"][conf["language"]])    
         else:
             self.process_states()
