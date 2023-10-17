@@ -17,8 +17,7 @@ import json
 
 
 # TODO: reasoner conf["language"]
-# TODO: number of rejections is wrong
-# TODO: time per turn
+# TODO: Bug reask for additional requirements
 
 
 
@@ -151,10 +150,19 @@ class Dialog_Manager():
             print(system_message.upper())
         else:
             print(system_message.lower())
+        time_before_input = datetime.datetime.now()
         user_message = input()
+
+
+        response_time =datetime.datetime.now() -  time_before_input  
+        response_time = str(response_time)
+        response_time = response_time.split(":")
+        
+        seconds = (float(response_time[0]) * 60 + float(response_time[1])) * 60 + float(response_time[2])
+
         turn_frame = {"system_message": system_message, "user_message":user_message,
                     'dialog_act_system': self.predict_act(system_message),'dialog_act_user': self.predict_act(user_message),
-                    "turn_index": self.turn_index}
+                    "turn_index": self.turn_index, "response_seconds": seconds}
         logging.log(log_frames_level,turn_frame)
         self.turn_index += 1
         self.user_data_frame_json["turns"].append(turn_frame)
