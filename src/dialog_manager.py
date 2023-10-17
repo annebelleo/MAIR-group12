@@ -14,8 +14,12 @@ import system_messages
 import socket
 import datetime
 import json
+
+
 # TODO: reasoner conf["language"]
 # TODO: number of rejections is wrong
+# TODO: time per turn
+
 
 
 # extra feature configuration
@@ -84,9 +88,9 @@ class Dialog_Manager():
             "device_name": socket.gethostname(),
             "time_stamp": time_stamp,
             "configuration": conf,
-            "turns" : [],
-            "number_rejections": 0,
-            "number_restarts": 0
+            "number_suggestions": 0,
+            "number_restarts": 0,
+            "turns" : []
         }
         self.frame_user_input = {"area": None,
                             "food": None,
@@ -211,7 +215,7 @@ class Dialog_Manager():
             self.suggestion_manager.reset_suggestions()
             self.state = 's7_restart'
         else:
-            
+            self.user_data_frame_json["number_suggestions"] += 1
             suggestion_data = self.suggestion_manager.get_suggestion_information(["restaurantname","pricerange","area","food"])
             suggestion_message = system_messages.MESSAGES["suggest_restaurant"][conf["language"]] % suggestion_data
             if additional_req:
@@ -226,7 +230,7 @@ class Dialog_Manager():
                 self.give_contact_information()
             elif self.frame_current_turn["dialog_act_user"] == 'reqalts' or self.frame_current_turn["dialog_act_user"] == 'negate':
                 self.state = 's4_suggest_restaurant'
-                self.user_data_frame_json["number_rejections"] += 1
+ 
     
     
     # first make a turn to ask which information the user wants,
@@ -241,7 +245,7 @@ class Dialog_Manager():
         elif self.frame_current_turn["dialog_act_user"] == "negate":
             self.state = 's6_bye'
         else:
-            self.turn(system_messages.MESSAGES["give_contact_reask"][conf["language"]])
+            self.turn(system_messages.MESSAGES["re_give_contact"][conf["language"]])
             self.give_contact_information()
         
     # load suggestions and check if there is exactly one suggestion available
