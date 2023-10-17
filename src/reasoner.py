@@ -66,6 +66,8 @@ def get_reasoning(q): # String manipulation to turn the rule applied to a natura
         if rule[i] !="_":
             output.update({rule_format[i]:rule[i]})
     output.update({"rule":q})
+
+def formal_string(output):
     string = f'It is {un_camel_caseify(output["rule"])} because '
     keys = list(output.keys())
     if len(output)==3:
@@ -77,6 +79,16 @@ def get_reasoning(q): # String manipulation to turn the rule applied to a natura
             string = string + f'the {un_camel_caseify(keys[x])} is {output[get_nth_key(output,x)]}, '
     return string
 
-
+def genz_string(output):
+    string = f'Its hella {un_camel_caseify(output["rule"])} cause '
+    keys = list(output.keys())
+    if len(output)==3:
+        string = string + f'the {un_camel_caseify(keys[1])} is {output[get_nth_key(output,1)]}'
+    elif len(output)==4:
+        string = string + f'the {un_camel_caseify(keys[1])} is {output[get_nth_key(output,1)]} and the {un_camel_caseify(keys[2])} is {output[get_nth_key(output,2)]}'
+    else:
+        for x in range(1,len(output)-1):
+            string = string + f'the {un_camel_caseify(keys[x])} is {output[get_nth_key(output,x)]}, '
+    return string
 if __name__ == '__main__':
     pass
