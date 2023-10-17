@@ -11,18 +11,29 @@ import reasoner
 import logging
 import time
 import system_messages
-# TODO: reasoner language
+import socket
+import datetime
+import json
+
+
+# TODO: reasoner conf["language"]
+# TODO: Bug reask for additional requirements
+
+
 
 # extra feature configuration
-is_ask_additional_requirement = True # (Ask user for additional requirements, such as romantic)
-is_ask_levenstein_correction = False # (Ask user about correctness of match for Levenshtein results)
-answer_delay = 0 # Introduce a delay before showing system responses (in seconds)
-is_output_caps = False #OUTPUT IN ALL CAPS OR NOT
-is_direct_search = True # Start offering suggestions 
-                         # after the first preference type is recognized vs. wait until all preference types are recognized
-                         # BUG: if direct search is enabled, the system will not ask for additional requirements 
-is_show_debug_information = False # Show debug information
-language = "GENZ" # "GENZ" or "FORMAL
+conf = {
+    "is_ask_additional_requirement" : True, # (Ask user for additional requirements, such as romantic)
+    "is_ask_levenstein_correction" : False, # (Ask user about correctness of match for Levenshtein results)
+    "answer_delay" : 0, # Introduce a delay before showing system responses (in seconds)
+    "is_output_caps" : False, #OUTPUT IN ALL CAPS OR NOT
+    "is_direct_search" : True ,# Start offering suggestions 
+                            # after the first preference type is recognized vs. wait until all preference types are recognized
+                            # BUG: if direct search is enabled, the system will not ask for additional requirements 
+    "is_show_debug_information" : False, # Show debug information
+    "language" : "GENZ" # "GENZ" or "FORMAL
+
+}
 
 
 
@@ -31,7 +42,7 @@ log_frames_level = 10
 # if you want information about frames: log_frames_level < log_frames_level
 # else log_frames_level >= log_frames_level
 logging_level = 0
-if is_show_debug_information:
+if conf["is_show_debug_information"]:
     logging_level = 9
 else:
     logging_level = 11
@@ -71,10 +82,23 @@ class Dialog_Manager():
         self.suggestion_manager = Suggestion_Manager()
         self.turn_index = 0
         self.frame_current_turn = None
-
+        time_stamp = str(datetime.datetime.now()).replace(":", "-").replace(" ", "_")
+        self.user_data_frame_json = {
+            "device_name": socket.gethostname(),
+            "time_stamp": time_stamp,
+            "configuration": conf,
+            "number_suggestions": 0,
+            "number_restarts": 0,
+            "turns" : []
+        }
         self.frame_user_input = {"area": None,
                             "food": None,
                             "pricerange": None}
+        
+    def save_meta_frame(self):
+        with open(f'res/user_data/{self.user_data_frame_json["device_name"]}_{self.user_data_frame_json["time_stamp"]}.json', 'w') as f:
+            json.dump(self.user_data_frame_json, f, indent=4)
+            
         
 
     # clears user frame for restarting
@@ -121,18 +145,29 @@ class Dialog_Manager():
     # 4. add turn_frame to list of turns
     def turn(self,system_message):
         if not self.is_current_state('s0_welcome'):
-            time.sleep(answer_delay)
-        if is_output_caps:
+            time.sleep(conf["answer_delay"])
+        if conf["is_output_caps"]:
             print(system_message.upper())
         else:
             print(system_message.lower())
+        time_before_input = datetime.datetime.now()
         user_message = input()
+
+
+        response_time =datetime.datetime.now() -  time_before_input  
+        response_time = str(response_time)
+        response_time = response_time.split(":")
+        
+        seconds = (float(response_time[0]) * 60 + float(response_time[1])) * 60 + float(response_time[2])
+
         turn_frame = {"system_message": system_message, "user_message":user_message,
                     'dialog_act_system': self.predict_act(system_message),'dialog_act_user': self.predict_act(user_message),
-                    "turn_index": self.turn_index}
+                    "turn_index": self.turn_index, "response_seconds": seconds}
         logging.log(log_frames_level,turn_frame)
         self.turn_index += 1
+        self.user_data_frame_json["turns"].append(turn_frame)
         self.frame_current_turn = turn_frame
+        self.save_meta_frame()
        
     # makes a turn to ask the user for information about a category (area, food or pricerange)
     # first checks if user dialog act is a inform, otherwise we dont to do anything 
@@ -143,11 +178,11 @@ class Dialog_Manager():
         if self.frame_current_turn['dialog_act_user'] == "inform":
             preference = get_preference(self.frame_current_turn["user_message"], category)
             if len(preference) == 0:
-                self.ask_for_inform(message=system_messages.MESSAGES["re_ask_inform"][language] % self.frame_current_turn['user_message'], category=category)
+                self.ask_for_inform(message=system_messages.MESSAGES["re_ask_inform"][conf["language"]] % self.frame_current_turn['user_message'], category=category)
                 return
             is_used_leven = not list(preference.values())[0] in self.frame_current_turn["user_message"].split()
-            if is_ask_levenstein_correction and is_used_leven:
-                self.turn(system_messages.MESSAGES["re_inform"][language] % list(preference.values())[0])
+            if conf["is_ask_levenstein_correction"] and is_used_leven:
+                self.turn(system_messages.MESSAGES["re_inform"][conf["language"]] % list(preference.values())[0])
                 if self.frame_current_turn["dialog_act_user"] == "affirm":
                     self.add_to_user_frame(preference)
                     logging.log(log_frames_level,self.frame_user_input)
@@ -160,7 +195,7 @@ class Dialog_Manager():
     # if no additional requirements are given, we just move on
     # otherwise filter in the suggestion manager for the additional requirement
     def ask_additional_requierments(self):
-        self.turn(system_messages.MESSAGES["ask_add_requirements"][language])
+        self.turn(system_messages.MESSAGES["ask_add_requirements"][conf["language"]])
         if not self.frame_current_turn["dialog_act_user"] == "negate":
             additional_req = consequent_extraction(self.frame_current_turn["user_message"])
             logging.log(log_frames_level,additional_req)
@@ -178,9 +213,9 @@ class Dialog_Manager():
     def suggest_restaurant(self):
 
         self.suggestion_manager.load_suggestions(self.frame_user_input,
-                                        path = 'res/restaurant_extra_info.csv', is_user_frame_complete= not is_direct_search)
+                                        path = 'res/restaurant_extra_info.csv', is_user_frame_complete= not conf["is_direct_search"])
         additional_req = None
-        if self.suggestion_manager.get_number_suggestions() > 1 and is_ask_additional_requirement:
+        if self.suggestion_manager.get_number_suggestions() > 1 and conf["is_ask_additional_requirement"]:
             additional_req = self.ask_additional_requierments()
         logging.log(log_frames_level,f'Suggestion available: {not self.suggestion_manager.is_suggestions_exhausted()}')
         self.suggestion_manager.propose_suggestion()
@@ -188,12 +223,12 @@ class Dialog_Manager():
             self.suggestion_manager.reset_suggestions()
             self.state = 's7_restart'
         else:
-            
+            self.user_data_frame_json["number_suggestions"] += 1
             suggestion_data = self.suggestion_manager.get_suggestion_information(["restaurantname","pricerange","area","food"])
-            suggestion_message = system_messages.MESSAGES["suggest_restaurant"][language] % suggestion_data
+            suggestion_message = system_messages.MESSAGES["suggest_restaurant"][conf["language"]] % suggestion_data
             if additional_req:
                 suggestion_message = suggestion_message + reasoner.get_reasoning(additional_req)
-            suggestion_message = suggestion_message + system_messages.MESSAGES["suggest_interess"][language]
+            suggestion_message = suggestion_message + system_messages.MESSAGES["suggest_interess"][conf["language"]]
             self.turn(suggestion_message)
             # get clasification
             if self.frame_current_turn["dialog_act_user"] == "affirm":
@@ -203,6 +238,7 @@ class Dialog_Manager():
                 self.give_contact_information()
             elif self.frame_current_turn["dialog_act_user"] == 'reqalts' or self.frame_current_turn["dialog_act_user"] == 'negate':
                 self.state = 's4_suggest_restaurant'
+ 
     
     
     # first make a turn to ask which information the user wants,
@@ -212,19 +248,19 @@ class Dialog_Manager():
             contact_information = request_extraction(self.frame_current_turn["user_message"])
             if len(contact_information) > 0:
                 data = self.suggestion_manager.get_suggestion_information(contact_information)
-                self.turn( system_messages.MESSAGES["give_contact"][language] % (contact_information, data))
+                self.turn( system_messages.MESSAGES["give_contact"][conf["language"]] % (contact_information, data))
                 self.give_contact_information()
         elif self.frame_current_turn["dialog_act_user"] == "negate":
             self.state = 's6_bye'
         else:
-            self.turn(system_messages.MESSAGES["give_contact_reask"][language])
+            self.turn(system_messages.MESSAGES["re_give_contact"][conf["language"]])
             self.give_contact_information()
         
     # load suggestions and check if there is exactly one suggestion available
     # if there are more than one suggestion available we reset the suggestions
     def is_suggestion_available(self):
         self.suggestion_manager.load_suggestions(self.frame_user_input,
-                                        path = 'res/restaurant_extra_info.csv', is_user_frame_complete =not is_direct_search)
+                                        path = 'res/restaurant_extra_info.csv', is_user_frame_complete =not conf["is_direct_search"])
         if not self.suggestion_manager.get_number_suggestions() == 1:
                 self.suggestion_manager.reset_suggestions()
         return not self.suggestion_manager.is_suggestions_exhausted()
@@ -237,33 +273,33 @@ class Dialog_Manager():
         
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
-            self.ask_for_inform(message= system_messages.MESSAGES["welcome"][language])
+            self.ask_for_inform(message= system_messages.MESSAGES["welcome"][conf["language"]])
             self.state =  's1_ask_price'
         
 
         elif self.is_current_state('s1_ask_price'):
-            if is_direct_search and self.is_suggestion_available():
+            if conf["is_direct_search"] and self.is_suggestion_available():
                 self.state = 's4_suggest_restaurant'
             elif not self.is_pricerange_expressed():
-                self.ask_for_inform("pricerange", message= system_messages.MESSAGES["ask_budget"][language])
+                self.ask_for_inform("pricerange", message= system_messages.MESSAGES["ask_budget"][conf["language"]])
                 self.state = 's1_ask_price'
             else:
                 self.state = 's2_ask_area'
             
         elif self.is_current_state('s2_ask_area'):
-            if is_direct_search and self.is_suggestion_available():
+            if conf["is_direct_search"] and self.is_suggestion_available():
                 self.state = 's4_suggest_restaurant'
             elif not self.is_area_expressed():
-                self.ask_for_inform("area", message= system_messages.MESSAGES["ask_area"][language])
+                self.ask_for_inform("area", message= system_messages.MESSAGES["ask_area"][conf["language"]])
                 self.state =  's2_ask_area'
             else:
                 self.state =  's3_ask_food'
         
         elif self.is_current_state('s3_ask_food'):
-            if is_direct_search and self.is_suggestion_available():
+            if conf["is_direct_search"] and self.is_suggestion_available():
                 self.state = 's4_suggest_restaurant'
             elif not self.is_food_expressed():
-                self.ask_for_inform("food", message= system_messages.MESSAGES["ask_food"][language])
+                self.ask_for_inform("food", message= system_messages.MESSAGES["ask_food"][conf["language"]])
                 self.state = 's3_ask_food'
             else:
                 self.state = 's4_suggest_restaurant'
@@ -272,17 +308,18 @@ class Dialog_Manager():
             self.suggest_restaurant()
            
         elif self.is_current_state('s5_give_info'):
-            self.turn(system_messages.MESSAGES["ask_contact"][language])
+            self.turn(system_messages.MESSAGES["ask_contact"][conf["language"]])
             self.give_contact_information()
         elif self.is_current_state('s7_restart'):
             self.clear_frame_user()
-            print(system_messages.MESSAGES["restart"][language])
+            self.user_data_frame_json["number_restart"] += 1
+            print(system_messages.MESSAGES["restart"][conf["language"]])
             self.state = "s1_ask_price"
         else: 
             self.state =  's6_bye'
         
         if self.is_current_state('s6_bye'):
-            self.turn(system_messages.MESSAGES["bye"][language])    
+            self.turn(system_messages.MESSAGES["bye"][conf["language"]])    
         else:
             self.process_states()
             
