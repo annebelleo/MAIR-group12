@@ -15,9 +15,6 @@ import socket
 import datetime
 import json
 
-# ellora : e1,e2
-# tomas: t1, t2
-
 
 # TODO: Bug reask for additional requirements
 
