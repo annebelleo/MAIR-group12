@@ -10,7 +10,9 @@ import numpy as np
 import reasoner
 import logging
 import time
-    
+import system_messages
+# TODO: reasoner language
+
 # extra feature configuration
 is_ask_additional_requirement = True # (Ask user for additional requirements, such as romantic)
 is_ask_levenstein_correction = False # (Ask user about correctness of match for Levenshtein results)
@@ -20,6 +22,7 @@ is_direct_search = True # Start offering suggestions
                          # after the first preference type is recognized vs. wait until all preference types are recognized
                          # BUG: if direct search is enabled, the system will not ask for additional requirements 
 is_show_debug_information = False # Show debug information
+language = "GENZ" # "GENZ" or "FORMAL
 
 
 
@@ -140,16 +143,15 @@ class Dialog_Manager():
         if self.frame_current_turn['dialog_act_user'] == "inform":
             preference = get_preference(self.frame_current_turn["user_message"], category)
             if len(preference) == 0:
-                self.ask_for_inform(message=f"I didn't understand: {self.frame_current_turn['user_message']}", category=category)
+                self.ask_for_inform(message=system_messages.MESSAGES["re_ask_inform"][language] % self.frame_current_turn['user_message'], category=category)
                 return
             is_used_leven = not list(preference.values())[0] in self.frame_current_turn["user_message"].split()
             if is_ask_levenstein_correction and is_used_leven:
-                self.turn(f"did you mean {list(preference.values())[0]}?")
+                self.turn(system_messages.MESSAGES["re_inform"][language] % list(preference.values())[0])
                 if self.frame_current_turn["dialog_act_user"] == "affirm":
                     self.add_to_user_frame(preference)
                     logging.log(log_frames_level,self.frame_user_input)
-                else: 
-                    self.ask_for_inform(message=f"what {list(preference.keys())[0]} did you mean?")
+
             else:                    
                 self.add_to_user_frame(preference)
                 logging.log(log_frames_level,self.frame_user_input)
@@ -158,7 +160,7 @@ class Dialog_Manager():
     # if no additional requirements are given, we just move on
     # otherwise filter in the suggestion manager for the additional requirement
     def ask_additional_requierments(self):
-        self.turn("do you have additional requirements? If so, what are they?")
+        self.turn(system_messages.MESSAGES["ask_add_requirements"][language])
         if not self.frame_current_turn["dialog_act_user"] == "negate":
             additional_req = consequent_extraction(self.frame_current_turn["user_message"])
             logging.log(log_frames_level,additional_req)
@@ -188,10 +190,10 @@ class Dialog_Manager():
         else:
             
             suggestion_data = self.suggestion_manager.get_suggestion_information(["restaurantname","pricerange","area","food"])
-            suggestion_message = "I have found %s. It is an %s restaurant in the %s part of town that serves %s food." % suggestion_data
+            suggestion_message = system_messages.MESSAGES["suggest_restaurant"][language] % suggestion_data
             if additional_req:
                 suggestion_message = suggestion_message + reasoner.get_reasoning(additional_req)
-            suggestion_message = suggestion_message + "\nAre you interested in this restaurant?"
+            suggestion_message = suggestion_message + system_messages.MESSAGES["suggest_interess"][language]
             self.turn(suggestion_message)
             # get clasification
             if self.frame_current_turn["dialog_act_user"] == "affirm":
@@ -210,12 +212,12 @@ class Dialog_Manager():
             contact_information = request_extraction(self.frame_current_turn["user_message"])
             if len(contact_information) > 0:
                 data = self.suggestion_manager.get_suggestion_information(contact_information)
-                self.turn(f"Here is the{contact_information}: {data}. Do you need more information?")
+                self.turn( system_messages.MESSAGES["give_contact"][language] % (contact_information, data))
                 self.give_contact_information()
         elif self.frame_current_turn["dialog_act_user"] == "negate":
             self.state = 's6_bye'
         else:
-            self.turn(f"I don't understand, what information do you want to know?")
+            self.turn(system_messages.MESSAGES["give_contact_reask"][language])
             self.give_contact_information()
         
     # load suggestions and check if there is exactly one suggestion available
@@ -235,7 +237,7 @@ class Dialog_Manager():
         
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
-            self.ask_for_inform(message= "Hi, how can I help you?")
+            self.ask_for_inform(message= system_messages.MESSAGES["welcome"][language])
             self.state =  's1_ask_price'
         
 
@@ -243,7 +245,7 @@ class Dialog_Manager():
             if is_direct_search and self.is_suggestion_available():
                 self.state = 's4_suggest_restaurant'
             elif not self.is_pricerange_expressed():
-                self.ask_for_inform("pricerange", message= "What is your budget?")
+                self.ask_for_inform("pricerange", message= system_messages.MESSAGES["ask_budget"][language])
                 self.state = 's1_ask_price'
             else:
                 self.state = 's2_ask_area'
@@ -252,7 +254,7 @@ class Dialog_Manager():
             if is_direct_search and self.is_suggestion_available():
                 self.state = 's4_suggest_restaurant'
             elif not self.is_area_expressed():
-                self.ask_for_inform("area", message= "Which area do you want to go?")
+                self.ask_for_inform("area", message= system_messages.MESSAGES["ask_area"][language])
                 self.state =  's2_ask_area'
             else:
                 self.state =  's3_ask_food'
@@ -261,7 +263,7 @@ class Dialog_Manager():
             if is_direct_search and self.is_suggestion_available():
                 self.state = 's4_suggest_restaurant'
             elif not self.is_food_expressed():
-                self.ask_for_inform("food", message= "What type of food do you want?")
+                self.ask_for_inform("food", message= system_messages.MESSAGES["ask_food"][language])
                 self.state = 's3_ask_food'
             else:
                 self.state = 's4_suggest_restaurant'
@@ -270,17 +272,17 @@ class Dialog_Manager():
             self.suggest_restaurant()
            
         elif self.is_current_state('s5_give_info'):
-            self.turn("What information do you want to know?")
+            self.turn(system_messages.MESSAGES["ask_contact"][language])
             self.give_contact_information()
         elif self.is_current_state('s7_restart'):
             self.clear_frame_user()
-            print("didn't find anything, start over")
+            print(system_messages.MESSAGES["restart"][language])
             self.state = "s1_ask_price"
         else: 
             self.state =  's6_bye'
         
         if self.is_current_state('s6_bye'):
-            self.turn("good bye")    
+            self.turn(system_messages.MESSAGES["bye"][language])    
         else:
             self.process_states()
             
