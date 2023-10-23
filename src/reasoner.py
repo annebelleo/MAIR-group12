@@ -1,6 +1,7 @@
 import pytholog as pl
 import pandas as pd
 from re import sub, findall
+import system_messages
 def camel_case(s):
   s = sub(r"(_|-)+", " ", s).title().replace(" ", "")
   return ''.join([s[0].lower(), s[1:]])
@@ -56,7 +57,7 @@ def get_nth_key(dictionary, n=0):
 def un_camel_caseify(string):
     return sub(r'((?<=[a-z])[A-Z]|(?<!\A)[A-Z](?=[a-z]))', r' \1', string).lower()
 
-def get_reasoning(q): # String manipulation to turn the rule applied to a natural language sentence
+def get_reasoning(q,style): # String manipulation to turn the rule applied to a natural language sentence
     rule_format = ["name","quality","crowd","lengthOfStay","foodType","price"]
     reasoner= Reasoner()
     rule = str(reasoner.knowledge_base.db[q]["facts"][0])
@@ -66,16 +67,13 @@ def get_reasoning(q): # String manipulation to turn the rule applied to a natura
         if rule[i] !="_":
             output.update({rule_format[i]:rule[i]})
     output.update({"rule":q})
-    string = f'It is {un_camel_caseify(output["rule"])} because '
     keys = list(output.keys())
     if len(output)==3:
-        string = string + f'the {un_camel_caseify(keys[1])} is {output[get_nth_key(output,1)]}'
+        return system_messages.MESSAGES["1_factor_reasoning"][style]%(un_camel_caseify(output["rule"]),un_camel_caseify(keys[1]),output[get_nth_key(output,1)])
     elif len(output)==4:
-        string = string + f'the {un_camel_caseify(keys[1])} is {output[get_nth_key(output,1)]} and the {un_camel_caseify(keys[2])} is {output[get_nth_key(output,2)]}'
-    else:
-        for x in range(1,len(output)-1):
-            string = string + f'the {un_camel_caseify(keys[x])} is {output[get_nth_key(output,x)]}, '
-    return string
+        return system_messages.MESSAGES["2_factor_reasoning"][style]%(un_camel_caseify(output["rule"]),un_camel_caseify(keys[1]),output[get_nth_key(output,1)],un_camel_caseify(keys[2]),output[get_nth_key(output,2)])
+
+
 
 
 if __name__ == '__main__':
