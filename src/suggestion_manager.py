@@ -97,7 +97,7 @@ class Suggestion_Manager:
     
     # Determines whether the current selection and backlog are exhausted  
     def is_suggestions_exhausted(self):
-        return len(self.suggestion_list) == 0 or self.suggestion_current is None
+        return len(self.suggestion_list) == 0 and self.suggestion_current is None
     #init
     def initialize(self):
         self.suggestion_list = []

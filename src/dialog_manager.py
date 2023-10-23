@@ -30,7 +30,7 @@ conf = {
                             # after the first preference type is recognized vs. wait until all preference types are recognized
                             # BUG: if direct search is enabled, the system will not ask for additional requirements 
     "is_show_debug_information" : False, # Show debug information
-    "language" : "GENZ" # "GENZ" or "FORMAL
+    "language" : "FORMAL" # "GENZ" or "FORMAL
 }
 
 
@@ -79,10 +79,11 @@ class Dialog_Manager():
         self.model = rf.load_model("res/models/random_forest_0.pkl")
         self.suggestion_manager = Suggestion_Manager()
         self.turn_index = 0
-        self.frame_current_turn = None
+        self.frame_current_turn = {}
         time_stamp = str(datetime.datetime.now()).replace(":", "-").replace(" ", "_")
         self.user_data_frame_json = {
             "user_id": "",
+            "task_number": "",
             "device_name": socket.gethostname(),
             "time_stamp": time_stamp,
             "configuration": conf,
@@ -167,6 +168,7 @@ class Dialog_Manager():
         self.user_data_frame_json["turns"].append(turn_frame)
         self.frame_current_turn = turn_frame
         self.save_meta_frame()
+        
        
     # makes a turn to ask the user for information about a category (area, food or pricerange)
     # first checks if user dialog act is a inform, otherwise we dont to do anything 
@@ -268,7 +270,8 @@ class Dialog_Manager():
     # this followes the diagram
     #   
     def process_states(self):
-        
+        if "dialog_act_user" in self.frame_current_turn.keys() and self.frame_current_turn["dialog_act_user"] == "bye":
+            self.state = 's6_bye'
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
             user_id = input("please write your user number (like  5,...): ")

@@ -20,8 +20,8 @@ MESSAGES = {
         "GENZ": "sorry, I'm a bit confused. can you, like, clarify %s?"
     },
     "suggest_restaurant": {
-        "FORMAL": "I have identified %s. It is an establishment of %s nature situated in the %s district, renowned for its offerings of %s cuisine.",
-        "GENZ": "check this out! I found %s it's a %s spot in the %s area that serves %s food. pretty cool, right?"
+        "FORMAL": "I have identified %s. It is an establishment of %s nature situated in the %s district, renowned for its offerings of %s cuisine. ",
+        "GENZ": "check this out! I found %s it's a %s spot in the %s area that serves %s food. pretty cool, right? "
     },
     "suggest_interess": {
         "FORMAL": "Are you inclined to express interest in this particular dining establishment?",
