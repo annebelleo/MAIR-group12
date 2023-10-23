@@ -271,8 +271,13 @@ class Dialog_Manager():
         
         logging.log(log_frames_level,self.state)
         if self.is_current_state('s0_welcome'):
-            user_id = input("please write your user number (like  5,...):")
+            user_id = input("please write your user number (like  5,...): ")
             self.user_data_frame_json["user_id"] = user_id 
+            
+            task_number = input("please write you the task number: ")
+            self.user_data_frame_json["task_number"] = task_number 
+            
+
             self.ask_for_inform(message= system_messages.MESSAGES["welcome"][conf["language"]])
             self.state =  's1_ask_price'
         
@@ -319,8 +324,9 @@ class Dialog_Manager():
             self.state =  's6_bye'
         
         if self.is_current_state('s6_bye'):
-            print(f"This is your user id: {self.user_id} \nPlease use it in the questionnaire.")
             self.turn(system_messages.MESSAGES["bye"][conf["language"]])    
+            print(f"This is your user id: {self.user_data_frame_json['user_id']} \nPlease use it in the questionnaire.")
+ 
         else:
             self.process_states()
             
