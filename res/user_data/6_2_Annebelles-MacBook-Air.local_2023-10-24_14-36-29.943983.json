@@ -1,0 +1,163 @@
+{
+    "user_id": "6",
+    "task_number": "2",
+    "device_name": "Annebelles-MacBook-Air.local",
+    "time_stamp": "2023-10-24_14-36-29.943983",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "dutch",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 5.383679
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify dutch?",
+            "user_message": "Dutch food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 10.912776
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Dutch food?",
+            "user_message": "I'm looking for a restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 9.556187
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify I'm looking for a restaurant?",
+            "user_message": "south",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 4.159571
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 7.838455
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "italian",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 5.148518
+        },
+        {
+            "system_message": "check this out! I found pizza hut cherry hinton it's a moderate spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 6,
+            "response_seconds": 3.41701
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 4.033855
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "east",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 3.01486
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "dutch",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 1.677406
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify dutch?",
+            "user_message": "Dutch",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 1.507757
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Dutch?",
+            "user_message": "No i cant clarify",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 11,
+            "response_seconds": 8.858436
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "Dutch",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 11.133804
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Dutch?",
+            "user_message": "you dfont have it",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 4.248671
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify you dfont have it?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 14,
+            "response_seconds": 4.774214
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "Im annoyed",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 15,
+            "response_seconds": 2.368392
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Im annoyed?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 16,
+            "response_seconds": 15.96037
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 17,
+            "response_seconds": 2.366424
+        }
+    ]
+}

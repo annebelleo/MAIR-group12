@@ -1,0 +1,83 @@
+{
+    "user_id": "6",
+    "task_number": "6",
+    "device_name": "Annebelles-MacBook-Air.local",
+    "time_stamp": "2023-10-24_14-45-32.221590",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 2,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "European restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 7.381272
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "moderately priced",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 5.529174
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "Centre ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 3.006235
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "Yes, assigned seats please",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 3,
+            "response_seconds": 5.861423
+        },
+        {
+            "system_message": "I have identified galleria. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. It is assigned seats because the crowd is busy. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "Yes lovely cheers",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 8.612377
+        },
+        {
+            "system_message": "I have identified pizza express fen ditton. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 5,
+            "response_seconds": 6.842619
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 6,
+            "response_seconds": 2.271484
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 7,
+            "response_seconds": 1.374504
+        }
+    ]
+}
