@@ -1,0 +1,83 @@
+{
+    "user_id": "1",
+    "task_number": "3",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-24_21-33-37.020151",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "Hello, can you help me finding a restaurant that serves mediterrean food? ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 153.058241
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "no limit ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 1,
+            "response_seconds": 8.937104
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "price doesnt matter",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 14.35565
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "yes in the centrum please ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 3,
+            "response_seconds": 13.412065
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "central",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 16.43134
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "yes it should be suitable for a professional occasion",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 5,
+            "response_seconds": 42.042999
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "It should not be romantic in any kind",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 20.570171
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "goodbye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 7,
+            "response_seconds": 35.249588
+        }
+    ]
+}
