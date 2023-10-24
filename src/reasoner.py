@@ -26,6 +26,8 @@ class Reasoner: # Main reasoner class. Representation of KB is stored here
             res = findall(r'\(.*?\)', query)
             res = res[0][1:-1]
             query =query.replace(res,camel_case(res))
+            outside = query.split("(")[0]
+            query = query.replace(outside,camel_case(outside))
             return self.knowledge_base.query(pl.Expr(query),show_path=True)
         
     def add_facts(self,df): # Function to add new fact to the kb
@@ -60,7 +62,7 @@ def un_camel_caseify(string):
 def get_reasoning(q,style): # String manipulation to turn the rule applied to a natural language sentence
     rule_format = ["name","quality","crowd","lengthOfStay","foodType","price"]
     reasoner= Reasoner()
-    rule = str(reasoner.knowledge_base.db[q]["facts"][0])
+    rule = str(reasoner.knowledge_base.db[camel_case(q)]["facts"][0])
     rule = rule.split("(")[-1][:-1].split(",")
     output = dict()
     for i in range(len(rule)):
