@@ -1,0 +1,179 @@
+{
+    "user_id": "9",
+    "task_number": "5",
+    "device_name": "theonymfis-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_18-56-15.492495",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "hi, i would like to find a moderately priced Dutch restaurant in the east please",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 14.444271
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "no fried food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 1,
+            "response_seconds": 12.405475
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "meat",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 20.046408
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify meat?",
+            "user_message": "chicken ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 5.732503
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify chicken ?",
+            "user_message": "chicken wings",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 9.692828
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify chicken wings?",
+            "user_message": "good food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 13.150221
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify good food?",
+            "user_message": "salad",
+            "dialog_act_system": "ack",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 6.652474
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify salad?",
+            "user_message": "lentils salad",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 9.842161
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify lentils salad?",
+            "user_message": "salad with lentils",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 5.825621
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify salad with lentils?",
+            "user_message": "fries",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 11.410281
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify fries?",
+            "user_message": "spicy",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 15.918238
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify spicy?",
+            "user_message": "spicy food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 3.195713
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify spicy food?",
+            "user_message": "the food that it is really really hot",
+            "dialog_act_system": "null",
+            "dialog_act_user": "confirm",
+            "turn_index": 12,
+            "response_seconds": 10.214745
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "pasta",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 26.722105
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify pasta?",
+            "user_message": "spaghetti",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 14,
+            "response_seconds": 4.586449
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify spaghetti?",
+            "user_message": "napolitan",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 15,
+            "response_seconds": 6.104451
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify napolitan?",
+            "user_message": "i would like a moderately Dutch restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 16,
+            "response_seconds": 18.382352
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify i would like a moderately Dutch restaurant?",
+            "user_message": "I would like to find a Dutch restaurant pleas",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 17,
+            "response_seconds": 10.592804
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify I would like to find a Dutch restaurant pleas?",
+            "user_message": "stop",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 18,
+            "response_seconds": 6.255143
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "hello again",
+            "dialog_act_system": "null",
+            "dialog_act_user": "hello",
+            "turn_index": 19,
+            "response_seconds": 4.283658
+        }
+    ]
+}

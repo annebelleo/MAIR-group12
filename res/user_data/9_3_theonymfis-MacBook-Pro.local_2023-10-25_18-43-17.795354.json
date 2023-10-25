@@ -1,0 +1,51 @@
+{
+    "user_id": "9",
+    "task_number": "3",
+    "device_name": "theonymfis-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_18-43-17.795354",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "i would like to find a moderately priced european restaurant in the centre that has assigned seats",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 27.660332
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 1,
+            "response_seconds": 7.594793
+        },
+        {
+            "system_message": "I have identified galleria. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 2,
+            "response_seconds": 16.917518
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 3,
+            "response_seconds": 3.00049
+        }
+    ]
+}

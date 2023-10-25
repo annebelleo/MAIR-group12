@@ -1,0 +1,139 @@
+{
+    "user_id": "9",
+    "task_number": "4",
+    "device_name": "theonymfis-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_18-50-42.286608",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "hi! i would like to find an expensive Korean restaurant in the centre",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 16.770198
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 1,
+            "response_seconds": 5.784631
+        },
+        {
+            "system_message": "check this out! I found stazione restaurant and coffee bar it's a expensive spot in the centre area that serves korean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 2,
+            "response_seconds": 12.523961
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "yes please",
+            "dialog_act_system": "request",
+            "dialog_act_user": "affirm",
+            "turn_index": 3,
+            "response_seconds": 3.383232
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "info about the restaurant",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 13.673213
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "i would like some more info about the restaurant",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "request",
+            "turn_index": 5,
+            "response_seconds": 8.651079
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "yes",
+            "dialog_act_system": "request",
+            "dialog_act_user": "affirm",
+            "turn_index": 6,
+            "response_seconds": 2.245849
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "info about the restaurant please",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 16.088545
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "only the info ",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "null",
+            "turn_index": 8,
+            "response_seconds": 54.833523
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "phone number",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "request",
+            "turn_index": 9,
+            "response_seconds": 6.940767
+        },
+        {
+            "system_message": "gotchu! Here's the ['phone']: ('01223 352607',). need anything else?",
+            "user_message": "email",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 6.551737
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "email",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 3.330397
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "i would like also the email of the restaurant",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 8.613015
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "phone",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "request",
+            "turn_index": 13,
+            "response_seconds": 3.289389
+        },
+        {
+            "system_message": "gotchu! Here's the ['phone']: ('01223 352607',). need anything else?",
+            "user_message": "no email?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 14,
+            "response_seconds": 4.579962
+        }
+    ]
+}
