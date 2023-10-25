@@ -1,0 +1,35 @@
+{
+    "user_id": "8",
+    "task_number": "2",
+    "device_name": "Cansus-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_23-16-09.832333",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "I am hungry. Can you help me find a restauarant?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 0,
+            "response_seconds": 16.076355
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "50 euros",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 3.654273
+        }
+    ]
+}
