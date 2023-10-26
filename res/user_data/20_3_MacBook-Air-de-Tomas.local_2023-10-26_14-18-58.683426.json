@@ -1,0 +1,75 @@
+{
+    "user_id": "20",
+    "task_number": "3",
+    "device_name": "MacBook-Air-de-Tomas.local",
+    "time_stamp": "2023-10-26_14-18-58.683426",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "I want you to find me an expensive Mediterranean restaurant to have dinner",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 24.410182
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "Centre",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 2.635933
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "I would like not to be a romantic place",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 15.201096
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "high",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 3.760873
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify high?",
+            "user_message": "expensive",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 3.829316
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "centre",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 2.53938
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "mediterranean",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 13.287888
+        }
+    ]
+}
