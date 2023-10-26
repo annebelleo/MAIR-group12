@@ -1,0 +1,83 @@
+{
+    "user_id": "19",
+    "task_number": "1",
+    "device_name": "MacBook-Air-de-Tomas.local",
+    "time_stamp": "2023-10-26_12-53-47.042222",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "i want to find a restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 14.815905
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: i want to find a restaurant",
+            "user_message": "i want to find an expensive restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 11.381793
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "in the centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 7.974511
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "Korean",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 4.521813
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no i dont have any",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 4,
+            "response_seconds": 6.703271
+        },
+        {
+            "system_message": "I have identified stazione restaurant and coffee bar. It is an establishment of expensive nature situated in the centre district, renowned for its offerings of korean cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 5,
+            "response_seconds": 12.180175
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 6,
+            "response_seconds": 3.524088
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "bye",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "bye",
+            "turn_index": 7,
+            "response_seconds": 11.360083
+        }
+    ]
+}
