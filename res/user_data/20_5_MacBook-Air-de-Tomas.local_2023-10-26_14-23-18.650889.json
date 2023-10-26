@@ -1,0 +1,83 @@
+{
+    "user_id": "20",
+    "task_number": "5",
+    "device_name": "MacBook-Air-de-Tomas.local",
+    "time_stamp": "2023-10-26_14-23-18.650889",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "Find a moderately priced Dutch restaurant in the east",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 24.773237
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "dutch",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 4.004783
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: dutch",
+            "user_message": "Dutch",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 3.835723
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Dutch",
+            "user_message": "Dutch food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 7.468196
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Dutch food",
+            "user_message": "Dutch restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 19.726338
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Dutch restaurant",
+            "user_message": "nehtherlands",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 3.990645
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: nehtherlands",
+            "user_message": "bye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 6,
+            "response_seconds": 5.934527
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 1.532376
+        }
+    ]
+}

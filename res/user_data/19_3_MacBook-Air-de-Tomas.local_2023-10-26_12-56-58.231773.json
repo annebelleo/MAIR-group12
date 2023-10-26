@@ -1,0 +1,163 @@
+{
+    "user_id": "19",
+    "task_number": "3",
+    "device_name": "MacBook-Air-de-Tomas.local",
+    "time_stamp": "2023-10-26_12-56-58.231773",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 3,
+    "number_restart": 2,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "i want an expensive mediterranean restaurant in the centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 27.671798
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "i dont want it to romantic",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 1,
+            "response_seconds": 11.444931
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "expensive",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 10.1049
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 2.38568
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "not romantic",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 3.322991
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: not romantic",
+            "user_message": "mediterranean",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 9.832378
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "not romantic",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 3.916632
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "expensive mediterranean restaurant in the centre",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 18.184983
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 3.78955
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 9,
+            "response_seconds": 1.460603
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "mediterranean",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 5.589679
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 11,
+            "response_seconds": 1.996027
+        },
+        {
+            "system_message": "I have identified shiraz restaurant. It is an establishment of expensive nature situated in the centre district, renowned for its offerings of mediterranean cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "sure",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 3.77039
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 13,
+            "response_seconds": 6.146779
+        },
+        {
+            "system_message": "I have identified la mimosa. It is an establishment of expensive nature situated in the centre district, renowned for its offerings of mediterranean cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "y",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 14,
+            "response_seconds": 2.597961
+        },
+        {
+            "system_message": "I have identified panahar. It is an establishment of expensive nature situated in the centre district, renowned for its offerings of mediterranean cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 15,
+            "response_seconds": 4.870407
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 16,
+            "response_seconds": 2.014157
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "bye",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "bye",
+            "turn_index": 17,
+            "response_seconds": 1.634935
+        }
+    ]
+}
