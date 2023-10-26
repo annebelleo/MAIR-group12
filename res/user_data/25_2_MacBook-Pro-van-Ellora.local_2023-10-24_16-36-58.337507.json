@@ -1,0 +1,227 @@
+{
+    "user_id": "25",
+    "task_number": "2",
+    "device_name": "MacBook-Pro-van-Ellora.local",
+    "time_stamp": "2023-10-24_16-36-58.337507",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 5,
+    "number_restart": 3,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "find an expensive german restaurant in the west",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 26.352517
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "german ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 6.032467
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german ",
+            "user_message": "food from germany ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 20.092288
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: food from germany ",
+            "user_message": "sausage, potato",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 13.863727
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: sausage, potato",
+            "user_message": "can you find a chinese restaurant instead?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 61.783342
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "cheap ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 4.594862
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "north",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 3.790494
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "chinese",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 7.066411
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "cheap please",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 5.550951
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "any",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 5.917103
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "chinese",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 4.852654
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 11,
+            "response_seconds": 2.568535
+        },
+        {
+            "system_message": "I have identified the missing sock. It is an establishment of cheap nature situated in the south district, renowned for its offerings of chinese cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "no..",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 18.307795
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "romantic setting",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 15.809652
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "cheap ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 14,
+            "response_seconds": 10.733404
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "any ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 15,
+            "response_seconds": 2.64737
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "chinese",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 16,
+            "response_seconds": 2.363392
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 17,
+            "response_seconds": 2.620621
+        },
+        {
+            "system_message": "I have identified the missing sock. It is an establishment of cheap nature situated in the south district, renowned for its offerings of chinese cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 18,
+            "response_seconds": 3.139091
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 19,
+            "response_seconds": 1.825626
+        },
+        {
+            "system_message": "I have identified rice house. It is an establishment of cheap nature situated in the south district, renowned for its offerings of chinese cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes!",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 20,
+            "response_seconds": 8.121717
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 21,
+            "response_seconds": 3.002091
+        },
+        {
+            "system_message": "I have identified the lucky star. It is an establishment of cheap nature situated in the south district, renowned for its offerings of chinese cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "no i like the rice house ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 22,
+            "response_seconds": 16.072207
+        },
+        {
+            "system_message": "I have identified charlie chan. It is an establishment of cheap nature situated in the centre district, renowned for its offerings of chinese cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 23,
+            "response_seconds": 12.846104
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 24,
+            "response_seconds": 4.502138
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "thanks byeee",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 25,
+            "response_seconds": 7.118504
+        }
+    ]
+}
