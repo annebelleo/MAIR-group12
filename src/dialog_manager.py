@@ -30,7 +30,7 @@ conf = {
                             # after the first preference type is recognized vs. wait until all preference types are recognized
                             # BUG: if direct search is enabled, the system will not ask for additional requirements 
     "is_show_debug_information" : False, # Show debug information
-    "language" : "GENZ" # "GENZ" or "FORMAL
+    "language" : "FORMAL" # "GENZ" or "FORMAL
 }
 
 

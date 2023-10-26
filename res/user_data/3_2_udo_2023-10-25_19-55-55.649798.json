@@ -1,0 +1,75 @@
+{
+    "user_id": "3",
+    "task_number": "2",
+    "device_name": "udo",
+    "time_stamp": "2023-10-25_19-55-55.649798",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "do you know a expensive german restaurant?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 33.393951
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "west",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 6.934129
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "German",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 6.218245
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: German",
+            "user_message": "german",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 5.870781
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german",
+            "user_message": "German",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 19.304014
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: German",
+            "user_message": "goodbye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 5,
+            "response_seconds": 30.370497
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 20.646528
+        }
+    ]
+}

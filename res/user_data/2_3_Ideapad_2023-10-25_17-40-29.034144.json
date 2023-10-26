@@ -1,0 +1,67 @@
+{
+    "user_id": "2",
+    "task_number": "3",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-25_17-40-29.034144",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "im looking to go eat in the center some Mediterranean food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 44.849544
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "it needs top be very expensive and not romantic at all",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 23.531312
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "i dont want it to be romantic",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 2,
+            "response_seconds": 13.501047
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "not romantic",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 7.624478
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify not romantic?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 4,
+            "response_seconds": 6.406159
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 6.850346
+        }
+    ]
+}
