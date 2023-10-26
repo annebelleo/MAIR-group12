@@ -1,0 +1,75 @@
+{
+    "user_id": "21",
+    "task_number": "6",
+    "device_name": "MacBook-Air-de-Tomas.local",
+    "time_stamp": "2023-10-26_15-03-03.682645",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "I want a European restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 11.474751
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "Moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 5.982029
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "The Centre",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 8.963533
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "Yes, assigned seats would be great",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 11.261812
+        },
+        {
+            "system_message": "check this out! I found galleria it's a moderate spot in the centre area that serves european food. pretty cool, right? it's assigned seats cause the crowd is busy!\ud83d\udc4c are you down for this place?\ud83d\ude0e",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 4,
+            "response_seconds": 5.907171
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "no",
+            "dialog_act_system": "request",
+            "dialog_act_user": "negate",
+            "turn_index": 5,
+            "response_seconds": 3.166268
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 6,
+            "response_seconds": 2.02061
+        }
+    ]
+}

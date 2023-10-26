@@ -1,0 +1,67 @@
+{
+    "user_id": "2",
+    "task_number": "2",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-25_17-38-47.307236",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "im looking for a expensive restaurant in the west",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 48.290768
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "i would like some german food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 10.457063
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify i would like some german food?",
+            "user_message": "GERMAN",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 10.719593
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify GERMAN?",
+            "user_message": "its a country",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 6.988495
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify its a country?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 4,
+            "response_seconds": 5.943775
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 0.734283
+        }
+    ]
+}

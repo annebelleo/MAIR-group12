@@ -1,0 +1,123 @@
+{
+    "user_id": "21",
+    "task_number": "5",
+    "device_name": "MacBook-Air-de-Tomas.local",
+    "time_stamp": "2023-10-26_15-01-26.108343",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "I`d like to go to an expensive german restaraunt even though I don`t like gernab food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 25.856899
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "The west",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 5.909799
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "German, I`m weird",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 10.163917
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify German, I`m weird?",
+            "user_message": "German ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 5.456973
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify German ?",
+            "user_message": "zes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 1.680976
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify zes?",
+            "user_message": "german",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 3.129861
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify german?",
+            "user_message": "yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 6,
+            "response_seconds": 1.440073
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "german food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 3.671951
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify german food?",
+            "user_message": "German food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 4.493637
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify German food?",
+            "user_message": "german food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 3.214087
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify german food?",
+            "user_message": "german restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 7.619847
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify german restaurant?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 11,
+            "response_seconds": 3.748196
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 1.562177
+        }
+    ]
+}

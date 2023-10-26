@@ -1,0 +1,99 @@
+{
+    "user_id": "8",
+    "task_number": "1",
+    "device_name": "Cansus-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_23-09-42.874906",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "Hi",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 3.580009
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Hi?",
+            "user_message": "I am hungry. Where can I eat in the center?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 21.215823
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "one hundred euros",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "reqalts",
+            "turn_index": 2,
+            "response_seconds": 7.931501
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "no budget",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 3,
+            "response_seconds": 51.908537
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "I do not have a budget",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 6.494826
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify I do not have a budget?",
+            "user_message": "I cannot. Can you like, help me with finding a place to eat?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 5,
+            "response_seconds": 21.835959
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "I am rich",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 15.117955
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify I am rich?",
+            "user_message": "I have endless money",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 6.09625
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify I have endless money?",
+            "user_message": "I am swimming in money",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 24.760586
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify I am swimming in money?",
+            "user_message": "I would like to eat at a michelin star restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 10.225854
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "user_id": "25",
+    "task_number": "5",
+    "device_name": "MacBook-Pro-van-Ellora.local",
+    "time_stamp": "2023-10-24_16-53-34.937322",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 2,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "find  a moderately priced Dutch restaurant in the east ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 21.179878
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "dutch food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 20.768354
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify dutch food?",
+            "user_message": "food from the netherlands",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 10.886962
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify food from the netherlands?",
+            "user_message": "stampot",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 2.621517
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify stampot?",
+            "user_message": "potato and sausage ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 4,
+            "response_seconds": 4.685996
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "any",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 11.572126
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "western european food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 28.082172
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 7,
+            "response_seconds": 1.6784
+        },
+        {
+            "system_message": "check this out! I found rajmahal it's a moderate spot in the east area that serves indian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 8,
+            "response_seconds": 31.687457
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "assigned seats",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 11.898179
+        },
+        {
+            "system_message": "check this out! I found pizza hut fen ditton it's a moderate spot in the east area that serves italian food. pretty cool, right? it's assigned seats cause the crowd is busy!\ud83d\udc4c are you down for this place?\ud83d\ude0e",
+            "user_message": "yea",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 10,
+            "response_seconds": 11.696306
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "an address",
+            "dialog_act_system": "request",
+            "dialog_act_user": "request",
+            "turn_index": 11,
+            "response_seconds": 12.054635
+        },
+        {
+            "system_message": "gotchu! Here's the ['addr']: ('cambridge retail park newmarket road fen ditton',). need anything else?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 12,
+            "response_seconds": 6.40613
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "catch you later",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 13,
+            "response_seconds": 4.051017
+        }
+    ]
+}

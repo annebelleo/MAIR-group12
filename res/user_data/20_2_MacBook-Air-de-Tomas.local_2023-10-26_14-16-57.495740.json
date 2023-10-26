@@ -1,0 +1,115 @@
+{
+    "user_id": "20",
+    "task_number": "2",
+    "device_name": "MacBook-Air-de-Tomas.local",
+    "time_stamp": "2023-10-26_14-16-57.495740",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "I wanted to look for some place to have dinner",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 0,
+            "response_seconds": 14.77393
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "20",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 5.217165
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify 20?",
+            "user_message": "my budget is 20\u20ac",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 2,
+            "response_seconds": 16.974715
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "expensive",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 7.93098
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "centre",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 3.274939
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "i'd like to have German food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 8.622006
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify i'd like to have German food?",
+            "user_message": "German restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 7.260004
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify German restaurant?",
+            "user_message": "German",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 7.789531
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify German?",
+            "user_message": "Germany",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 6.703462
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Germany?",
+            "user_message": "Find a German restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 12.810905
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Find a German restaurant?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 10,
+            "response_seconds": 10.855046
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 0.097421
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "user_id": "1",
+    "task_number": "5",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-24_21-45-40.716248",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "Hiii, I would like to go to a resturant, do u have good suggestion?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "ack",
+            "turn_index": 0,
+            "response_seconds": 34.421034
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "Not too much ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 13.75094
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Not too much ?",
+            "user_message": "like not too expensive ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 7.43036
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "in the east ",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 16.806744
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "dutch foood",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 8.496607
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify dutch foood?",
+            "user_message": "durch food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 4.101631
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify durch food?",
+            "user_message": "Dutch food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 6.447056
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify Dutch food?",
+            "user_message": "jeeez ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 10.157584
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify jeeez ?",
+            "user_message": "Dutch ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 3.152843
+        }
+    ]
+}
