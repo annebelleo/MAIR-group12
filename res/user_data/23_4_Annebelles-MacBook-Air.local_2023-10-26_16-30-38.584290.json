@@ -1,0 +1,51 @@
+{
+    "user_id": "23",
+    "task_number": "4",
+    "device_name": "Annebelles-MacBook-Air.local",
+    "time_stamp": "2023-10-26_16-30-38.584290",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "find a moderately priced italian restaurant in the south",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 13.517672
+        },
+        {
+            "system_message": "check this out! I found pizza hut cherry hinton it's a moderate spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 1,
+            "response_seconds": 16.703024
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "no",
+            "dialog_act_system": "request",
+            "dialog_act_user": "negate",
+            "turn_index": 2,
+            "response_seconds": 2.457236
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 3,
+            "response_seconds": 4.838665
+        }
+    ]
+}

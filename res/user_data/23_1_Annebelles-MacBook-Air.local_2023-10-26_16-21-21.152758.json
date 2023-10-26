@@ -1,0 +1,131 @@
+{
+    "user_id": "23",
+    "task_number": "1",
+    "device_name": "Annebelles-MacBook-Air.local",
+    "time_stamp": "2023-10-26_16-21-21.152758",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 2,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "please find me an expensive korean restaurant in the centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 19.793095
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 1,
+            "response_seconds": 16.557343
+        },
+        {
+            "system_message": "I have identified stazione restaurant and coffee bar. It is an establishment of expensive nature situated in the centre district, renowned for its offerings of korean cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "sure",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 15.591976
+        },
+        {
+            "system_message": "I have identified little seoul. It is an establishment of expensive nature situated in the centre district, renowned for its offerings of korean cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 3,
+            "response_seconds": 7.907544
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "$50",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 14.867512
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: $50",
+            "user_message": "my budget is $50.00",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 5,
+            "response_seconds": 11.500686
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "my budget is low",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 6,
+            "response_seconds": 8.038002
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "i dont have a budget",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 7,
+            "response_seconds": 8.600281
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "what is your budget",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 8,
+            "response_seconds": 7.669762
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 9,
+            "response_seconds": 4.600508
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "50.00",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 25.578526
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: 50.00",
+            "user_message": "yes I am happy with the restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 11,
+            "response_seconds": 14.819002
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 12,
+            "response_seconds": 8.0465
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 3.745507
+        }
+    ]
+}
