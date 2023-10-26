@@ -1,0 +1,131 @@
+{
+    "user_id": "7",
+    "task_number": "4",
+    "device_name": "annebelles-air.home",
+    "time_stamp": "2023-10-25_23-02-59.990345",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 3,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "hi, i would like to go to an Italian restaurant in the south that is not too expensive",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 26.055093
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "nah",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 3.490295
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "nah",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 1.544325
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "nope",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 0.799027
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 4,
+            "response_seconds": 0.882344
+        },
+        {
+            "system_message": "check this out! I found frankie and bennys it's a expensive spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "no it should not be expensive",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 5,
+            "response_seconds": 26.665216
+        },
+        {
+            "system_message": "check this out! I found zizzi cambridge it's a expensive spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 6,
+            "response_seconds": 3.443086
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 6.191201
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "south",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 3.438901
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "italian",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 3.466307
+        },
+        {
+            "system_message": "check this out! I found pizza hut cherry hinton it's a moderate spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "ye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 10,
+            "response_seconds": 13.007666
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "phone",
+            "dialog_act_system": "request",
+            "dialog_act_user": "request",
+            "turn_index": 11,
+            "response_seconds": 8.461477
+        },
+        {
+            "system_message": "gotchu! Here's the ['phone']: ('01223 323737',). need anything else?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 12,
+            "response_seconds": 4.226539
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 13,
+            "response_seconds": 1.911933
+        }
+    ]
+}

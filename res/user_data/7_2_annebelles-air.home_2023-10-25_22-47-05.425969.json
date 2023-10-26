@@ -1,0 +1,83 @@
+{
+    "user_id": "7",
+    "task_number": "2",
+    "device_name": "annebelles-air.home",
+    "time_stamp": "2023-10-25_22-47-05.425969",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "I want to go to a Dutch restaurant in the east",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 14.685795
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 4.660132
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "Dutch food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 6.552754
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Dutch food",
+            "user_message": "dutch",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 2.668811
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: dutch",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 4,
+            "response_seconds": 29.00925
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 5,
+            "response_seconds": 2.587032
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 6,
+            "response_seconds": 2.630897
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "burger",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 6.999232
+        }
+    ]
+}

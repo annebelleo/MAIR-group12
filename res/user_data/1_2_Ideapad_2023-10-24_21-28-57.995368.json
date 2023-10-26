@@ -1,0 +1,43 @@
+{
+    "user_id": "1",
+    "task_number": "2",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-24_21-28-57.995368",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "Hi can you help me finding a german restaurant for a special occasion? It is okaz if it is a bit pricy",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 151.083379
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Hi can you help me finding a german restaurant for a special occasion? It is okaz if it is a bit pricy",
+            "user_message": "HI, can you help me finding a german restaurant that in the west? It is okaz if it is pricy",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 58.262264
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: HI, can you help me finding a german restaurant that in the west? It is okaz if it is pricy",
+            "user_message": "goodbye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 2,
+            "response_seconds": 23.127663
+        }
+    ]
+}

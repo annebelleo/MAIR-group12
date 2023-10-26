@@ -1,0 +1,83 @@
+{
+    "user_id": "8",
+    "task_number": "5",
+    "device_name": "Cansus-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_23-25-24.804454",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "I am craving German food. Can you help me?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 0,
+            "response_seconds": 25.958062
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "I am rich, I have no budget. I prefer something expensive",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 1,
+            "response_seconds": 19.599196
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "10000 euros ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 5.436614
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: 10000 euros ",
+            "user_message": "I can pay any price",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "request",
+            "turn_index": 3,
+            "response_seconds": 22.562418
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "I can pay something that is expensively priced",
+            "dialog_act_system": "null",
+            "dialog_act_user": "confirm",
+            "turn_index": 4,
+            "response_seconds": 13.437102
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "no budget",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 5,
+            "response_seconds": 4.680137
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 6,
+            "response_seconds": 1.162037
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 7,
+            "response_seconds": 1.35966
+        }
+    ]
+}

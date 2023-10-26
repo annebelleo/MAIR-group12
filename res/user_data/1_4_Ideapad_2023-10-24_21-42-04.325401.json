@@ -1,0 +1,91 @@
+{
+    "user_id": "1",
+    "task_number": "4",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-24_21-42-04.325401",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "Hello, Can you help me finding a nice restaurant?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 0,
+            "response_seconds": 23.935938
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "No limit!",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 16.729861
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify No limit!?",
+            "user_message": "It doent matter how much ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 11.681151
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "very central if thats possible ",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 19.057459
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "asian ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 16.597898
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "korean food possible as well?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 14.198958
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "umm nope ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 14.137748
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "Can you give me the address?#",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "request",
+            "turn_index": 7,
+            "response_seconds": 12.536686
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "goodbye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 8,
+            "response_seconds": 16.088447
+        }
+    ]
+}
