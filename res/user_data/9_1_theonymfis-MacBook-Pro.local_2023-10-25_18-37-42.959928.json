@@ -1,0 +1,67 @@
+{
+    "user_id": "9",
+    "task_number": "1",
+    "device_name": "theonymfis-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_18-37-42.959928",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "i would like to find a moderately priced italian restauran in the south",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 33.978962
+        },
+        {
+            "system_message": "I have identified pizza hut cherry hinton. It is an establishment of moderate nature situated in the south district, renowned for its offerings of italian cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "is it moderately priced?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "confirm",
+            "turn_index": 1,
+            "response_seconds": 58.031342
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "like 25 euros per person",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 2,
+            "response_seconds": 37.539823
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "25",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 3.505758
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: 25",
+            "user_message": "25 euros",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 4.793898
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: 25 euros",
+            "user_message": "exit",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 4.066297
+        }
+    ]
+}

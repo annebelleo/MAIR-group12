@@ -1,0 +1,91 @@
+{
+    "user_id": "8",
+    "task_number": "4",
+    "device_name": "Cansus-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_23-22-14.333804",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "Hello. I am craving Italian food. Can you help me find an Italian restuarant?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 0,
+            "response_seconds": 39.595769
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "I can pay something moderatly priced",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 28.94203
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "I prefer to eat in the south of the city.",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 20.063102
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "I love lasagne",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 12.134534
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: I love lasagne",
+            "user_message": "I would like to have a creamy pasta",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 12.519017
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: I would like to have a creamy pasta",
+            "user_message": "My culinary preferences are Italian",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 14.996261
+        },
+        {
+            "system_message": "I have identified pizza hut cherry hinton. It is an establishment of moderate nature situated in the south district, renowned for its offerings of italian cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 6,
+            "response_seconds": 16.305735
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 7,
+            "response_seconds": 4.392212
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "thank you and goodbye!",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "thankyou",
+            "turn_index": 8,
+            "response_seconds": 7.56244
+        }
+    ]
+}

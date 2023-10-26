@@ -1,0 +1,107 @@
+{
+    "user_id": "8",
+    "task_number": "6",
+    "device_name": "Cansus-MacBook-Pro.local",
+    "time_stamp": "2023-10-25_23-27-18.676402",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "Hi. I would like to eat at a restaurant that has assigned seats, can you help me find one?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 33.014063
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Hi. I would like to eat at a restaurant that has assigned seats, can you help me find one?",
+            "user_message": "are there any restaurants that have assigned seats?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 13.244304
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: are there any restaurants that have assigned seats?",
+            "user_message": "I am looking for a European restaurant.",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 13.302539
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "I can pay something moderately priced.",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 27.67934
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "I prefer to eat in the center",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 14.367206
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 5,
+            "response_seconds": 7.057061
+        },
+        {
+            "system_message": "I have identified galleria. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "does it have assigned seats?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "request",
+            "turn_index": 6,
+            "response_seconds": 14.288847
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "I would like to sit at an assigned seat",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 10.166023
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "I would like a waiter to assign a seat for me. Is this possible",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 8,
+            "response_seconds": 59.475999
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 9,
+            "response_seconds": 8.524884
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "no",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "negate",
+            "turn_index": 10,
+            "response_seconds": 4.506645
+        }
+    ]
+}
