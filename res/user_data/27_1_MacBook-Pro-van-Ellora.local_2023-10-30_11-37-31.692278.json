@@ -1,0 +1,147 @@
+{
+    "user_id": "27",
+    "task_number": "1",
+    "device_name": "MacBook-Pro-van-Ellora.local",
+    "time_stamp": "2023-10-30_11-37-31.692278",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 2,
+    "number_restart": 2,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "Find a moderate priced italian restaurant in te south",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 73.21164
+        },
+        {
+            "system_message": "I have identified pizza hut cherry hinton. It is an establishment of moderate nature situated in the south district, renowned for its offerings of italian cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "OK",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 34.672972
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "Yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 21.215567
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Yes",
+            "user_message": "Moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 17.476826
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "north",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 10.824687
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "chinese",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 8.252799
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "cheap",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 42.420091
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "any",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 4.57724
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "chinese",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 15.881609
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "No",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 27.077419
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 10,
+            "response_seconds": 8.877098
+        },
+        {
+            "system_message": "I have identified the missing sock. It is an establishment of cheap nature situated in the south district, renowned for its offerings of chinese cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 11,
+            "response_seconds": 46.739944
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "adress",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 12,
+            "response_seconds": 16.161924
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "address",
+            "dialog_act_system": "null",
+            "dialog_act_user": "request",
+            "turn_index": 13,
+            "response_seconds": 9.409748
+        },
+        {
+            "system_message": "Here is the desired ['addr']: ('finders corner newmarket road',). Do you require any further elucidation?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 14,
+            "response_seconds": 12.823695
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "bey",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 15,
+            "response_seconds": 13.416483
+        }
+    ]
+}

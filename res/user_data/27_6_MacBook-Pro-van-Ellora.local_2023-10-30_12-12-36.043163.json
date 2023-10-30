@@ -1,0 +1,131 @@
+{
+    "user_id": "27",
+    "task_number": "6",
+    "device_name": "MacBook-Pro-van-Ellora.local",
+    "time_stamp": "2023-10-30_12-12-36.043163",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "find me a expensive german restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 37.474995
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "centre of town",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 13.667874
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "meat",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 35.194053
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify meat?",
+            "user_message": "indian",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 5.163436
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "find me a expensive german restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 43.821608
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "centre",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 6.569985
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "mediterranean",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 24.562019
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "quiet",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 9.316933
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 8,
+            "response_seconds": 4.235978
+        },
+        {
+            "system_message": "check this out! I found shiraz restaurant it's a expensive spot in the centre area that serves mediterranean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 9,
+            "response_seconds": 7.619697
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "yes",
+            "dialog_act_system": "request",
+            "dialog_act_user": "affirm",
+            "turn_index": 10,
+            "response_seconds": 5.137304
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "address",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "request",
+            "turn_index": 11,
+            "response_seconds": 4.353795
+        },
+        {
+            "system_message": "gotchu! Here's the ['addr']: ('84 regent street city centre',). need anything else?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 12,
+            "response_seconds": 4.888033
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "by",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 3.585535
+        }
+    ]
+}

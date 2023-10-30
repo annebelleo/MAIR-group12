@@ -1,0 +1,171 @@
+{
+    "user_id": "26",
+    "task_number": "5",
+    "device_name": "MacBook-Pro-van-Ellora.local",
+    "time_stamp": "2023-10-30_11-10-05.760224",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 2,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "moderate Dutch restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 18.757587
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "east",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 7.777954
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "Dutch ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 7.728716
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Dutch ",
+            "user_message": "tosti",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 10.006594
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: tosti",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 4,
+            "response_seconds": 5.542049
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "earopean",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 6.535796
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "east european",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 24.20984
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: east european",
+            "user_message": "european food in east",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 79.280193
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: european food in east",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 8,
+            "response_seconds": 6.953323
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "any",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 5.245159
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "east",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 3.761724
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "european",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 24.409654
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 6.452671
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "east",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 16.039287
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "any",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 14,
+            "response_seconds": 21.288579
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 15,
+            "response_seconds": 5.131781
+        },
+        {
+            "system_message": "I have identified rajmahal. It is an establishment of moderate nature situated in the east district, renowned for its offerings of indian cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 16,
+            "response_seconds": 12.965482
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 17,
+            "response_seconds": 5.101939
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "bey",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 18,
+            "response_seconds": 4.925757
+        }
+    ]
+}
