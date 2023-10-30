@@ -1,0 +1,35 @@
+{
+    "user_id": "4",
+    "task_number": "5",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-28_21-11-28.432826",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "german restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 13.037894
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german restaurant",
+            "user_message": "german",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 6.832687
+        }
+    ]
+}

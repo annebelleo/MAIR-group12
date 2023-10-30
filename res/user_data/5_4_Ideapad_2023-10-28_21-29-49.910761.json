@@ -1,0 +1,91 @@
+{
+    "user_id": "5",
+    "task_number": "4",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-28_21-29-49.910761",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 2,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "Hey! I need to find an expensive korean restaurant in the city center can you help?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 29.707806
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 1,
+            "response_seconds": 5.278155
+        },
+        {
+            "system_message": "check this out! I found stazione restaurant and coffee bar it's a expensive spot in the centre area that serves korean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "no thats not korean !!!",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 2,
+            "response_seconds": 18.561339
+        },
+        {
+            "system_message": "check this out! I found little seoul it's a expensive spot in the centre area that serves korean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "yeah",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 3,
+            "response_seconds": 7.285438
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "yep",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 2.383361
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "oh nothing",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "null",
+            "turn_index": 5,
+            "response_seconds": 4.377588
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "nothing",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "null",
+            "turn_index": 6,
+            "response_seconds": 3.028801
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "number?",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 3.831768
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "goodbye",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "bye",
+            "turn_index": 8,
+            "response_seconds": 19.65067
+        }
+    ]
+}

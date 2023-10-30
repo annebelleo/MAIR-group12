@@ -85,3 +85,47 @@ def table_result_statistics(results: pd.DataFrame, measure = 'accuracy', table_n
     
     results.to_csv(path_or_buf=table_path+table_name,index_label='model')
 
+from matplotlib.axes import Axes
+from matplotlib.figure import Figure
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import matplotlib.lines as lines
+# df
+# formal, language, time
+# genz, language, time
+# 
+def violin_with_dots(df: pd.DataFrame, x: str, y: str) -> tuple[Figure, Axes]:
+    fig, axes = plt.subplots()
+    
+    axes.scatter(data=df, x=x, y=y)
+    df_x = df[x]
+    df_x = df_x.drop_duplicates()
+    df_x = df_x.values
+    d = {}
+    for x_value in df_x: # example: x_value = "formal", "genz"
+        d[x_value] =  df[df[x].str.match(x_value)][y].values.astype("float")
+    axes.violinplot(dataset = pd.DataFrame(d), positions=range(len(d)))
+    axes.set_title('')
+    axes.yaxis.grid(True)
+    axes.set_xlabel(x)
+    axes.set_ylabel(y)
+    dots = axes.collections[0].get_offsets()
+    for dot_index in range(int(len(dots) / 2)):
+        # because of this, we can only have 2 violins (the lines are plotted in pairs)
+        line = lines.Line2D([ 0,1], [dots[dot_index][1],dots[dot_index + int(len(dots) / 2)][1]],
+                        color='green', linestyle='-', linewidth=0.5)
+        
+        axes.add_line(line)
+
+    
+    return fig, axes
+
+    
+
+if __name__ == '__main__':
+    pass
+    #violin_with_dots(pd.DataFrame({"language": ["formal", "formal", "formal", "genz", "genz", "genz"],
+    #                               "time": [1,2,3,4,5,6]}), "language", "time")
+    
+

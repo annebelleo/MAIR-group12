@@ -1,0 +1,107 @@
+{
+    "user_id": "5",
+    "task_number": "6",
+    "device_name": "Ideapad",
+    "time_stamp": "2023-10-28_21-34-04.026966",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 4,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "hello! can you find me a european restaurant in the centre?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 44.336188
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 4.998724
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "can it have assigned seats?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 33.843734
+        },
+        {
+            "system_message": "I have identified galleria. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. It is assigned seats because the crowd is busy. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes!",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 12.481528
+        },
+        {
+            "system_message": "I have identified pizza express fen ditton. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "no galleria",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 4,
+            "response_seconds": 8.813083
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 10.275645
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 3.597819
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "european",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 5.327104
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "assigned seats",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 29.460532
+        },
+        {
+            "system_message": "I have identified galleria. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. It is assigned seats because the crowd is busy. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes!",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 4.8663
+        },
+        {
+            "system_message": "I have identified pizza express fen ditton. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "bye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 10,
+            "response_seconds": 20.037529
+        }
+    ]
+}
