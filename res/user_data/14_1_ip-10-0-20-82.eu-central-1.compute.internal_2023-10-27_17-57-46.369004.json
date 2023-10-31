@@ -1,0 +1,99 @@
+{
+    "user_id": "14",
+    "task_number": "1",
+    "device_name": "ip-10-0-20-82.eu-central-1.compute.internal",
+    "time_stamp": "2023-10-27_17-57-46.369004",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "give me a nicely priced italian restaurant south of me",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 33.725847
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "\\moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 5.04749
+        },
+        {
+            "system_message": "check this out! I found pizza hut cherry hinton it's a moderate spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "where are they located?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "request",
+            "turn_index": 2,
+            "response_seconds": 16.582383
+        },
+        {
+            "system_message": "gotchu! Here's the ['addr']: ('g4 cambridge leisure park clifton way cherry hinton',). need anything else?",
+            "user_message": "that's a bit too far away from my current location",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 3,
+            "response_seconds": 11.790465
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "one that's closer",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "reqalts",
+            "turn_index": 4,
+            "response_seconds": 6.288922
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "give me a closer restauarant",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "null",
+            "turn_index": 5,
+            "response_seconds": 8.991428
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "ok, bye",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "bye",
+            "turn_index": 6,
+            "response_seconds": 15.498534
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "bye",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "bye",
+            "turn_index": 7,
+            "response_seconds": 1.925518
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "no",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "negate",
+            "turn_index": 8,
+            "response_seconds": 2.517481
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 1.134262
+        }
+    ]
+}
