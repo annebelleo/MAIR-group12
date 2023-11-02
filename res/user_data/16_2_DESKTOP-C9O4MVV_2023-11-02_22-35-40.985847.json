@@ -1,0 +1,123 @@
+{
+    "user_id": "16",
+    "task_number": "2",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-02_22-35-40.985847",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "i need to find a moderately priced dutch restaurant in the east",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 71.829758
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "dutch",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 18.958226
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify dutch?",
+            "user_message": "its pancakes or bitterballen stuff like that",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 2,
+            "response_seconds": 23.504875
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "i like dutch food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 13.182386
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify i like dutch food?",
+            "user_message": "broodje unox",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 17.500654
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify broodje unox?",
+            "user_message": "its like bread with sausage with sauce ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 5,
+            "response_seconds": 19.451563
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "i am looking for a dutch restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 41.337795
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify i am looking for a dutch restaurant?",
+            "user_message": "a restaurant with dutch food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 14.003358
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify a restaurant with dutch food?",
+            "user_message": "with stamppot",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 24.630028
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify with stamppot?",
+            "user_message": "its potato with vegetable and meat",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 9,
+            "response_seconds": 26.149677
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "im not your fam, fam!",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 10,
+            "response_seconds": 12.577028
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "bye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 11,
+            "response_seconds": 8.660287
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 2.253346
+        }
+    ]
+}

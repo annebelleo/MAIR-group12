@@ -1,0 +1,251 @@
+{
+    "user_id": "16",
+    "task_number": "1",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-02_22-28-04.760754",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 3,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "i am looking for a restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 19.509877
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify i am looking for a restaurant?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 1,
+            "response_seconds": 15.063733
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "high budget",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 10.179478
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify high budget?",
+            "user_message": "yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 3,
+            "response_seconds": 5.786004
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "up to thousand euros",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 26.403688
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify up to thousand euros?",
+            "user_message": "yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 5,
+            "response_seconds": 2.855715
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "a lot of money",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 10.460821
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify a lot of money?",
+            "user_message": "yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 7,
+            "response_seconds": 1.870555
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "ten dollars",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 23.423796
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify ten dollars?",
+            "user_message": "yes",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 9,
+            "response_seconds": 2.198421
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "expensive",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 13.875842
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "in the centre please",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 12.476034
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "korean food its my favorite ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 19.315105
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "i do not like vegetables",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 30.760275
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 14,
+            "response_seconds": 8.269781
+        },
+        {
+            "system_message": "check this out! I found stazione restaurant and coffee bar it's a expensive spot in the centre area that serves korean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 15,
+            "response_seconds": 14.323052
+        },
+        {
+            "system_message": "check this out! I found little seoul it's a expensive spot in the centre area that serves korean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "no i want korean barbecue",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 16,
+            "response_seconds": 27.537181
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "expensive",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 17,
+            "response_seconds": 10.717744
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "centre ",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 18,
+            "response_seconds": 7.286035
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "korean barbecue, fam!",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 19,
+            "response_seconds": 33.284271
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no blood",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 20,
+            "response_seconds": 10.951172
+        },
+        {
+            "system_message": "check this out! I found stazione restaurant and coffee bar it's a expensive spot in the centre area that serves korean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "yes very nive dude",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 21,
+            "response_seconds": 10.795849
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "yes please",
+            "dialog_act_system": "request",
+            "dialog_act_user": "affirm",
+            "turn_index": 22,
+            "response_seconds": 5.948224
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "contact with stazione restaurant and coffee bar",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 23,
+            "response_seconds": 30.33435
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "nothing i think were done",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "null",
+            "turn_index": 24,
+            "response_seconds": 12.51683
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "bye",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "bye",
+            "turn_index": 25,
+            "response_seconds": 6.056986
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "buy",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 26,
+            "response_seconds": 7.98885
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "byeeeee",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 27,
+            "response_seconds": 5.72506
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 28,
+            "response_seconds": 2.723239
+        }
+    ]
+}
