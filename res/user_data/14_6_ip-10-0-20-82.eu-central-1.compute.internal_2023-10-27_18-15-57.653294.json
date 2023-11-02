@@ -1,0 +1,83 @@
+{
+    "user_id": "14",
+    "task_number": "6",
+    "device_name": "ip-10-0-20-82.eu-central-1.compute.internal",
+    "time_stamp": "2023-10-27_18-15-57.653294",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "get me a mediterranean restuarant in the centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 12.1961
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "expensive",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 2.83671
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "not romantic",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 4.148922
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "expense",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 4.588903
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: expense",
+            "user_message": "expensive",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 3.458408
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "centre",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 4.207266
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "mediterranean",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 5.752089
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "not romantic",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 4.098271
+        }
+    ]
+}

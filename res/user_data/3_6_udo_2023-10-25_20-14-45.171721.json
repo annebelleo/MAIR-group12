@@ -1,0 +1,123 @@
+{
+    "user_id": "3",
+    "task_number": "6",
+    "device_name": "udo",
+    "time_stamp": "2023-10-25_20-14-45.171721",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "do you know a European restaURAnt?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 18.103641
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "moderately",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 7.753208
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "center",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 7.413748
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "free seats",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 3,
+            "response_seconds": 11.549456
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "assigned seats?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 9.89646
+        },
+        {
+            "system_message": "I have identified galleria. It is an establishment of moderate nature situated in the centre district, renowned for its offerings of european cuisine. It is assigned seats because the crowd is busy. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 5,
+            "response_seconds": 43.647741
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "the adress",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 6,
+            "response_seconds": 9.298387
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "the adr",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 7,
+            "response_seconds": 3.973126
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "Do you have the adress?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "request",
+            "turn_index": 8,
+            "response_seconds": 20.004295
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "Do you have the address?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "request",
+            "turn_index": 9,
+            "response_seconds": 23.485905
+        },
+        {
+            "system_message": "Here is the desired ['addr']: ('33 bridge street',). Do you require any further elucidation?",
+            "user_message": "the phone number?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "request",
+            "turn_index": 10,
+            "response_seconds": 12.772567
+        },
+        {
+            "system_message": "Here is the desired ['phone']: ('01223 362054',). Do you require any further elucidation?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 11,
+            "response_seconds": 3.844384
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 9.943345
+        }
+    ]
+}

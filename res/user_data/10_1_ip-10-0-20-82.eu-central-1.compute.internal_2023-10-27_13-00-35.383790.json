@@ -1,0 +1,179 @@
+{
+    "user_id": "10",
+    "task_number": "1",
+    "device_name": "ip-10-0-20-82.eu-central-1.compute.internal",
+    "time_stamp": "2023-10-27_13-00-35.383790",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 3,
+    "number_restart": 2,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "looking for italian restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 65.736314
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "moderate, not super expensive",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 11.077614
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "south part ",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 9.520529
+        },
+        {
+            "system_message": "check this out! I found pizza hut cherry hinton it's a moderate spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "what's on the men",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 3,
+            "response_seconds": 16.233834
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "what's on the menu",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "null",
+            "turn_index": 4,
+            "response_seconds": 5.784726
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 9.30771
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "south",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 3.602015
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "italian",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 19.207223
+        },
+        {
+            "system_message": "check this out! I found pizza hut cherry hinton it's a moderate spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "awesome",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 6.651381
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 9,
+            "response_seconds": 5.467813
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "moderate",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 3.009666
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "south",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 2.63433
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "italian",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 7.24986
+        },
+        {
+            "system_message": "check this out! I found pizza hut cherry hinton it's a moderate spot in the south area that serves italian food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 13,
+            "response_seconds": 2.651884
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "sure",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 14,
+            "response_seconds": 3.1484
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "contant info",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 15,
+            "response_seconds": 6.35952
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "contact info all",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "inform",
+            "turn_index": 16,
+            "response_seconds": 10.785017
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "phone",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "request",
+            "turn_index": 17,
+            "response_seconds": 2.829362
+        },
+        {
+            "system_message": "gotchu! Here's the ['phone']: ('01223 323737',). need anything else?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 18,
+            "response_seconds": 6.014243
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 19,
+            "response_seconds": 4.385114
+        }
+    ]
+}
