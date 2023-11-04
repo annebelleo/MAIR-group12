@@ -1,0 +1,107 @@
+{
+    "user_id": "17",
+    "task_number": "5",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-04_17-31-23.413786",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "dutch restaurant in the east moderatly priced",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 47.049277
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "potatoes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 15.219754
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify potatoes?",
+            "user_message": "patatje oorlog",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 29.215855
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify patatje oorlog?",
+            "user_message": "war potatoes with peanut sauce",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 26.992685
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify war potatoes with peanut sauce?",
+            "user_message": "sliced patatoes bAKED=",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 44.384959
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify sliced patatoes bAKED=?",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 0.127502
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify ?",
+            "user_message": "sliced potatoes baked in cowfat with peanuts smashed sauce",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 47.172588
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify sliced potatoes baked in cowfat with peanuts smashed sauce?",
+            "user_message": "mashed potatoes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 32.784108
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify mashed potatoes?",
+            "user_message": "thank you",
+            "dialog_act_system": "null",
+            "dialog_act_user": "thankyou",
+            "turn_index": 8,
+            "response_seconds": 12.305452
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "bye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 9,
+            "response_seconds": 9.270039
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 2.54157
+        }
+    ]
+}
