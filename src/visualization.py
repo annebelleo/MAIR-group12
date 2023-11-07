@@ -95,8 +95,9 @@ import matplotlib.lines as lines
 # formal, language, time
 # genz, language, time
 # 
-def violin_with_dots(df: pd.DataFrame, x: str, y: str, plot_lines = True, plot_dots=True) -> tuple[Figure, Axes]:
+def violin_with_dots(df: pd.DataFrame, x: str, y: str, plot_lines = True, plot_dots=True, line_color="black", x_label=None, y_label=None, y_range = None) -> tuple[Figure, Axes]:
     fig, axes = plt.subplots()
+
     if plot_dots:
         axes.scatter(data=df, x=x, y=y)
     df_x = df[x]
@@ -105,18 +106,28 @@ def violin_with_dots(df: pd.DataFrame, x: str, y: str, plot_lines = True, plot_d
     d = {}
     for x_value in df_x: # example: x_value = "formal", "genz"
         d[x_value] =  df[df[x].str.match(x_value)][y].values.astype("float")
+    axes.set_xticks(range(len(d)))
+    axes.set_xticklabels(d.keys())
     axes.violinplot(dataset = pd.DataFrame(d), positions=range(len(d)))
     axes.set_title('')
     axes.yaxis.grid(True)
-    axes.set_xlabel(x)
-    axes.set_ylabel(y)
+    if x_label:
+        axes.set_xlabel(x_label)
+    else:
+        axes.set_xlabel(x)
+    if y_label:
+        axes.set_ylabel(y_label)
+    else:
+        axes.set_ylabel(y)
+    if y_range:
+        axes.set_ylim(y_range)
     if not plot_lines:
         return fig, axes
     dots = axes.collections[0].get_offsets()
     for dot_index in range(int(len(dots) / 2)):
         # because of this, we can only have 2 violins (the lines are plotted in pairs)
         line = lines.Line2D([ 0,1], [dots[dot_index][1],dots[dot_index + int(len(dots) / 2)][1]],
-                        color='green', linestyle='-', linewidth=0.5)
+                        color=line_color, linestyle='-', linewidth=0.5)
         
         axes.add_line(line)
 
