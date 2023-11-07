@@ -1,0 +1,107 @@
+{
+    "user_id": "15",
+    "task_number": "5",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-02_22-12-35.359646",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "i would like to find a german restaurant in the west. i would like for it to be chique and expensive",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 41.411212
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "west",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 2.954159
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "german food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 5.365479
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify german food?",
+            "user_message": "food from germany'",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 8.976224
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify food from germany'?",
+            "user_message": "no thanks",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 4,
+            "response_seconds": 14.400905
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "schnitzel",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 5.286764
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify schnitzel?",
+            "user_message": "wiener schnitzel",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 6.458807
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify wiener schnitzel?",
+            "user_message": "wurst mit pommes frites",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 5.072237
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify wurst mit pommes frites?",
+            "user_message": "sheize",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 6.036832
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify sheize?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 9,
+            "response_seconds": 2.099287
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 10,
+            "response_seconds": 3.307968
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+    "user_id": "16",
+    "task_number": "3",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-02_22-41-15.614134",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 2,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "im looking for a restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 20.454621
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify im looking for a restaurant?",
+            "user_message": "place to eat food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 13.350223
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify place to eat food?",
+            "user_message": "restaurant",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 5.813381
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify restaurant?",
+            "user_message": "food place",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 4.127258
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify food place?",
+            "user_message": "eat",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 5.698843
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify eat?",
+            "user_message": "food ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 4.553043
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify food ?",
+            "user_message": "things in mouth",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 33.546223
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify things in mouth?",
+            "user_message": "to eat",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 34.186902
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify to eat?",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 14.098941
+        },
+        {
+            "system_message": "sorry, I'm a bit confused. can you, like, clarify ?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 9,
+            "response_seconds": 3.883096
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "moderately priced",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 30.974391
+        },
+        {
+            "system_message": "what area do you wanna go to in the city?",
+            "user_message": "in the centre somewhere with assigned seats",
+            "dialog_act_system": "request",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 56.48443
+        },
+        {
+            "system_message": "what's your craving, fam? food-wise, I mean.",
+            "user_message": "somewhere with european food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 34.728083
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "assigned seats maybe?",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 13,
+            "response_seconds": 18.66481
+        },
+        {
+            "system_message": "check this out! I found galleria it's a moderate spot in the centre area that serves european food. pretty cool, right? it's assigned seats cause the crowd is busy!\ud83d\udc4c are you down for this place?\ud83d\ude0e",
+            "user_message": "its sounds incredible ",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 14,
+            "response_seconds": 24.05806
+        },
+        {
+            "system_message": "check this out! I found pizza express fen ditton it's a moderate spot in the centre area that serves european food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "also a good option",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "ack",
+            "turn_index": 15,
+            "response_seconds": 10.941444
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "no i want pizza express",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 16,
+            "response_seconds": 15.277555
+        },
+        {
+            "system_message": "so, what's your budget?",
+            "user_message": "bye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 17,
+            "response_seconds": 3.527818
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 18,
+            "response_seconds": 10.482476
+        }
+    ]
+}

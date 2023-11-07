@@ -1,0 +1,123 @@
+{
+    "user_id": "17",
+    "task_number": "3",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-04_17-14-30.387321",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "find a mediterrainen in the center expensive for bussiness diner",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 79.411701
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "Good wine good food exellent service",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 38.437906
+        },
+        {
+            "system_message": "Do you possess any supplementary preferences? If so, might you articulate them?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 2,
+            "response_seconds": 8.497053
+        },
+        {
+            "system_message": "I have identified shiraz restaurant. It is an establishment of expensive nature situated in the centre district, renowned for its offerings of mediterranean cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 3,
+            "response_seconds": 19.596912
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "what is the menu?",
+            "dialog_act_system": "null",
+            "dialog_act_user": "null",
+            "turn_index": 4,
+            "response_seconds": 27.418475
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "what sort of food",
+            "dialog_act_system": "null",
+            "dialog_act_user": "request",
+            "turn_index": 5,
+            "response_seconds": 28.081868
+        },
+        {
+            "system_message": "Is there any additional contact information you wish to acquire?",
+            "user_message": "yes please email adress or website",
+            "dialog_act_system": "null",
+            "dialog_act_user": "affirm",
+            "turn_index": 6,
+            "response_seconds": 56.943111
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "stupid computer",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 16.152237
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 8,
+            "response_seconds": 7.160966
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 3.947912
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 10,
+            "response_seconds": 2.383191
+        },
+        {
+            "system_message": "My apologies, but I'm not quite certain. Could you please elucidate your information request?",
+            "user_message": "no",
+            "dialog_act_system": "null",
+            "dialog_act_user": "negate",
+            "turn_index": 11,
+            "response_seconds": 1.557968
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 5.922539
+        }
+    ]
+}
