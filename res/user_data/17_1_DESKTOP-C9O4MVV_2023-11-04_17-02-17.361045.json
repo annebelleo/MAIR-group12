@@ -1,0 +1,115 @@
+{
+    "user_id": "17",
+    "task_number": "1",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-04_17-02-17.361045",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 1,
+    "number_restart": 1,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "moderate price good quality Italian restaurant",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 64.296326
+        },
+        {
+            "system_message": "May I inquire about your preferred location in the city?",
+            "user_message": "in the south",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 19.734183
+        },
+        {
+            "system_message": "I have identified pizza hut cherry hinton. It is an establishment of moderate nature situated in the south district, renowned for its offerings of italian cuisine. Are you inclined to express interest in this particular dining establishment?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 2,
+            "response_seconds": 30.690314
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "fine dining italian restaurant in the south",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 49.93071
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: fine dining italian restaurant in the south",
+            "user_message": "Best visited intalian restaurant in the south",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 44.010102
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Best visited intalian restaurant in the south",
+            "user_message": "Good food Italian restaurant in the south",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 33.562095
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Good food Italian restaurant in the south",
+            "user_message": "",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 2.13164
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: ",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 7,
+            "response_seconds": 3.474965
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "40 ",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 8,
+            "response_seconds": 17.094282
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: 40 ",
+            "user_message": "Budget 40 per person",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 16.238577
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: Budget 40 per person",
+            "user_message": "bye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 10,
+            "response_seconds": 56.671313
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 4.244924
+        }
+    ]
+}

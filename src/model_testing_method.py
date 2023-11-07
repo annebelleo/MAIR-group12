@@ -107,7 +107,7 @@ def perform_test_suite(setup_name : str,
                         iteration_num=iter_num,
                         setup_description=setup_name,
                         classification_report=model_classification_report)
-        if iter == 0:
+        if iter == 0 and setup_name == 'base':
             with open('figs/FFN_micro_results', 'w', newline="") as fp:
                 report = model_classification_report
                 report.pop('accuracy')

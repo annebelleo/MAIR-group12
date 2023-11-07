@@ -1,0 +1,139 @@
+{
+    "user_id": "17",
+    "task_number": "2",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-04_17-08-54.859703",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "FORMAL"
+    },
+    "number_suggestions": 0,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "Welcome to the restaurant suggestion system, what can I help you find today?",
+            "user_message": "German restaurant in the West",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 31.78101
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: German restaurant in the West",
+            "user_message": "find german restaurant in the west",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 30.962143
+        },
+        {
+            "system_message": "Could you please provide details about your budget?",
+            "user_message": "30",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 2,
+            "response_seconds": 6.450353
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: 30",
+            "user_message": "expensive",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 3,
+            "response_seconds": 27.410305
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "german bratwurstle",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 4,
+            "response_seconds": 24.644594
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german bratwurstle",
+            "user_message": "sausages of a german",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 5,
+            "response_seconds": 18.289168
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: sausages of a german",
+            "user_message": "german schnitzel",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 6,
+            "response_seconds": 14.934541
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german schnitzel",
+            "user_message": "",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 7,
+            "response_seconds": 3.399034
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: ",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 8,
+            "response_seconds": 1.525758
+        },
+        {
+            "system_message": "Could you specify your culinary preferences?",
+            "user_message": "german schnitzel",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 9,
+            "response_seconds": 9.295711
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german schnitzel",
+            "user_message": "german specialities for food",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 10,
+            "response_seconds": 24.099624
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german specialities for food",
+            "user_message": "german expensive restaurent in the west budget 100",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 11,
+            "response_seconds": 32.264481
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: german expensive restaurent in the west budget 100",
+            "user_message": "five star german restaurant in the west",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 12,
+            "response_seconds": 27.688108
+        },
+        {
+            "system_message": "I apologize for any confusion. Could you please reiterate: five star german restaurant in the west",
+            "user_message": "bye",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "bye",
+            "turn_index": 13,
+            "response_seconds": 12.105228
+        },
+        {
+            "system_message": "Goodbye, thank you for using the restaurant suggestion system.",
+            "user_message": "",
+            "dialog_act_system": "thankyou",
+            "dialog_act_user": "inform",
+            "turn_index": 14,
+            "response_seconds": 2.341422
+        }
+    ]
+}

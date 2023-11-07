@@ -1,0 +1,99 @@
+{
+    "user_id": "17",
+    "task_number": "4",
+    "device_name": "DESKTOP-C9O4MVV",
+    "time_stamp": "2023-11-04_17-27-47.039442",
+    "configuration": {
+        "is_ask_additional_requirement": true,
+        "is_ask_levenstein_correction": false,
+        "answer_delay": 0,
+        "is_output_caps": false,
+        "is_direct_search": false,
+        "is_show_debug_information": false,
+        "language": "GENZ"
+    },
+    "number_suggestions": 1,
+    "number_restart": 0,
+    "turns": [
+        {
+            "system_message": "hey there! what's up? how can I help you?",
+            "user_message": "find an expensive Korean restaurant in the center",
+            "dialog_act_system": "null",
+            "dialog_act_user": "inform",
+            "turn_index": 0,
+            "response_seconds": 24.894231
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "find an expensive korean restaurant in the center en the website",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "inform",
+            "turn_index": 1,
+            "response_seconds": 45.02621
+        },
+        {
+            "system_message": "anything else I should know? any other preferences, maybe?",
+            "user_message": "no",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 2,
+            "response_seconds": 6.034842
+        },
+        {
+            "system_message": "check this out! I found stazione restaurant and coffee bar it's a expensive spot in the centre area that serves korean food. pretty cool, right? are you down for this place?\ud83d\ude0e",
+            "user_message": "yes",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "affirm",
+            "turn_index": 3,
+            "response_seconds": 25.023237
+        },
+        {
+            "system_message": "do you want any contact info about the restaurant?",
+            "user_message": "yes please the website",
+            "dialog_act_system": "request",
+            "dialog_act_user": "affirm",
+            "turn_index": 4,
+            "response_seconds": 17.557752
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "the reservation nummer",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "null",
+            "turn_index": 5,
+            "response_seconds": 17.205526
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "the exact adress",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "null",
+            "turn_index": 6,
+            "response_seconds": 13.032801
+        },
+        {
+            "system_message": "huh? what more deets you need, my friend?",
+            "user_message": "phone",
+            "dialog_act_system": "reqmore",
+            "dialog_act_user": "request",
+            "turn_index": 7,
+            "response_seconds": 12.117572
+        },
+        {
+            "system_message": "gotchu! Here's the ['phone']: ('01223 352607',). need anything else?",
+            "user_message": "no thanks",
+            "dialog_act_system": "inform",
+            "dialog_act_user": "negate",
+            "turn_index": 8,
+            "response_seconds": 14.279876
+        },
+        {
+            "system_message": "thanks, catch you later! \ud83d\udc4b",
+            "user_message": "bye",
+            "dialog_act_system": "null",
+            "dialog_act_user": "bye",
+            "turn_index": 9,
+            "response_seconds": 5.535664
+        }
+    ]
+}

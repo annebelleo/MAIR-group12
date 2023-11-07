@@ -95,10 +95,10 @@ import matplotlib.lines as lines
 # formal, language, time
 # genz, language, time
 # 
-def violin_with_dots(df: pd.DataFrame, x: str, y: str) -> tuple[Figure, Axes]:
+def violin_with_dots(df: pd.DataFrame, x: str, y: str, plot_lines = True, plot_dots=True) -> tuple[Figure, Axes]:
     fig, axes = plt.subplots()
-    
-    axes.scatter(data=df, x=x, y=y)
+    if plot_dots:
+        axes.scatter(data=df, x=x, y=y)
     df_x = df[x]
     df_x = df_x.drop_duplicates()
     df_x = df_x.values
@@ -110,6 +110,8 @@ def violin_with_dots(df: pd.DataFrame, x: str, y: str) -> tuple[Figure, Axes]:
     axes.yaxis.grid(True)
     axes.set_xlabel(x)
     axes.set_ylabel(y)
+    if not plot_lines:
+        return fig, axes
     dots = axes.collections[0].get_offsets()
     for dot_index in range(int(len(dots) / 2)):
         # because of this, we can only have 2 violins (the lines are plotted in pairs)
